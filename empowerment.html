@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Empowerment Campaign</title>
+    <style>
+        body {
+            margin: 0 0;
+            padding: 0 0;
+            overflow-x: hidden;
+        }
+
+        .phonebooboo {
+            display: none;
+        }
+
+        .top {
+            position: relative;
+            text-align: center;
+            font-family: Times New Roman;
+            color: rgba(92, 92, 92, 1);
+            font-size: 4.1vw;
+            margin: 1vw 0 0 0;
+        }
+
+        .header {
+            position: relative;
+        }
+
+        .nav {
+            position: relative;
+            justify-content: space-around;
+            display: flex;
+            background-color: rgb(97, 97, 97);
+            padding: 0.5vw 0;
+        }
+
+        .nav li {
+            color: white;
+            list-style: none;
+        }
+
+        .nav li a {
+            text-decoration: none;
+            font-size: 1.33vw;
+            color: rgba(248, 244, 244, 1);
+            font-family: Times New Roman;
+        }
+
+        .home {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .phonehome {
+            display: none;
+        }
+
+        .empwhole {
+            position: relative;
+            margin: 2vw 0 9vw 0;
+        }
+
+        .empowerment {
+            font-size: 3.9vw;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: normal;
+            font-weight: normal;
+            border-bottom: 0.2vw solid;
+            height: 4vw;
+            width: 54%;
+            position: relative;
+            left: 24%;
+            color: rgb(117, 117, 117, 1);
+        }
+
+        .campaign {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin: 2vw 0;
+        }
+
+        .phonepowerment {
+            display: none;
+        }
+
+        .power img {
+            width: 30vw;
+            height: 53vw;
+        }
+
+        .power h1 {
+            position: absolute;
+            text-align: left;
+            font-family: "Times New Roman";
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1.79vw;
+            color: rgb(255, 255, 255);
+            left: 4%;
+            margin: 21vw 0;
+            z-index: 1;
+        }
+
+        .power h2 {
+            text-align: center;
+            position: absolute;
+            font-family: "Times New Roman";
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1.25vw;
+            left: 3%;
+            margin: -8vw 0;
+            color: rgb(255, 255, 255);
+        }
+
+        .power h3 {
+            position: absolute;
+            text-align: left;
+            font-family: "Times New Roman";
+            font-style: normal;
+            font-size: 3vw;
+            font-weight: normal;
+            margin: -10vw 1vw;
+            color: rgb(255, 255, 255);
+        }
+
+        #auntie {
+            opacity: 0.71;
+        }
+
+        #btn {
+            position: absolute;
+            margin: 27vw 1vw;
+        }
+
+        #btn img {
+            width: 5vw;
+            height: 5vw;
+            opacity: 0.4;
+        }
+
+
+        .footer {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            background: rgb(52 47 47);
+            position: relative;
+            margin: -5vw 0;
+        }
+
+        .phonefooter {
+            display: none;
+        }
+
+        .thumb {
+
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            padding: 0 13vw 0 3vw;
+            margin-top: 1.5vw;
+            font-size: 2.2vw;
+            color: rgba(255, 255, 255, 1);
+        }
+
+        .foot {
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            padding: 0 3.4vw;
+            font-size: 1.5vw;
+            margin-top: 0.5vw;
+            color: rgba(255, 255, 255, 1);
+
+        }
+
+        .foot a {
+            color: rgba(255, 255, 255, 1);
+            text-decoration: none;
+        }
+
+        .social {
+            margin-top: 1vw;
+            margin-bottom: 1vw;
+        }
+
+        .social a {
+            color: rgba(255, 255, 255, 1);
+            padding: 0 1.3vw 0 0vw;
+        }
+
+        .whatsapp {
+            padding: 17px;
+        }
+
+
+        #logo {
+            position: relative;
+            float: right;
+        }
+
+        #logo img {
+            width: 3vw;
+            right: 3vw;
+        }
+
+
+        @media (max-width: 700px) {
+            .home {
+                display: none;
+            }
+
+            .header {
+                display: none;
+            }
+
+            .phonehome {
+                display: block;
+            }
+
+            .phonebooboo {
+                display: block;
+            }
+
+            .hamburger {
+                position: fixed;
+                cursor: pointer;
+                right: 18px;
+                display: block;
+                top: 1vw;
+            }
+
+
+
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+
+            .bar {
+                display: block;
+                width: 30px;
+                height: 3px;
+
+                margin: 5px auto;
+                -webkit-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+                background-color: rgb(0, 0, 0);
+            }
+
+            .topnav {
+                overflow: visible;
+                background-color: white;
+                position: absolute;
+                width: 100%;
+                height: 140vh;
+
+            }
+
+            .topnav #myLinks {
+                display: none;
+                background-color: white;
+                width: 100%;
+                height: 100vh;
+                z-index: 1;
+                position: fixed;
+            }
+
+            .topnav a {
+                padding: 20px 0px;
+                display: block;
+                text-align: right;
+                position: relative;
+                top: 10vw;
+                text-decoration: none;
+                font-family: Times New Roman;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 3.5vw;
+                color: white;
+                z-index: 3;
+                right: 5%;
+
+            }
+
+            #white {
+                z-index: 2;
+                position: fixed;
+                width: 100%;
+                height: 150vw;
+                top: 0;
+                opacity: 50%;
+                margin: 0;
+
+            }
+
+            .topnav a.icon {
+                background: white;
+                display: block;
+                position: absolute;
+                right: 0;
+                top: -16px;
+            }
+
+
+
+
+            .campaign {
+                display: none;
+            }
+
+            .phonepowerment {
+                display: block;
+            }
+
+            .empowerment {
+                font-size: 5.5vw;
+                margin: 0 0 3vw;
+                left: 0;
+                border-bottom: none;
+                width: 100%;
+                text-decoration: underline;
+            }
+
+
+            .powerfirst {
+                top: 3vw;
+                display: flex;
+                justify-content: space-between;
+                left: 0;
+                position: relative;
+                width: 100%;
+            }
+
+            .powerfirst img {
+                height: 86vw;
+                width: 49vw;
+            }
+
+            .power h3 {
+                margin: -18vw 2vw;
+                font-size: 5vw;
+            }
+
+            #btn {
+                position: absolute;
+                margin: 41vw 6vw;
+            }
+
+            #btn img {
+                width: 10vw;
+                height: 10vw;
+                opacity: 0.4;
+            }
+
+            #powerbank {
+                position: relative;
+                margin: 3vw 0;
+            }
+
+            #powerbank h1 {
+                margin: 50vw 0;
+                position: absolute;
+                text-align: left;
+                font-family: "Times New Roman";
+                font-style: normal;
+                font-weight: normal;
+                font-size: 4.5vw;
+                color: rgb(255, 255, 255);
+                z-index: 1;
+                left: 10%;
+                line-height: 7vw;
+            }
+
+            #powerbank h2 {
+                text-align: center;
+                position: relative;
+                top: -25vw;
+                font-size: 4vw;
+                font-family: "Times New Roman";
+                font-style: normal;
+                font-weight: normal;
+                color: rgb(255, 255, 255);
+                letter-spacing: 0.1px;
+            }
+
+            #powerbank img {
+                height: 150vw;
+                width: 100%;
+            }
+
+            .footer {
+                display: none;
+            }
+
+            .phonefooter {
+                display: flex;
+                width: 100%;
+                background: rgb(52 47 47);
+                z-index: 2;
+                position: relative;
+
+            }
+
+            .feet1 {
+                display: grid;
+                grid-template-columns: 1fr;
+                position: relative;
+            }
+
+            .thumb {
+                font-size: 5.5vw;
+                margin: 3vw 13vw 0 3vw;
+            }
+
+            .foot a {
+                color: rgba(255, 255, 255, 1);
+                text-decoration: none;
+            }
+
+            .foot {
+                font-size: 4vw;
+                padding: 0 6vw;
+            }
+
+            .feet2 {
+                position: relative;
+                right: 10%;
+                font-size: 5vw;
+                margin: 19vw 0;
+            }
+
+            .social {
+                row-gap: 5vw;
+                grid-template-columns: 1fr;
+                display: grid;
+            }
+
+            .logo {
+                position: relative;
+                right: 78%;
+                top: 25vw;
+            }
+
+            .logo img {
+                width: 10vw;
+            }
+
+            #last {
+                position: relative;
+                margin: 0 0 12vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="phonebooboo">
+        <div class="topnav">
+            <div id="myLinks">
+                <a class="grow" href="#">SARTORIAL </a>
+                <a class="grow" href="#">COLLECTION</a>
+                <a class="grow" href="#">CUSTOMIZED PROCESS</a>
+                <a class="grow" href="#l">PRODUCTION</a>
+                <a class="grow" href="#">SUITINGS / SHIRTINGS</a>
+                <a class="grow" href="#">ACCESSORIES</a>
+                <a class="grow" href="#">CLIENT PURCHASE</a>
+                <a class="grow" href="#">INQUIRY</a>
+                </ul>
+                <img src="burgerbg.png" id="white">
+            </div>
+
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="top">
+        WOMAN’S BUSINESS WEAR
+    </div>
+    <div class="header">
+        <div class="nav">
+            <li class="grow"><a href="#">SARTORIAL </a></li>
+            <li class="grow"><a href="#">COLLECTION</a></li>
+            <li class="grow"><a href="#">CUSTOMIZED PROCESS</a></li>
+            <li class="grow"><a href="#">PRODUCTION</a></li>
+            <li class="grow"><a href="#">SUITINGS / SHIRTINGS</a></li>
+            <li class="grow"><a href="#">ACCESSORIES</a></li>
+            <li class="grow"><a href="#">CLIENT PURCHASE</a></li>
+            <li class="grow"><a href="#">INQUIRY</a></li>
+        </div>
+    </div>
+    <div class="empwhole">
+        <div class="empowerment">
+            EMPOWERMENT CAMPAIGN
+        </div>
+        <div class="campaign">
+            <div class="power">
+                <h1>"Just because you are CEO, <br>
+                    don't think you have landed. <br>
+                    You must continually increase <br>
+                    your learning, the way you think, <br>
+                    and the way you approach the <br>
+                    organization."</h1>
+                <img id="auntie" src="empowerment1.png" alt="">
+                <h2>- INDRA NOOYI <br> (FORMER) CHAIRPERSON, CEO, PEPSICO</h2>
+            </div>
+            <div class="power">
+                <div id="btn"><a href="exceptional.html"><img src="play.png" alt=""></a>`</div>
+                <a href="exceptional.html"><img src="empowerment2.png" alt=""></a>
+                <h3>Exceptionally <br>
+                    Successful</h3>
+            </div>
+            <div class="power">
+                <div id="btn"> <a href="serious.html"><img src="play.png" alt=""></a></div>
+                <a href="serious.html"><img src="empowerment3.png" alt=""></a>
+                <h3>Seriously <br> Successful</h3>
+            </div>
+        </div>
+        <div class="phonepowerment">
+            <div class="powerfirst">
+                <div class="power">
+                    <div id="btn"><a href="exceptional.html"><img src="play.png" alt=""></a>`</div>
+                    <a href="exceptional.html"><img src="empowerment2.png" alt=""></a>
+                    <h3>Exceptionally <br>
+                        Successful</h3>
+                </div>
+                <div class="power">
+                    <div id="btn"> <a href="serious.html"><img src="play.png" alt=""></a></div>
+                    <a href="serious.html"><img src="empowerment3.png" alt=""></a>
+                    <h3>Seriously <br> Sucessful</h3>
+                </div>
+            </div>
+            <div class="ment" id="powerbank">
+                <h1>"Just because you are CEO, <br>
+                    don't think you have landed. <br>
+                    You must continually increase <br>
+                    your learning, the way you think, <br>
+                    and the way you approach the <br>
+                    organization."</h1>
+                <img id="auntie" src="empowerment1.png" alt="">
+                <h2>- INDRA NOOYI <br> (FORMER) CHAIRPERSON, CEO, PEPSICO</h2>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+
+        <div class="thumb">
+            Retail Client Services
+
+        </div>
+
+        <div class="thumb">
+            Wholesale Client Services
+        </div>
+
+        <div class="thumb">
+            Media
+        </div>
+
+        <div class="foot">
+            <a href="#"> Joint Venture
+            </a>
+        </div>
+        <div class="foot">
+            <a href="#"> Buyer Inquiry
+            </a>
+        </div>
+        <div class="foot">
+            <a href="#"> Blog
+            </a>
+        </div>
+        <div class="foot">
+            <a href="#"> JV Partner
+            </a>
+        </div>
+        <div class="foot">
+            <a href="#"> Private Label
+            </a>
+        </div>
+        <div class="foot">
+            <a href="#"> Editorial
+            </a>
+        </div>
+        <div class="foot">
+            <a href="#"> Customized Order Process
+            </a>
+        </div>
+        <div class="foot">
+            <a href="#"> Co - Branding
+            </a>
+        </div>
+        <div class="foot">
+            <a href="#"> Affliliate Partnership
+            </a>
+        </div>
+        <div class="foot">
+
+        </div>
+        <div class="foot">
+            <div class="social">
+                <a href="https://instagram.com/womanswearbusiness?igshid=YmMyMTA2M2Y="><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=919980803612" class="whatsapp"><i
+                        class="fab fa-whatsapp"></i></a>
+                <a href="https://www.pinterest.com/womenswearbusiness/_saved/"><i class="fab fa-pinterest"></i></a>
+
+            </div>
+        </div>
+        <div class="foot">
+            <div id="logo">
+                <img src="logo.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="phonefooter">
+        <div class="feet1">
+            <div class="thumb">
+                Retail Client Services
+
+            </div>
+            <div class="foot">
+                <a href="#"> Joint Venture
+                </a>
+            </div>
+            <div class="foot">
+                <a href="#"> JV Partner
+                </a>
+            </div>
+            <div class="foot">
+                <a href="#"> Customized Order Process
+                </a>
+            </div>
+            <div class="thumb">
+                Wholesale Client Services
+
+            </div>
+            <div class="foot">
+                <a href="#"> Buyer Inquiry
+                </a>
+            </div>
+            <div class="foot">
+                <a href="#"> Private Label
+                </a>
+            </div>
+            <div class="foot">
+                <a href="#"> Co - Branding
+                </a>
+            </div>
+            <div class="thumb">
+                Media
+
+            </div>
+            <div class="foot">
+                <a href="#"> WBW -Blog
+                </a>
+            </div>
+            <div class="foot">
+                <a href="#"> Editorial
+                </a>
+            </div>
+            <div class="foot" id="last">
+                Affliliate Partnership
+            </div>
+        </div>
+
+        <div class="feet2">
+            <div class="social">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+
+            </div>
+            <div class="logo">
+                <img src="logo.png" alt="">
+            </div>
+        </div>
+
+
+    </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+    <script>
+        window.onload = function () {
+            const hamburger = document.querySelector(".hamburger");
+            const nav = document.querySelector(".navbar");
+            const womenswearbusiness = document.querySelector(".womenswearbusiness");
+
+            hamburger.addEventListener("click", () => {
+                hamburger.classList.toggle("active");
+                nav.classList.toggle("active");
+                womenswearbusiness.classList.toggle("active");
+            })
+        }
+
+        document.querySelectorAll(".li").forEach(n => n.
+            addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                nav.classList.remove("active");
+            }))
+    </script>
+    <script id="applicationScript">
+        var Application = function () {
+            this.prefix = "--web-";
+            var self = this;
+            self.goToTargetView = function (event) {
+                var button = event.currentTarget;
+                var buttonComputedStyles = getComputedStyle(button);
+                var actionTargetValue = buttonComputedStyles.getPropertyValue(self.prefix + "action-target").trim();
+                var targetType = buttonComputedStyles.getPropertyValue(self.prefix + "action-type").trim();
+
+                if (self.application == false || targetType == "page") {
+                    document.location.href = "./" + actionTargetValue;
+                    return;
+                }
+                event.stopImmediatePropagation();
+            }
+            self.getElement = function (id) {
+                id = id ? id.trim() : id;
+                var element = id ? document.getElementById(id) : null;
+
+                return element;
+            }
+        }
+
+        window.application = new Application();
+    </script>
+</body>
+
+</html>

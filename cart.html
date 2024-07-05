@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: none;
+        }
+
+
+        body {
+            overflow-x: hidden;
+
+        }
+
+        .header {
+            position: relative;
+            margin: 0.9vw;
+        }
+
+        #heading {
+            overflow: visible;
+            top: 0.1vw;
+            position: relative;
+            text-align: center;
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 2.86vw;
+            color: rgba(92, 92, 92, 1);
+
+        }
+
+        .textiles {
+            font-size: 5vw;
+            top: -0.1vw;
+            position: relative;
+        }
+
+        #Line_31 {
+            fill: transparent;
+            stroke: rgba(112, 112, 112, 1);
+            stroke-width: 2px;
+            stroke-linejoin: miter;
+            stroke-linecap: butt;
+            stroke-miterlimit: 4;
+            shape-rendering: auto;
+        }
+
+        .Line_31 {
+            overflow: visible;
+            position: absolute;
+            left: 20.5%;
+            top: 4.8vw;
+            width: 57.5vw;
+            height: 3px;
+            transform: matrix(1, 0, 0, 1, 0, 0);
+        }
+
+
+
+
+
+
+        .navbar {
+            text-align: center;
+            position: sticky;
+            margin-top: 2.3vw;
+        }
+
+        .navbar ul {
+            display: inline-flex;
+        }
+
+        .navbar ul li {
+            padding: 0 3.2vw;
+            list-style: none;
+        }
+
+        .navbar ul li a {
+            font-size: 1.6vw;
+            text-decoration: none;
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            color: rgba(92, 92, 92, 1);
+            border-bottom: 1.82px solid rgb(189 189 189);
+        }
+
+        .carti {
+            position: relative;
+            font-size: 4vw;
+            margin: 4vw 0;
+            text-align: center;
+        }
+
+        .my {
+            display: flex;
+            justify-content: space-around;
+            border-top: 2px solid;
+            border-bottom: 2px solid;
+            padding: 0.5vw 0;
+        }
+
+
+        .shopping h2 {
+            font-size: 2.5vw;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+        }
+
+        #shop {
+            position: relative;
+            background-color: rgb(190, 190, 190);
+            padding: 0.4vw 1vw;
+            border-radius: 3vw;
+        }
+
+        #shop h2:hover {
+            background-color: rgb(130, 202, 156);
+        }
+
+        #continue h2 {
+            position: relative;
+            background-color: rgb(130, 202, 156);
+            padding: 0.4vw 0.4vw;
+            border-radius: 3vw;
+        }
+
+        #continue h2:hover {
+            background-color: orange;
+        }
+
+        .pro {
+            display: flex;
+            justify-content: space-around;
+            margin: 4vw 0;
+        }
+
+        .duct h1 {
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 2vw;
+        }
+
+        .duct h2 {
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            margin: 2vw 0;
+            font-size: 1.5vw
+        }
+
+
+        .duct h4 {
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            margin: 2vw 0;
+            font-size: 2vw;
+        }
+
+
+
+        .price {
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            margin: 2vw 0;
+            font-size: 3vw;
+        }
+
+
+
+
+
+        .cart a {
+            position: absolute;
+            text-decoration: none;
+            font-size: 2vw;
+            right: 3%;
+            top: 1vw;
+            z-index: 1;
+            color: rgba(92, 92, 92, 1);
+        }
+
+        .details {
+            position: relative;
+            margin: 2vw 0vw 0 10vw;
+        }
+
+        .produce {
+            display: flex;
+            font-family: "Times New Roman";
+            font-style: normal;
+            font-weight: normal;
+            color: rgb(0, 0, 0);
+            position: relative;
+            font-size: 2.5vw;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .title {
+            width: 28%;
+            display: flex;
+            align-items: center;
+        }
+        .quantity {
+            width: 25%;
+            display: flex;
+            align-items: center;
+        }
+        .meter{
+            width: 24%;
+            display: flex;
+            align-items: center;
+        }
+
+        .total {
+            width: 23%;
+            display: flex;
+            align-items: center;
+        }
+
+        .product {
+            position: relative;
+            margin: 5vw 1vw;
+            display: flex;
+            width: 100%;
+
+        }
+
+        .prodet {
+            width: 28%;
+            display: flex;
+            align-items: center;
+        }
+
+      
+
+        .sizdet {
+            width: 25%;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .quandet {
+            width: 24%;
+            display: flex;
+            align-items: center;
+
+        }
+
+        #totaldet {
+            width: 23%;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .prodet span {
+            position: relative;
+            font-size: 1.8vw;
+            margin: 0 1vw;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+        }
+
+        .prodet img {
+            width: 5vw;
+        }
+
+        .fa-solid {
+            position: relative;
+            top: -2vw;
+            margin: 0 0.5vw;
+            font-size: 0.8vw;
+        }
+        #quantity{
+            font-size: 1.4vw;
+            border: 2px solid;      
+        padding: 0 0vw 0 3vw;
+        }
+        #sizerange{
+            font-size: 1.4vw;
+            border: 2px solid;      
+        padding: 0 0vw 0 3vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="home">
+        <div class="header">
+            <div class="cart">
+                <a href="cart.html">
+                    🛒<span>0</span>
+                </a>
+            </div>
+            <div id="heading">
+                <div class="textiles">HAND MADE - TEXTILES</div>
+                <svg class="Line_31" viewBox="0 0 2040 1">
+                    <path id="Line_31" d="M 0 0 L 2040 0">
+                    </path>
+                </svg>
+                <p>BEAUTIFUL BOUCLÉ</p>
+
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li class="grow"><a href="#">BOUCLÉ LIBRARY</a></li>
+                    <li class="grow"><a href="#">HOME GALLERY</a></li>
+                    <li class="grow"><a href="#">ARTISANAL STORY </a></li>
+                    <li class="grow"><a href="#">CLIENT PURCHASE</a></li>
+                    <li class="grow"><a href="#">WHITE LABEL</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="carti">
+            SHOPPING CART
+        </div>
+        <div class="my">
+            <div class="shopping" id="shop">
+                <h2> My Cart</h2>
+            </div>
+            <div class="shopping" id="continue">
+                <h2>Continue Shopping</h2>
+            </div>
+        </div>
+        <div class="details">
+            <div class="produce">
+                <h5 class="title">PRODUCT</h5>
+                <h5 class="quantity">QUANTITY</h5>
+
+                <h5 class="meter">SIZE</h5>
+
+                <h5 class="total">TOTAL</h5>
+            </div>
+            <div class="products">
+
+            </div>
+        </div>
+
+        <!--
+        <div class="total">
+            <div class="price">
+                TOTAL
+            </div>
+            <div class="price">
+                225$
+            </div>
+        </div>
+    -->
+        <script src="main.js"></script>
+</body>
+
+</html>

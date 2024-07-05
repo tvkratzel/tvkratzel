@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        .bg {
+
+            position: relative;
+            top: -1vw;
+            left: -1%;
+        }
+
+        .bg img {
+            position: relative;
+            width: 101%;
+            height: 80px;
+        }
+
+        label.logo {
+            float: left;
+            left: 5%;
+            position: relative;
+        }
+
+        nav {
+            position: relative;
+            top: -5rem;
+        }
+
+        nav ul {
+            float: right;
+            margin-right: 5%;
+        }
+
+        .list {
+            display: inline-block;
+            margin: 1vw 1vw;
+        }
+
+        .list a {
+            color: white;
+            font-size: 1.3vw;
+        }
+
+        #navigation {
+            display: flex;
+        }
+
+        a.active,
+        a:hover {
+            background: #ff4c4c;
+            transition: .5s;
+        }
+
+        .images {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            top: 3vw;
+            left: 10%;
+        }
+
+        .slider {
+
+            width: 25vw;
+
+
+        }
+
+        .slides-row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .slides {
+            flex-basis: 24%;
+            cursor: pointer;
+        }
+
+        #info {
+            position: relative;
+            left: 30%;
+        }
+
+        #info h3 {
+            position: relative;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            margin: 1vw 0;
+        }
+
+        #info p {
+            position: relative;
+            font-size: 3vw;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            margin: 1vw 0;
+        }
+
+        #info li {
+            position: relative;
+            width: 38vw;
+            list-style: disc;
+            font-size: 1.5vw;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+        }
+
+        #info a {
+            color: black;
+            background-color: #0ed10e;
+            position: relative;
+            border: 0.2vw solid black;
+            padding: 0.1vw 1vw;
+            font-size: 1.3vw;
+            top: 8vw;
+        }
+
+        #info a:hover {
+            background-color: green;
+        }
+
+        .quant {
+            position: absolute;
+            margin: 2vw 0;
+            color: black;
+            font-size: 1vw;
+        }
+
+        #size {
+            position: absolute;
+            margin: 5vw 0;
+            width: 10vw;
+        }
+
+        option {
+            color: black;
+        }
+
+        .slidesimg {
+            position: relative
+        }
+
+        .slidesimg img {
+            width: 25vw;
+            height: 25vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <div class="bg"><img src="pagepg.jpg" alt=""></div>
+
+        <nav>
+            <label class="logo"><img src="logo.png" alt=""></label>
+            <ul>
+                <li class="list"><a id="navigation" class="active" href="john.html">HOME</a></li>
+                <li class="list"><a id="navigation" href="#">ABOUT US</a></li>
+                <li class="list"><a id="navigation" href="#">EVENTS</a></li>
+                <li class="list"><a id="navigation" href="#">PAGE</a></li>
+                <li class="list"><a id="navigation" href="#">NEWS</a></li>
+                <li class="list"><a id="navigation" href="#">CONTACT US</a></li>
+
+            </ul>
+        </nav>
+    </div>
+    <div class="images">
+        <div class="row">
+            <div class="slider">
+                <div class="slidesimg">
+                    <img src="phonecover1.jpg" width="100%" id="productimg">
+                </div>
+                <div class="slides-row">
+                    <div class="slides">
+                        <img src="phonecover1.jpg" width="100%" class="smallimg">
+                    </div>
+                    <div class="slides">
+                        <img src="tshirt1a.jpg" width="100%" class="smallimg">
+                    </div>
+                    <div class="slides">
+                        <img src="tshirt1b.jpg" width="100%" class="smallimg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="info">
+            <h3>T-shirt</h3>
+            <p>Unisex Ultra Cotton Tee</p>
+            <li> 100% Cotton (fiber content may vary for different colors)</li>
+            <li> Medium fabric (6.0 oz/yd² (203 g/m²))</li>
+            <li> Classic fit</li>
+            <li> Tear-away label</li>
+            <li> Runs bigger than usual</li>
+            <input class="quant" type="number" value="" placeholder="Select Quantity">
+            <select name="size" id="size" aria-placeholder="select size">
+                <option value="small">SELECT SIZE</option>
+                <option value="small">SMALL</option>
+                <option value="small">MIDIUM</option>
+                <option value="small">BIG</optiom>
+            </select>
+            <a href="#">START DESIGNING</a>
+        </div>
+    </div>
+    <script>
+        var productimg = document.getElementById("productimg");
+        var smallimg = document.getElementsByClassName("smallimg");
+        smallimg[0].onclick = function () {
+            productimg.src = smallimg[0].src;
+        }
+        smallimg[1].onclick = function () {
+            productimg.src = smallimg[1].src;
+        }
+        smallimg[2].onclick = function () {
+            productimg.src = smallimg[2].src;
+        }
+        smallimg[3].onclick = function () {
+            productimg.src = smallimg[3].src;
+        }
+    </script>
+</body>
+
+</html>

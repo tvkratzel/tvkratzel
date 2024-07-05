@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        .bg {
+
+            position: relative;
+            top: -1vw;
+            left: -1%;
+        }
+
+        .bg img {
+            position: relative;
+            width: 101%;
+            height: 80px;
+        }
+
+        label.logo {
+            float: left;
+            left: 5%;
+            position: relative;
+        }
+
+        nav {
+            position: relative;
+            top: -5rem;
+        }
+
+        nav ul {
+            float: right;
+            margin-right: 5%;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 1vw 1vw;
+        }
+
+        nav ul li a {
+            color: white;
+            font-size: 1.3vw;
+        }
+
+        #navigation {
+            display: flex;
+        }
+
+        a.active,
+        a:hover {
+            background: #ff4c4c;
+            transition: .5s;
+        }
+
+        .products {
+            position: relative;
+
+        }
+
+        .pro {
+            font-size: 7.4vw;
+            text-align: center;
+            left: -5.5vw;
+            color: black;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            position: relative;
+        }
+
+        .product1 {
+            display: flex;
+            justify-content: space-evenly;
+            position: relative;
+            margin: 5vw 0;
+        }
+
+        .product2 {
+            display: flex;
+            justify-content: space-evenly;
+            position: relative;
+            top: 3vw;
+        }
+
+        .items {
+            text-align: center;
+            border: 0.1vw solid #bfaeae;
+            width: 16vw;
+            height: 23vw;
+            border-radius: 0.7vw;
+
+        }
+
+        .items img {
+            width: 15vw;
+            top: 0.4vw;
+            height: 15vw;
+            transition: 1s;
+            position: relative;
+
+        }
+
+        .items img:hover {
+            transform: scale(1.05);
+            z-index: 2;
+        }
+
+        .link {
+            color: black;
+            background-color: white;
+            position: relative;
+            border: 0.2vw solid black;
+            border-radius: 1vw;
+            padding: 0.1vw 1vw;
+            font-size: 1.3vw;
+            top: 2vw;
+        }
+
+        .items h2 {
+            font-size: 2vw;
+            top: 1vw;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            position: relative;
+            transition: 0.5s;
+        }
+        .items a:hover{
+            background-color: #ff1800;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <div class="bg"><img src="pagepg.jpg" alt=""></div>
+
+        <nav>
+            <label class="logo"><img src="logo.png" alt=""></label>
+            <ul>
+                <li><a id="navigation" class="active" href="john.html">HOME</a></li>
+                <li><a id="navigation" href="#">ABOUT US</a></li>
+                <li><a id="navigation" href="#">EVENTS</a></li>
+                <li><a id="navigation" href="#">PAGE</a></li>
+                <li><a id="navigation" href="#">NEWS</a></li>
+                <li><a id="navigation" href="#">CONTACT US</a></li>
+
+            </ul>
+        </nav>
+    </div>
+
+    <div class="products">
+        <div class="pro">
+            PRODUCTS
+        </div>
+
+        <div class="product1">
+            <div class="items">
+                <a href="tshirt1.html"><img onclick="application.goToTargetView(event)" id="#" src="tshirt1.jpg" alt=""></a>
+                <h2>White tshirt1</h2>
+                <a class="link" href="#">ADD TO CART</a>
+
+            </div>
+            <div class="items">
+                <a href="tshirt2.html"><img onclick="application.goToTargetView(event)" id="#" src="tshirt2.jpg" alt=""></a>
+                <h2>White tshirt2</h2>
+                <a class="link" href="#">ADD TO CART</a>
+
+            </div>
+            <div class="items">
+                <a href="hoodie1.html"> <img onclick="application.goToTargetView(event)" id="#" src="hoddie1.jpg" alt=""></a>
+                <h2>Hoodie1</h2>
+                <a class="link" href="#">ADD TO CART</a>
+
+            </div>
+            <div class="items">
+                <a href="hoodie2.html"><img onclick="application.goToTargetView(event)" id="#" src="hoddie2.jpg" alt=""></a>
+                <h2>Hoodie2</h2>
+                <a class="link" href="#">ADD TO CART</a>
+
+            </div>
+        </div>
+        <div class="product2">
+
+            <div class="items">
+                <a href="hat1.html"><img onclick="application.goToTargetView(event)" id="#" src="hat1.jpg" alt=""></a>
+                <h2>Hat1</h2>
+                <a class="link" href="#">ADD TO CART</a>
+
+            </div>
+            <div class="items">
+                <a href="hat2.html"><img onclick="application.goToTargetView(event)" id="#" src="hat2.jpg" alt=""></a>
+                <h2>Hat2</h2>
+                <a class="link" href="#">ADD TO CART</a>
+
+            </div>
+            <div class="items">
+                <a href="phone1.html"> <img onclick="application.goToTargetView(event)" id="#" src="phonecover1.jpg" alt=""></a>
+                <h2>phonecover1</h2>
+                <a class="link" href="#">ADD TO CART</a>
+
+            </div>
+            <div class="items">
+               <a href="phone2.html"> <img src="phonecover2.jpg" alt=""></a>
+                <h2>Phonecover2</h2>
+                <a class="link" href="#">ADD TO CART</a>
+            </div>
+        </div>
+    </div>
+    <script id="applicationScript">
+        var Application = function () {
+            this.prefix = "--web-";
+            var self = this;
+            self.goToTargetView = function (event) {
+                var button = event.currentTarget;
+                var buttonComputedStyles = getComputedStyle(button);
+                var actionTargetValue = buttonComputedStyles.getPropertyValue(self.prefix + "action-target").trim();
+                var targetType = buttonComputedStyles.getPropertyValue(self.prefix + "action-type").trim();
+
+                if (self.application == false || targetType == "page") {
+                    document.location.href = "./" + actionTargetValue;
+                    return;
+                }
+                event.stopImmediatePropagation();
+            }
+            self.getElement = function (id) {
+                id = id ? id.trim() : id;
+                var element = id ? document.getElementById(id) : null;
+
+                return element;
+            }
+        }
+
+        window.application = new Application();
+    </script>
+</body>
+
+</html>

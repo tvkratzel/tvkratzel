@@ -1,0 +1,41 @@
+         <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="size" oninput="getvalue()">
+    <div id="preview"></div>
+</body>
+<script>
+     function getvalue(){
+         let name = document.getElementById('sizerange').value
+         if (name <=25){
+         document.getElementById('preview').innerHTML = name * 47
+         }
+
+        else if (50<= name < 75){
+            document.getElementById('preview').innerHTML = name * 42
+        }
+        else if (75 < name <150){
+            document.getElementById('preview').innerHTML = name * 36.5
+        }
+        else if (150 < name < 300){
+            document.getElementById('preview').innerHTML = name * 30
+        }
+        else if (300 < name < 500){
+            document.getElementById('preview').innerHTML = name * 26
+        }
+        else{
+            document.getElementById('preview').innerHTML = "select valid options"
+        }
+
+
+
+     }
+</script>
+
+</html>

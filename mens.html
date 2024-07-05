@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        .bg {
+
+            position: relative;
+            top: -1vw;
+            left: -1%;
+        }
+
+        .bg img {
+            position: relative;
+            width: 101%;
+            height: 80px;
+        }
+
+        label.logo {
+            float: left;
+            left: 5%;
+            position: relative;
+        }
+
+        nav {
+            position: relative;
+            top: -5rem;
+        }
+
+        nav ul {
+            float: right;
+            margin-right: 5%;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 1.9vw 1vw;
+        }
+
+        nav ul li a {
+            color: white;
+            font-size: 1.3vw;
+        }
+        .drop{
+            display: none;
+        }
+        nav ul li:hover .drop{
+            position: absolute;
+            display: block;
+            
+        }
+        .drop ul{
+            display: block;
+            position: relative;
+            top: 0.5vw;
+            color: black;
+            background-image: url(down.jpeg);
+        }
+        .drop ul li{
+            position: relative;
+            margin: 0.5vw 0;
+        }
+
+
+        #navigation {
+            display: flex;
+        }
+
+        a.active,
+        a:hover {
+            background: #ff4c4c;
+            transition: .5s;
+        }
+
+        .products {
+            position: relative;
+top: 3vw;
+        }
+
+        .pro {
+            font-size: 7.4vw;
+            text-align: center;
+            left: 39.5%;
+            color: black;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            position: absolute;
+        }
+.clothes{
+    position: absolute;
+    top: 12vw;
+    left: 38.5%;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 5vw;
+
+}
+        .product1 {
+            display: flex;
+            position: absolute;
+            left: 10%;
+            gap: 5vw;
+            margin: 15vw 0;
+            top: 5vw;
+
+
+        }
+        .stickers{
+    position: absolute;
+    top: 47vw;
+    left: 38%;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 5vw;
+
+}
+
+        .product2 {
+            display: flex;
+            position: absolute;
+            left: 10%;
+            gap: 5vw;
+            margin: 25vw 0;
+            top: 31vw;
+        }
+        .banner{
+    position: absolute;
+    top: 28vw;
+    left: 37%;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 5vw;
+
+}
+
+        .product3 {
+            display: flex;
+            position: absolute;
+            gap: 5vw;
+            margin: 19vw 0;
+            top: 18vw;
+        }
+        .items {
+            text-align: center;
+            border: 0.1vw solid #bfaeae;
+            width: 16vw;
+            height: 23vw;
+            border-radius: 0.7vw;
+
+        }
+
+        .items img {
+            width: 15vw;
+            top: 0.4vw;
+            height: 15vw;
+            transition: 1s;
+            position: relative;
+
+        }
+
+        .items img:hover {
+            transform: scale(1.05);
+            z-index: 2;
+        }
+
+        .link {
+            color: black;
+            background-color: white;
+            position: relative;
+            border: 0.2vw solid black;
+            border-radius: 1vw;
+            padding: 0.1vw 1vw;
+            font-size: 1.3vw;
+            top: 2vw;
+        }
+
+        .items h2 {
+            font-size: 1.3vw;
+            top: 1vw;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .items a:hover {
+            background-color: #ff1800;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <div class="bg"><img src="pagepg.jpg" alt=""></div>
+
+        <nav>
+            <label class="logo"><img src="logo.png" alt=""></label>
+            <ul>
+                <li><a class="active" href="john.html">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="">CONTACT</a></li>
+                <li><a href="">SHOP &emsp13; ▾</a>
+                <div class="drop">
+                    <ul>
+                        <li><a href="mens.html">MENS</a></li>
+                        <li><a href="womens.html">WOMENS</a></li>
+                    </ul>
+                </div></li>
+                <li><a href="#">CONTACT</a></li>
+                <li><a href="#">SUPPORT</a></li>
+                <li><a href="#">COMMUNITY</a></li>
+                <li><a href="#">AFFILATES</a></li>
+
+            </ul>
+        </nav>
+    </div>
+
+    <div class="products">
+        <div class="pro">
+            MENS
+        </div>
+        <div class="clothes">CLOTHES</div>
+        <div class="product1">
+            <div class="items">
+                <a href="tshirt2.html"><img onclick="application.goToTargetView(event)" id="#" src="tshirt2.jpg"
+                        alt=""></a>
+                <h2>White Tshirts</h2>
+                <a class="link" href="#">ADD TO CART</a>
+
+            </div>
+            <div class="items">
+                <a href="tshirt2.html"><img onclick="application.goToTargetView(event)" id="#" src="jersey.jpg"
+                        alt=""></a>
+                <h2>Football Jerserys</h2>
+                <a class="link" href="#">ADD TO CART</a>
+
+            </div>
+            <div class="items">
+                <a href="tshirt2.html"> <img onclick="application.goToTargetView(event)" id="#" src="hoddie2.jpg"
+                        alt=""></a>
+                <h2>Hoodies</h2>
+                <a class="link" href="#">ADD TO CART</a>
+
+            </div>
+            <div class="items">
+                <a href="tshirt2.html"><img onclick="application.goToTargetView(event)" id="#" src="hat1.jpg"
+                        alt=""></a>
+                <h2>Hats</h2>
+                <a class="link" href="#">ADD TO CART</a>
+
+            </div>
+        </div>
+        <div class="stickers">
+            STICKERS
+        </div>
+        <div class="product2">
+
+            <div class="items">
+                <a href="hat1.html"><img onclick="application.goToTargetView(event)" id="#" src="sticker1.png" alt=""></a>
+                <h2>sticker1</h2>
+                <a class="link" href="#">ADD TO CART</a>
+
+            </div>
+            <div class="items">
+                <a href="hat2.html"><img onclick="application.goToTargetView(event)" id="#" src="sticker2.png" alt=""></a>
+                <h2>sticker2</h2>
+                <a class="link" href="#">ADD TO CART</a>
+
+            </div>
+            <div class="items">
+                <a href="phone1.html"> <img onclick="application.goToTargetView(event)" id="#" src="sticker3.png" alt=""></a>
+                <h2>sticker3</h2>
+                <a class="link" href="#">ADD TO CART</a>
+
+            </div>
+            <div class="items">
+                <a href="phone2.html"> <img src="sticker4.png" alt=""></a>
+                <h2>sticker4</h2>
+                <a class="link" href="#">ADD TO CART</a>
+            </div>
+            <div class="banner">
+                BANNERS
+            </div>
+            <div class="product3">
+    
+                <div class="items">
+                    <a href="hat1.html"><img onclick="application.goToTargetView(event)" id="#" src="banner1.png" alt=""></a>
+                    <h2>Banner1</h2>
+                    <a class="link" href="#">ADD TO CART</a>
+    
+                </div>
+                <div class="items">
+                    <a href="hat2.html"><img onclick="application.goToTargetView(event)" id="#" src="banner2.png" alt=""></a>
+                    <h2>Banner2</h2>
+                    <a class="link" href="#">ADD TO CART</a>
+    
+                </div>
+                <div class="items">
+                    <a href="phone1.html"> <img onclick="application.goToTargetView(event)" id="#" src="banner3.png"
+                            alt=""></a>
+                    <h2>Banner3</h2>
+                    <a class="link" href="#">ADD TO CART</a>
+    
+                </div>
+                <div class="items">
+                    <a href="phone2.html"> <img src="banner4.png" alt=""></a>
+                    <h2>Banner4</h2>
+                    <a class="link" href="#">ADD TO CART</a>
+                </div>
+        </div>
+    </div>
+    <script id="applicationScript">
+        var Application = function () {
+            this.prefix = "--web-";
+            var self = this;
+            self.goToTargetView = function (event) {
+                var button = event.currentTarget;
+                var buttonComputedStyles = getComputedStyle(button);
+                var actionTargetValue = buttonComputedStyles.getPropertyValue(self.prefix + "action-target").trim();
+                var targetType = buttonComputedStyles.getPropertyValue(self.prefix + "action-type").trim();
+
+                if (self.application == false || targetType == "page") {
+                    document.location.href = "./" + actionTargetValue;
+                    return;
+                }
+                event.stopImmediatePropagation();
+            }
+            self.getElement = function (id) {
+                id = id ? id.trim() : id;
+                var element = id ? document.getElementById(id) : null;
+
+                return element;
+            }
+        }
+
+        window.application = new Application();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,665 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    /* Hide scrollbars */
+}
+
+.bg {
+    position: relative;
+
+}
+
+.bg img {
+    position: relative;
+    width: 100%;
+}
+
+label.logo {
+    float: left;
+    left: 5%;
+    position: relative;
+}
+
+.logo img {
+    position: relative;
+    font-size: 13vw;
+}
+
+nav {
+    position: relative;
+    top: -53vw;
+}
+
+nav ul {
+    float: right;
+    margin-right: 5%;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 1vw 1vw;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 1.3vw;
+}
+.drop{
+    display: none;
+}
+nav ul li:hover .drop{
+    position: absolute;
+    display: block;
+    
+}
+.drop ul{
+    display: block;
+    position: relative;
+    top: 0.5vw;
+    color: black;
+    background-image: url(down.jpeg);
+}
+.drop ul li{
+    position: relative;
+    margin: 0.5vw 0;
+}
+
+a.active,
+a:hover {
+    background: #ff4c4c;
+    transition: .5s;
+}
+
+#firsttext {
+    position: relative;
+    top: -40vw;
+    color: white;
+}
+
+.country {
+    position: absolute;
+    font-size: 7vw;
+    left: 5%;
+
+}
+
+.but {
+    position: absolute;
+    left: 5%;
+    top: 18.5vw;
+    font-size: 1.35vw;
+}
+
+
+
+.contact-button {
+    text-decoration: none;
+    width: 100%;
+    max-width: 15vw;
+    height: 3vw;
+    display: block;
+    line-height: 3vw;
+    letter-spacing: 0.3vw;
+    position: relative;
+    text-align: center;
+    left: 5%;
+    color: #000000;
+    top: 25vw;
+
+}
+
+.contact-button div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+}
+
+.contact-button span.bg {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    left: -5px;
+    top: 0;
+    transition: all .3s ease-in-out;
+    background-color: #ffffff;
+    transform: skewX(-19deg);
+
+}
+
+.contact-button:hover span.bg {
+    width: 110%;
+}
+
+.contact-button span.base {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+
+}
+
+.contact-button span.text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+}
+
+.contact-button:hover span.text {
+    color: #1d1d1d;
+}
+
+.mid {
+    font-family: Times New Roman;
+    font-style: normal;
+    font-weight: normal;
+    position: relative;
+    font-size: 3.3vw;
+    margin: 4vw 0;
+    text-align: center;
+    color: #323232;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2vw 0;
+}
+
+.card1:hover,
+.card2:hover,
+.card3:hover {
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.card2 {
+    background: #e61937;
+    width: 22vw;
+    height: 22vw;
+    border-radius: 1vw;
+    transition: 1s;
+
+}
+
+.card1,
+.card3 {
+    border: 0.1vw solid black;
+    width: 22vw;
+    height: 22vw;
+    border-radius: 1vw;
+    transition: 1s;
+
+
+}
+
+.cardi {
+    background-color: #f5eeee;
+    height: 10vw;
+    margin-bottom: 2vw;
+    background-image: url(donate.jpg);
+    background-size: cover;
+    border-radius: 1vw 1vw 0 0;
+
+}
+
+.card2 a {
+    color: black;
+    display: block;
+    background-color: white;
+    text-align: center;
+    position: relative;
+    border: 0.2vw solid #fffdfd;
+    border-radius: 1vw;
+    padding: 0.1vw 0.5vw;
+    margin: 3vw 0;
+    left: 30%;
+    font-size: 1.3vw;
+    width: 8vw;
+}
+
+.card1 a,
+.card3 a {
+    color: black;
+    display: block;
+    background-color: white;
+    text-align: center;
+    position: relative;
+    border: 0.2vw solid black;
+    border-radius: 1vw;
+    padding: 0.1vw 0.5vw;
+    margin: 3vw 0;
+    font-size: 1.3vw;
+    width: 8vw;
+}
+
+.card1 a {
+    left: 30.5%;
+}
+
+.card3 a {
+    right: -30.5%;
+}
+
+.card1 h2,
+.card3 h2 {
+    font-size: 2.5vw;
+    text-align: center;
+    font-family: Times New Roman;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.card2 h2 {
+    font-size: 2.5vw;
+    text-align: center;
+    font-family: Times New Roman;
+    font-style: normal;
+    font-weight: normal;
+    color: white;
+    margin: 2vw 0;
+}
+
+.card2 p {
+    font-size: 1.5vw;
+    color: white;
+    text-align: center;
+    font-family: Times New Roman;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.explain {
+    color: rgb(68, 68, 68);
+    text-align: center;
+    font-size: 1.5vw;
+    margin: 5vw 0px;
+    position: relative;
+}
+
+.wp {
+    position: relative;
+
+}
+
+.wp img {
+    position: relative;
+    width: 100%;
+}
+
+#secondttext {
+    position: relative;
+    color: white;
+    margin: -33vw 0;
+}
+
+.chnda {
+    position: absolute;
+    font-size: 4.5vw;
+    right: 12%;
+    font-family: Times New Roman;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.pen {
+    position: absolute;
+    right: 4.6%;
+    margin-top: 14vw;
+    font-size: 1.35vw;
+    font-family: Times New Roman;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.contact-botton {
+    text-decoration: none;
+    width: 100%;
+    max-width: 15vw;
+    height: 3vw;
+    display: block;
+    line-height: 3vw;
+    letter-spacing: 0.3vw;
+    position: absolute;
+    text-align: center;
+    right: 30.9%;
+    color: #000000;
+    top: 27vw;
+}
+
+
+
+.contact-botton div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+}
+
+.contact-botton span.bg {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    left: -5px;
+    top: 0;
+    transition: all .3s ease-in-out;
+    background-color: #ffffff;
+    transform: skewX(-19deg);
+
+}
+
+.contact-botton:hover span.bg {
+    width: 110%;
+}
+
+.contact-botton span.base {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+
+}
+
+.contact-botton span.text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+}
+
+.contact-botton:hover span.text {
+    color: #1d1d1d;
+}
+
+.option {
+
+    display: flex;
+    justify-content: center;
+    position: relative;
+    column-gap: 3vw;
+    top: 21vw;
+    float: right;
+    right: 18.6%;
+
+}
+
+#dollar {
+    font-size: 1.5vw;
+    border: 0.1vw solid #814040;
+
+}
+
+.again {
+    font-family: Times New Roman;
+    font-style: normal;
+    font-weight: normal;
+    position: relative;
+    font-size: 3.3vw;
+    top: 35vw;
+    margin: 5vw 0;
+    text-align: center;
+    color: #323232;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6vw 4vw;
+    left: 12%;
+    margin: 38vw 0px;
+    position: absolute;
+}
+
+.card {
+    color: black;
+    background: white;
+    width: 22vw;
+    height: 25vw;
+}
+
+.png {
+    height: 10vw;
+    margin-bottom: 1.5vw;
+    background-size: 50%;
+}
+
+.png1 {
+    background-image: url(1.png);
+}
+
+.png2 {
+    background-image: url(2.png);
+}
+
+.png3 {
+    background-image: url(3.png);
+}
+
+.png4 {
+    background-image: url(4.png);
+}
+
+.png5 {
+    background-image: url(5.png);
+}
+
+.png6 {
+    background-image: url(6.png);
+}
+
+.card h2 {
+    font-size: 2.5vw;
+    text-align: center;
+    font-family: Times New Roman;
+    font-style: normal;
+    font-weight: normal;
+    color: black;
+    margin: 2vw 0;
+}
+
+.card p {
+    font-size: 1.5vw;
+    color: #444;
+    text-align: center;
+    font-family: Times New Roman;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.card a {
+    color: black;
+    display: block;
+    background-color: white;
+    text-align: center;
+    border: 0.2vw solid #fffdfd;
+    border-radius: 1vw;
+    padding: 0.1vw 0.5vw;
+    margin: 1vw 0;
+    font-size: 1.3vw;
+    font-family: Times New Roman;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.showoff {
+    width: 100%;
+    position: relative;
+    top: 105vw;
+}
+
+.showoff img {
+    width: 98.7vw;
+}
+
+.notagain {
+    font-family: Times New Roman;
+    font-style: normal;
+    font-weight: normal;
+    position: relative;
+    font-size: 3.3vw;
+    top: 100vw;
+    margin: 12vw 0;
+    text-align: center;
+    color: #323232;
+}
+
+.nare {
+    width: 80%;
+    position: absolute;
+    margin: 95vw 0;
+    left: 9%;
+}
+
+.nare img {
+    width: 80vw;
+}
+
+.voldemort {
+    position: relative;
+    top: 135vw;
+}
+
+.vol {
+    position: relative;
+
+}
+
+.vol img {
+    position: relative;
+    width: 100%;
+}
+
+.uncle img {
+    position: relative;
+    float: right;
+    width: 40vw;
+    top: -48vw;
+}
+
+#thirdtext {
+    position: relative;
+    top: -40vw;
+    color: white;
+}
+
+.fraud {
+    position: absolute;
+    font-size: 5vw;
+    left: 5%;
+    font-family: Times New Roman;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.pradeep {
+    position: absolute;
+    left: 5%;
+    top: 16vw;
+    font-size: 1.3vw;
+    font-family: Times New Roman;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.notagainagain {
+    font-family: Times New Roman;
+    font-style: normal;
+    font-weight: normal;
+    position: absolute;
+    left: 27%;
+    font-size: 3.3vw;
+    top: 358vw;
+    margin: 30vw 0;
+    text-align: center;
+    color: #323232;
+}
+
+.comment {
+    width: 80%;
+    position: absolute;
+    margin: 160vw 0;
+    left: 10%;
+
+}
+
+.commeny img {
+    width: 80vw;
+}
+
+
+.subscribe {
+    width: 100%;
+    position: relative;
+    top: 140vw;
+}
+
+.subscribe img {
+    width: 100vw;
+}
+
+.email h2 {
+    position: relative;
+    font-family: Times New Roman;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    font-size: 3.5vw;
+    top: 113vw;
+    color: white;
+}
+
+.gmail {
+    top: 120vw;
+    position: relative;
+    justify-content: center;
+    display: flex;
+}
+
+#emailme {
+    background: none;
+    border: 1px solid white;
+    outline: none;
+    overflow: visible;
+    width: 400px;
+    white-space: nowrap;
+    font-family: "Times New Roman";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.5vw;
+    color: rgb(0, 0, 0);
+}
+
+#letter {
+    color: white;
+    font-size: 1.5vw;
+    height: 4vw;
+    background-color: red;
+    border: 1px solid white;
+    width: 12vw;
+    cursor: pointer;
+    transition: 1s;
+}
+
+#letter:hover {
+    background-color: black;
+}

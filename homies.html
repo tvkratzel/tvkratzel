@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: none;
+        }
+
+
+        body {
+            overflow-x: hidden;
+
+        }
+
+        .heading {
+            position: relative;
+            top: 0.4vw;
+        }
+
+        .top {
+            position: relative;
+            overflow: visible;
+            white-space: nowrap;
+            text-align: center;
+            font-family: "Times New Roman";
+            font-style: normal;
+            font-weight: bold;
+            color: black;
+            font-size: 2.2vw;
+        }
+
+        .navbar {
+            text-align: center;
+            position: relative;
+            margin: 1vw 0;
+        }
+
+        .navbar ul {
+            display: inline-flex;
+        }
+
+        .navbar ul li {
+            list-style: none;
+            padding: 0 0.9vw;
+        }
+
+        .navbar ul li a {
+            font-family: "Times New Roman";
+            font-style: normal;
+            font-weight: bold;
+            color: rgb(75, 75, 75);
+            text-decoration: none;
+            font-size: 1.1vw;
+        }
+
+        .abot {
+            position: relative;
+        }
+
+        .abot img {
+            position: absolute;
+            width: 100%;
+            height: 33.8vw;
+        }
+
+        .txt {
+            position: relative;
+            top: 10vw;
+        }
+
+        .txt h2 {
+            position: relative;
+            font-family: "Times New Roman";
+            font-style: normal;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            font-size: 3.1vw;
+        }
+
+        .txt h3 {
+            position: relative;
+            font-family: "Times New Roman";
+            font-style: normal;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            font-size: 1.5vw;
+            margin-bottom: 1vw;
+        }
+
+        .txt h4 {
+            position: relative;
+            font-family: "Times New Roman";
+            font-style: normal;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            font-size: 1.45vw;
+            margin-bottom: 0.5vw;
+        }
+
+        .txt h6 {
+            position: relative;
+            font-family: "Times New Roman";
+            font-style: normal;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            font-size: 1vw;
+        }
+
+        #slider {
+            position: relative;
+            top: 27vw;
+        }
+
+        #slider figure {
+            position: relative;
+            width: 501%;
+            margin: 0;
+            left: 0;
+            animation: 8s slider infinite linear;
+        }
+
+        #slider figure img {
+            width: 20%;
+            float: left;
+        }
+
+        @keyframes slider {
+            0% {
+                left: 0;
+            }
+
+            40% {
+                left: 0;
+            }
+
+            45% {
+                left: -100%;
+            }
+
+            95% {
+                left: -100%;
+            }
+
+            100% {
+                left: -200%;
+            }
+        }
+
+        .bot {
+            position: relative;
+            top: 30.45vw;
+            display: flex;
+            float: left;
+            gap: 13vw;
+            left: 29%;
+        }
+
+        .tom {
+            position: relative;
+
+        }
+
+        .tom img {
+            width: 16.4vw;
+        }
+
+        .tom h1 {
+            text-align: center;
+            font-family: "Times New Roman";
+            font-style: normal;
+            font-weight: normal;
+            color: rgb(255, 255, 255);
+            text-decoration: underline;
+            font-size: 1.1vw;
+            margin-bottom: 0.4vw;
+            margin-top: 0.4vw;
+        }
+
+        .first {
+            text-align: center;
+            font-family: "Times New Roman";
+            font-style: normal;
+            font-weight: normal;
+            color: rgb(255, 255, 255);
+            font-size: 0.8vw;
+            margin-bottom: 0.4vw;
+        }
+
+        .second {
+            text-align: center;
+            font-family: "Times New Roman";
+            font-style: normal;
+            font-weight: normal;
+            color: rgb(255, 255, 255);
+            font-size: 0.7vw;
+            margin-bottom: 0.4vw;
+        }
+
+        .third {
+            text-align: center;
+            font-family: "Times New Roman";
+            font-style: normal;
+            font-weight: normal;
+            color: rgb(255, 255, 255);
+            font-size: 0.7vw;
+        }
+
+        #link{
+            text-align: center;
+            font-family: "Times New Roman";
+            font-style: normal;
+            font-weight: normal;
+            --web-animation: fadein 0.30000001192092896s ease-out;
+            --web-action-type: page;
+            --web-action-target: https://www.pnrao.com/;
+            cursor: pointer;
+            color: #7272ed;
+        }
+
+        .bg {
+            position: relative;
+            top: 50vw;
+            height: 11vw;
+            width: 100%;
+            z-index: -1;
+            background-image: url(bgbgbg.jpg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heading">
+        <div class="top">
+            P N RAO CLOTHING CO.
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li class="grow"><a href="#">CORPORATE</a></li>
+                <li class="grow"><a href="#">SARTORIAL</a></li>
+                <li class="grow"><a href="#">PRODUCTION</a></li>
+                <li class="grow"><a href="#">SUITINGS</a></li>
+                <li class="grow"><a href="#">PRICING</a></li>
+                <li class="grow"><a href="#">CONTACT</a></li>
+
+
+            </ul>
+        </nav>
+    </div>
+    <div class="abot">
+        <img src="fore.png" alt="">
+        <div class="txt">
+            <h2>P N RAO CLOTHING COMPANY</h2>
+            <h3>FINE SUITS MANUFACTURING</h3>
+            <h4>Fine Clothing Manufacturing for the past 100 Years(Bangelore - India)</h4>
+            <h6>Manufacturing Is Dedicated To Your Specific Private Labelling Requirements <br> Low Minimums /
+                Finest Quailty / Expedient Turn Around</h6>
+        </div>
+    </div>
+
+    <div id="slider">
+        <figure>
+            <img src="slide1.jpg">
+            <img src="slide2.jpg">
+            <img src="slide1.jpg">
+        </figure>
+    </div>
+    <div class="bot">
+        <div class="tom">
+            <h1> CONTACT US </h1>
+            <div class="first"> For a one - on - one Consultation please contact us <br>
+                directly to schedule a video conference.</div>
+            <div class="second"> P N RAO <br>
+                Office No. 51, <br>
+                Spring Dale, Residency Road 1st Cross, <br>
+                Residency Road, Ashok Nagar, Bengaluru, <br>
+                Karnataka 560025, India.</div>
+            <div class="third"> Contact Number : +91 9980803612</div>
+            <div onclick="application.goToTargetView(event)" id="link">
+               www.pnrao.com
+            </div>
+        </div>
+        <div class="tom">
+            <img src="bottom.png" alt="">
+        </div>
+    </div>
+    <div class="bg">
+    </div>
+    <script id="applicationScript">
+        var Application = function () {
+            this.prefix = "--web-";
+            var self = this;
+            self.goToTargetView = function (event) {
+                var button = event.currentTarget;
+                var buttonComputedStyles = getComputedStyle(button);
+                var actionTargetValue = buttonComputedStyles.getPropertyValue(self.prefix + "action-target").trim();
+                var targetType = buttonComputedStyles.getPropertyValue(self.prefix + "action-type").trim();
+
+                if (self.application == false || targetType == "page") {
+                    document.location.href = "./" + actionTargetValue;
+                    return;
+                }
+                event.stopImmediatePropagation();
+            }
+            self.getElement = function (id) {
+                id = id ? id.trim() : id;
+                var element = id ? document.getElementById(id) : null;
+
+                return element;
+            }
+        }
+
+        window.application = new Application();
+    </script>
+</body>
+
+</html>

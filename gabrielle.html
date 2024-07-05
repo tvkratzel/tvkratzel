@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  
+    .middle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        overflow: hidden
+    }
+
+    .navigation {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translate(-50%);
+        display: flex;
+    }
+
+    .bar {
+        width: 50px;
+        height: 10px;
+        border: 2px solid #fff;
+        margin: 5px;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+
+    .bar:hover {
+        background: #fff;
+    }
+
+    input[name="r"] {
+        position: absolute;
+        visibility: hidden;
+    }
+
+    .slides {
+        width: 200%;
+        height: 100%;
+        display: flex;
+    }
+
+    .slide {
+        width: 50%;
+        transition: 0.6s;
+    }
+
+   
+    .slide img{
+        object-fit: contain;
+    user-select: text;
+    top: 0px !important;
+    right: 0px !important;
+    bottom: 0px !important;
+    left: 0px !important;
+    box-sizing: border-box !important;
+    min-width: 0px !important;
+    max-width: none !important;
+    min-height: 0px !important;
+    max-height: none !important;
+    width: 100% !important;
+    height: 100% !important;
+    transform: none !important;
+    margin: 0px !important;
+    background: black;
+    }
+
+    #r1:checked~.s1 {
+        margin-left: 0;
+    }
+
+    #r2:checked~.s1 {
+        margin-left: -50%;
+    }
+</style>
+
+<body>
+    <div class="slidershow middle">
+        <div class="slides">
+            <input type="radio" name="r" id="r1" checked>
+            <input type="radio" name="r" id="r2">
+
+            <div class="slide s1">
+                <img class="otis" src="NAV3.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img class="maeve" src="NAV2.jpg" alt="">
+            </div>
+        </div>
+        <div class="navigation">
+            <label for="r1" class="bar"></label>
+            <label for="r2" class="bar"></label>
+
+        </div>
+    </div>
+</body>
+
+</html>

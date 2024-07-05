@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border: none;
+    }
+
+
+    body {
+        overflow-x: hidden;
+
+    }
+
+    .header {
+        position: relative;
+        margin: 0.9vw;
+    }
+
+    #heading {
+        overflow: visible;
+        top: 0.1vw;
+        position: relative;
+        text-align: center;
+        white-space: nowrap;
+        font-family: Times New Roman;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 2.86vw;
+        color: rgba(92, 92, 92, 1);
+
+    }
+
+    .textiles {
+        font-size: 5vw;
+        top: -0.1vw;
+        position: relative;
+    }
+
+    #Line_31 {
+        fill: transparent;
+        stroke: rgba(112, 112, 112, 1);
+        stroke-width: 2px;
+        stroke-linejoin: miter;
+        stroke-linecap: butt;
+        stroke-miterlimit: 4;
+        shape-rendering: auto;
+    }
+
+    .Line_31 {
+        overflow: visible;
+        position: absolute;
+        left: 20.5%;
+        top: 4.8vw;
+        width: 57.5vw;
+        height: 3px;
+        transform: matrix(1, 0, 0, 1, 0, 0);
+    }
+
+
+    .cart a {
+        position: absolute;
+        text-decoration: none;
+        font-size: 2vw;
+        right: 3%;
+        top: 1vw;
+        z-index: 1;
+        color: rgba(92, 92, 92, 1);
+    }
+
+
+
+    .navbar {
+        text-align: center;
+        position: sticky;
+        margin-top: 2.3vw;
+    }
+
+    .navbar ul {
+        display: inline-flex;
+    }
+
+    .navbar ul li {
+        padding: 0 3.2vw;
+        list-style: none;
+    }
+
+    .navbar ul li a {
+        font-size: 1.6vw;
+        text-decoration: none;
+        white-space: nowrap;
+        font-family: Times New Roman;
+        font-style: normal;
+        font-weight: normal;
+        color: rgba(92, 92, 92, 1);
+        border-bottom: 1.82px solid rgb(189 189 189);
+    }
+
+    .product {
+        display: flex;
+        position: relative;
+        justify-content: space-around;
+        margin: 3vw 0;
+    }
+
+    .image img {
+        width: 31.5vw;
+    }
+
+    .info {
+        position: relative;
+    }
+
+    .info h1 {
+        position: relative;
+        text-align: left;
+        font-family: "Times New Roman";
+        font-style: normal;
+        font-weight: normal;
+        color: #484545;
+        font-size: 2.3vw;
+        margin: 1vw 0 2vw 0;
+    }
+
+    .info h2 {
+        position: relative;
+        text-align: left;
+        font-family: "Times New Roman";
+        font-style: normal;
+        font-weight: normal;
+        color: rgb(112, 112, 112);
+        font-size: 1.6vw;
+        line-height: 2vw;
+        margin: 3vw 0 2vw 0;
+    }
+
+    .info h4 {
+        position: relative;
+        display: flex;
+        gap: 5vw;
+    }
+
+    .addcart {
+        position: relative;
+        background-color: red;
+        border-radius: 4vw;
+        padding: 0.5vw 1vw;
+        margin: 2vw 0;
+    }
+
+    .addcart a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .check {
+        position: relative;
+        margin: 0 0 2vw;
+        cursor: pointer;
+        color: black;
+        background-color: cornflowerblue;
+        padding: 0.5vw;
+        border-radius: 1vw;
+    }
+    #mili{
+        position: relative;
+    margin: 0 0 2vw;
+    cursor: pointer;
+    color: black;
+    background-color: #cfd7e5;
+    padding: 0.5vw;
+    border-radius: 1vw;
+    }
+
+    #price {
+        color: red;
+        position: relative;
+        left: 0;
+        display: none;
+    }
+</style>
+
+<body>
+    <div class="home">
+        <div class="header">
+            <div class="cart">
+                <a href="cart.html">
+                    🛒<span></span>
+                </a>
+            </div>
+
+            <div id="heading">
+                <div class="textiles">HAND MADE - TEXTILES </div>
+
+                <svg class="Line_31" viewBox="0 0 2040 1">
+                    <path id="Line_31" d="M 0 0 L 2040 0">
+                    </path>
+                </svg>
+                <p>BEAUTIFUL BOUCLÉ</p>
+
+            </div>
+
+            <nav class="navbar">
+                <ul>
+                    <li class="grow"><a href="#">BOUCLÉ LIBRARY</a></li>
+                    <li class="grow"><a href="#">HOME GALLERY</a></li>
+                    <li class="grow"><a href="#">ARTISANAL STORY </a></li>
+                    <li class="grow"><a href="#">CLIENT PURCHASE</a></li>
+                    <li class="grow"><a href="#">WHITE LABEL</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="product">
+            <div class="image">
+                <img src="MORNINGSKYFC.jpg" alt="">
+            </div>
+            <div class="info">
+                <h2>NAME - ARCTIC <br>
+                    GSM - 365 <br>
+                    WIDTH - 54" <br>
+                    COMPOSITION - 40% COTTON X 40% VISCOSE X 20% ACRYLIC. <br>
+                    COLOR - SHADES OF WHITE</h2>
+                <h4><button class="check" onclick="myFunction()">Check Prices Here</button>
+                    <div id="price">
+                        <div class="centi">
+                            <select name="" id="mili">
+                                <option value="">SELECT SIZE</option>
+                                <option value="">0-25m = 47$/meter</option>
+                                <option value="">25-75m = 42$/meter</option>
+                                <option value="">75-150m = 36.5$/meter</option>
+                                <option value="">150-300m = 30$/meter</option>
+                                <option value="">300-500m = 26$/meter</option>
+
+
+                            </select>
+                        </div>
+                </h4>
+                <h3> <a class="addcart" href="" style="text-decoration: none; color:black;">
+                        ADD TO CART
+                    </a></h3>
+
+            </div>
+        </div>
+        <script src="main.js"></script>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("price");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+            }
+        </script>
+
+</body>
+
+</html>

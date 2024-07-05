@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morning Sky</title>
+    <style>
+        #image {
+            object-fit: contain;
+            user-select: text;
+            position: fixed !important;
+            top: 0px !important;
+            right: 0px !important;
+            bottom: 0px !important;
+            left: 0px !important;
+            box-sizing: border-box !important;
+            min-width: 0px !important;
+            max-width: none !important;
+            min-height: 0px !important;
+            max-height: none !important;
+            width: 100% !important;
+            height: 100% !important;
+            transform: none !important;
+            margin: 0px !important;
+            background: black;
+        }
+
+        .cart a {
+            position: absolute;
+            text-decoration: none;
+            font-size: 2vw;
+            right: 3%;
+            top: 1vw;
+            z-index: 1;
+            color: rgba(92, 92, 92, 1);
+        }
+
+        .carts {
+            position: absolute;
+            color: white;
+            right: 0;
+            margin: 20vw 5vw;
+        }
+
+        .txt {
+            position: relative;
+        }
+
+        .addcart {
+            position: relative;
+            background-color: red;
+            border-radius: 4vw;
+            padding: 0.5vw 1vw;
+            margin: 2vw 0;
+        }
+
+        .addcart a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .check {
+            position: relative;
+            margin: 3vw 0;
+            cursor: pointer;
+        }
+
+        #price {
+            color: red;
+            position: relative;
+            left: 0;
+            display: none;
+        }
+
+        #amount {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cart">
+        <a href="cart.html">
+            🛒<span>0</span>
+        </a>
+    </div>
+
+    <img id="image" src="MORNINGSKYFC.jpg">
+    <div class="carts">
+
+        <div>
+            <a class="addcart" href="" style="text-decoration: none; color:black;">
+                ADD TO CART
+            </a>
+        </div>
+        <button class="check" onclick="myFunction()">Check Prices Here</button>
+        <div id="price">
+            <div class="centi">
+                <select name="" id="mili">
+                    <option value="">SELECT SIZE</option>
+                    <option value="">0-25m = 47$/meter</option>
+                    <option value="">25-75m = 42$/meter</option>
+                    <option value="">75-150m = 36.5$/meter</option>
+                    <option value="">150-300m = 30$/meter</option>
+                    <option value="">300-500m = 26$/meter</option>
+
+
+                </select>
+            </div>
+            <div id="amount">
+
+            </div>
+        </div>
+
+    </div>
+    <script src="main.js"></script>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("price");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+
+</body>

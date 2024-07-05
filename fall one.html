@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fall One</title>
+    <style>
+    #image{
+    object-fit: contain;
+    user-select: text;
+    position: fixed !important;
+    top: 0px !important;
+    right: 0px !important;
+    bottom: 0px !important;
+    left: 0px !important;
+    box-sizing: border-box !important;
+    min-width: 0px !important;
+    max-width: none !important;
+    min-height: 0px !important;
+    max-height: none !important;
+    width: 100% !important;
+    height: 100% !important;
+    transform: none !important;
+    margin: 0px !important;
+    background: black;
+}
+.cart a {
+            position: absolute;
+            text-decoration: none;
+            font-size: 2vw;
+            right: 3%;
+            top: 1vw;
+            z-index: 1;
+            color: rgba(92, 92, 92, 1);
+        }
+
+        .carts {
+            position: absolute;
+            color: white;
+            right: 0;
+            margin: 20vw 5vw;
+        }
+
+        .txt {
+            position: relative;
+        }
+
+        .addcart {
+            position: relative;
+            background-color: red;
+            border-radius: 4vw;
+            padding: 0.5vw 1vw;
+            margin: 2vw 0;
+        }
+
+        .addcart a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cart">
+        <a href="cart.html">
+            🛒<span>0</span>
+        </a>
+    </div>
+
+<img id="image" src="FALLONEFC.jpg">
+<div class="carts">
+    
+    <div>
+        <a class="addcart" href="" style="text-decoration: none; color:black;">
+            ADD TO CART
+        </a>
+    </div>
+
+</div>
+
+
+
+<script>
+    let carts = document.querySelectorAll('.addcart');
+let products = [
+    {
+        name: 'FALL ONE',
+        tag: 'FALLONEFC',
+        inCart: 0
+    }
+]
+
+for (let i = 0; i < carts.length; i++) {
+    carts[i].addEventListener('click', () => {
+        event.preventDefault();
+
+        cartNumbers(products[i]);
+    })
+}
+
+function onLoadCartNumbers() {
+    let productNumbers = localStorage.getItem('cartNumbers');
+
+    if (productNumbers) {
+        document.querySelector('.cart span').textContent = productNumbers;
+    }
+}
+
+function cartNumbers(product) {
+    let productNumbers = localStorage.getItem('cartNumbers');
+
+    productNumbers = parseInt(productNumbers);
+
+    if (productNumbers) {
+        localStorage.setItem('cartNumbers', productNumbers + 1);
+        document.querySelector('.cart span').textContent = productNumbers + 1;
+
+    } else {
+        localStorage.setItem('cartNumbers', 1);
+        document.querySelector('.cart span').textContent = 1;
+    }
+    setItems(product);
+}
+function setItems(product) {
+    let cartItems = localStorage.getItem('productsInCart');
+    cartItems = JSON.parse(cartItems);
+
+    if (cartItems != null) {
+
+        if (cartItems[product.tag] == undefined) {
+            cartItems = {
+                ...cartItems,
+                [product.tag]: product
+            }
+        }
+        cartItems[product.tag].inCart += 1;
+    } else {
+        product.inCart = 1;
+        cartItems = {
+            [product.tag]: product
+        }
+
+    }
+    localStorage.setItem("productsInCart", JSON.stringify
+        (cartItems));
+}
+
+function displayCart() {
+    let cartItems = localStorage.getItem("productsInCart");
+    cartItems = JSON.parse(cartItems);
+    let productContainer = document.querySelector
+        (".products");
+
+    console.log(cartItems);
+
+    if (cartItems && productContainer) {
+        productContainer.innerHTML = '';
+        Object.values(cartItems).map(item => {
+            productContainer.innerHTML += `
+         <div class="product">
+             <div class="prodet">
+                 <i class="fa-solid fa-rectangle-xmark"></i>
+                 <img src="${item.tag}.jpg">
+                 <span>${item.name}</span>
+             </div>
+             <div class="quandet">
+             <input type="number" id="quantity" name="quantity" value="1" min="1" max="50">
+          </div>
+             
+             <div class="sizdet">
+                <input type="number" id="quantity" name="quantity" value="1" min="1" max="500">
+             </div>
+             
+             <div class="totdet">
+             <p> 100$ </p>
+             </div>
+         </div>
+    `
+
+        });
+    }
+
+}
+onLoadCartNumbers();
+displayCart();
+</script>
+</body>
+</body>
+

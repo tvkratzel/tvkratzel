@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: none;
+        }
+
+
+        body {
+            overflow-x: hidden;
+
+        }
+
+        .header {
+            position: relative;
+            margin: 0.9vw;
+        }
+
+        #heading {
+            overflow: visible;
+            top: 0.1vw;
+            position: relative;
+            text-align: center;
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 2.86vw;
+            color: rgba(92, 92, 92, 1);
+
+        }
+
+        .textiles {
+            font-size: 5vw;
+            top: -0.1vw;
+            position: relative;
+        }
+
+        #Line_31 {
+            fill: transparent;
+            stroke: rgba(112, 112, 112, 1);
+            stroke-width: 2px;
+            stroke-linejoin: miter;
+            stroke-linecap: butt;
+            stroke-miterlimit: 4;
+            shape-rendering: auto;
+        }
+
+        .Line_31 {
+            overflow: visible;
+            position: absolute;
+            left: 20.5%;
+            top: 4.8vw;
+            width: 57.5vw;
+            height: 3px;
+            transform: matrix(1, 0, 0, 1, 0, 0);
+        }
+
+
+
+
+
+
+        .navbar {
+            text-align: center;
+            position: sticky;
+            margin-top: 2.3vw;
+        }
+
+        .navbar ul {
+            display: inline-flex;
+        }
+
+        .navbar ul li {
+            padding: 0 3.2vw;
+            list-style: none;
+        }
+
+        .navbar ul li a {
+            font-size: 1.6vw;
+            text-decoration: none;
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            color: rgba(92, 92, 92, 1);
+            border-bottom: 1.82px solid rgb(189 189 189);
+        }
+
+        .collection {
+            overflow: visible;
+            white-space: nowrap;
+            position: relative;
+            margin: 9vw;
+            text-align: center;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 3.6vw;
+            color: rgba(83, 83, 83, 1);
+            top: -2vw;
+        }
+
+        #Line_34 {
+            fill: transparent;
+            stroke: rgba(107, 107, 107, 1);
+            stroke-width: 4px;
+            stroke-linejoin: miter;
+            stroke-linecap: butt;
+            stroke-miterlimit: 4;
+            shape-rendering: auto;
+        }
+
+        .Line_34 {
+            overflow: visible;
+            position: absolute;
+            width: 12.6vw;
+            margin: -11.9vw 0;
+            left: 43.6%;
+            height: 1vw;
+            transform: matrix(1, 0, 0, 1, 0, 0);
+        }
+
+
+
+
+        .wrapper-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            top: -6.5vw;
+            position: relative;
+            grid-row-gap: 5vw;
+        }
+
+        .grid {
+            text-align: center;
+        }
+
+        .grid img {
+            width: 18vw;
+            height: 18vw;
+
+        }
+        .color {
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1.5vw;
+            color: rgba(0, 0, 0, 1);
+        }
+
+        .footer {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            background: rgb(52 47 47);
+            position: relative;
+
+
+        }
+
+        .thumb {
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            padding: 0px 8.1vw 0 4.7vw;
+            margin-top: 0.5vw;
+            font-size: 1.5vw;
+            color: rgba(255, 255, 255, 1);
+        }
+
+        .foot {
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            padding: 0 4.4vw;
+            font-size: 1.2vw;
+            left: -5%;
+            text-align: center;
+            margin-top: 0.2vw;
+            color: rgba(255, 255, 255, 1);
+            position: relative;
+        }
+
+        .social {
+            margin-top: 0.5vw;
+            margin-bottom: 0.2vw;
+            position: relative;
+            left: 2%;
+        }
+
+        .social a {
+            color: rgba(255, 255, 255, 1);
+            padding: 0 1.3vw 0 0vw;
+        }
+
+        .whatsapp {
+            padding: 17px;
+        }
+
+        .finger {
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            padding: 0 3.4vw;
+            font-size: 1.5vw;
+            margin-top: 0.5vw;
+            color: rgba(255, 255, 255, 1);
+            height: 0;
+
+        }
+
+        .finger img {
+            width: 24vw;
+            position: relative;
+            top: 0.6vw;
+        }
+
+        @media (max-width: 600px) {
+            .wrapper-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .grid img {
+                width: 35vw;
+                height: 25vw;
+            }
+
+            .wrapper-grido {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .grido img {
+                width: 35vw;
+            }
+
+            .footer {
+                display: grid;
+                grid-template-rows: 1fr;
+                background: rgb(52 47 47);
+                position: relative;
+                margin-top: 10vw;
+
+            }
+
+            .navbar ul li {
+                padding: 0 3vw;
+                list-style: none;
+            }
+
+            .navbar ul li a {
+                font-size: 2.2vw;
+                border-bottom: 1px solid rgb(189 189 189);
+
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="home">
+        <div class="header">
+            <div id="heading">
+                <div class="textiles">HAND MADE - TEXTILES</div>
+                <svg class="Line_31" viewBox="0 0 2040 1">
+                    <path id="Line_31" d="M 0 0 L 2040 0">
+                    </path>
+                </svg>
+                <p>BEAUTIFUL BOUCLÉ</p>
+
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li class="grow"><a href="#">BOUCLÉ LIBRARY</a></li>
+                    <li class="grow"><a href="#">HOME GALLERY</a></li>
+                    <li class="grow"><a href="#">ARTISANAL STORY </a></li>
+                    <li class="grow"><a href="#">CLIENT PURCHASE</a></li>
+                    <li class="grow"><a href="#">WHITE LABEL</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="coll">
+            <div class="collection">
+                TWEED
+            </div>
+            <svg class="Line_34" viewBox="0 0 1259 3"
+                <path id="Line_34" d="M 0 0 L 1259 3">
+                </path>
+            </svg>
+            <div class="wrapper-grid">
+                <div class="grid">
+                    <a href="confettispringh9.html"> <img src="CONFETTISPRINGH1.jpg"></a>
+                    <p class="color">CONFETTI SPRING</p>
+                </div>
+                <div class="grid">
+                    <a href="confettifallh9.html"><img src="CONFETTIFALLH1.jpg">
+                    </a>
+                    <p class="color">CONFETTI FALL</p>
+                </div>
+                <div class="grid">
+                    <a href="springoneh9.html"> <img src="SPRINGONEH1.jpg"> </a>
+                    <p class="color">SPRING ONE</p>
+                </div>
+                <!--   <div class="grid">
+                    <img src="S.jpeg">
+                    <p class="color">SPRING TWO</p>
+                </div>-->
+
+                <div class="grid">
+                    <a href="summeroneh9.html"> <img src="SUMMERONEH1.jpg"> </a>
+                    <p class="color">SUMMER ONE</p>
+                </div>
+                <!-- <div class="grid">
+                    <img src="U.jpeg">
+                    <p class="color">SUMMER TWO</p>
+                </div>-->
+
+                <div class="grid">
+                    <a href="falloneh9.html"> <img src="FALLONEH1.jpg"> </a>
+                    <p class="color">FALL ONE</p>
+                </div>
+                <div class="grid">
+                    <a href="falltwoh9.html"> <img src="FALLTWOH1.jpg"> </a>
+                    <p class="color">FALL TWO</p>
+                </div>
+                <div class="grid">
+                    <a href="whiteouth9.html"> <img src="WHITEOUTH1.jpg"> </a>
+                    <p class="color">WHITEOUT</p>
+                </div>
+                <!-- <div class="grid">
+                    <img src="X.jpeg">
+                    <p class="color">WINTER ONE</p>
+                </div>-->
+
+                <div class="grid">
+                    <a href="midnighth9.html"> <img src="MIDNIGHTH1.jpg"> </a>
+                    <p class="color">MIDNIGHT</p>
+                </div>
+                <div class="grid">
+                    <a href="morningskyh9.html"> <img src="MORNINGSKYH1.jpg"> </a>
+                    <p class="color">MORNING SKY</p>
+                </div>
+                <div class="grid">
+                    <a href="afternoonskyh9.html"> <img src="AFTERNOONSKYH1.jpg"> </a>
+                    <p class="color">AFTERNOON SKY</p>
+                </div>
+                <div class="grid">
+                    <a href="eveningskyh9.html"> <img src="EVENINGSKYH1.jpg"> </a>
+                    <p class="color">EVENING SKY</p>
+                </div>
+                <div class="grid">
+                    <a href="dawnh9.html"> <img src="DAWNH1.jpg"> </a>
+                    <p class="color">DAWN</p>
+                </div>
+                <div class="grid">
+                    <a href="springfieldh9.html"> <img src="SPRINGFIELDH1.jpg"> </a>
+                    <p class="color">SPRINGFIELD</p>
+                </div>
+                <div class="grid">
+                    <a href="springtimeh9.html"> <img src="SPRINGTIMEH1.jpg"> </a>
+                    <p class="color">SPRINGTIME</p>
+                </div>
+                <div class="grid">
+                    <a href="sunseth9.html"> <img src="SUNSETH1.jpg"> </a>
+                    <p class="color">SUNSET</p>
+                </div>
+                <div class="grid">
+                    <a href="summertimeh9.html"> <img src="SUMMERTIMEH1.jpg"> </a>
+                    <p class="color">SUMMERTIME</p>
+                </div>
+                <div class="grid">
+                    <a href="morningsunh9.html"><img src="MORNINGSUNH1.jpg">
+                    </a>
+                    <p class="color">MORNING SUN</p>
+                </div>
+                <div class="grid">
+                    <a href="afternoonsunh9.html"><img src="AFTERNOONSUNH1.jpg">
+                    </a>
+                    <p class="color">AFTERNOON SUN</p>
+                </div>
+                <div class="grid">
+                    <a href="stormskyh9.html"><img src="STORMSKYH1.jpg">
+                    </a>
+                    <p class="color">STORM SKY</p>
+                </div>
+                <div class="grid">
+                    <a href="stormbreakh9.html"><img src="STORMBREAKH1.jpg">
+                    </a>
+                    <p class="color">STORM BREAK</p>
+                </div>
+                <!--  <div class="grid">
+                    <img src="M.jpeg">
+                    <p class="color">WINTER MORNING</p>
+                </div>-->
+
+
+
+
+            </div>
+        </div>
+        <div class="footer">
+
+            <div class="thumb">
+                Retail Client Services
+
+            </div>
+
+            <div class="thumb">
+                Wholesale Client Services
+            </div>
+            <div class="thumb">
+                Handmade - Textiles
+            </div>
+            <div class="thumb">
+                &emsp; Media
+            </div>
+
+            <div class="foot">
+                Joint Venture
+            </div>
+            <div class="foot">
+                Buyer Inquiry
+            </div>
+            <div class="foot">
+                Boucle
+            </div>
+            <div class="foot">
+                Blog
+            </div>
+            <div class="foot">
+                JV Partner
+            </div>
+            <div class="foot">
+                Private Label
+            </div>
+            <div class="foot">
+                Hand Block
+            </div>
+            <div class="foot">
+                Editorial
+            </div>
+            <div class="foot">
+                Customized Order Process
+            </div>
+            <div class="foot">
+                Co - Branding
+            </div>
+            <div class="foot">
+                Hand Embroidery
+            </div>
+            <div class="foot">
+                Affliliate Partnership
+            </div>
+            <div class="foot">
+
+            </div>
+            <div class="foot">
+                <div class="social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+
+                </div>
+            </div>
+
+            <div class="foot">
+                Hand Woven
+            </div>
+            <div class="finger">
+
+            </div>
+        </div>
+    </div>
+    <script id="applicationScript">
+        var Application = function () {
+            this.prefix = "--web-";
+            var self = this;
+            self.goToTargetView = function (event) {
+                var button = event.currentTarget;
+                var buttonComputedStyles = getComputedStyle(button);
+                var actionTargetValue = buttonComputedStyles.getPropertyValue(self.prefix + "action-target").trim();
+                var targetType = buttonComputedStyles.getPropertyValue(self.prefix + "action-type").trim();
+
+                if (self.application == false || targetType == "page") {
+                    document.location.href = "./" + actionTargetValue;
+                    return;
+                }
+                event.stopImmediatePropagation();
+            }
+            self.getElement = function (id) {
+                id = id ? id.trim() : id;
+                var element = id ? document.getElementById(id) : null;
+
+                return element;
+            }
+        }
+
+        window.application = new Application();
+    </script>
+</body>
+
+</html>

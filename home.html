@@ -3,691 +3,232 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
+    <title>Home</title>
     <style>
-        body {
+        body{
             margin: 0 0;
             padding: 0 0;
-            overflow-x: hidden;
+            font-family: 'Times New Roman', Times, serif;
+            
         }
-
-        .phonebooboo {
-            display: none;
-        }
-
-        .top {
+        nav {
             position: relative;
-            text-align: center;
-            font-family: Times New Roman;
-            color: rgba(92, 92, 92, 1);
-            font-size: 4.1vw;
-            margin: 1vw 0 0 0;
-        }
-
-        .header {
-            position: relative;
-        }
-
-        .nav {
-            position: relative;
-            justify-content: space-around;
             display: flex;
-            background-color: rgb(97, 97, 97);
-            padding: 0.5vw 0;
-        }
-
-        .nav li {
-            color: white;
             list-style: none;
+            justify-content: center;
+            font-size: 2vw;
+            gap: 3vw;
+            color: white;
+            margin: 4vw 0;
         }
 
-        .nav li a {
-            text-decoration: none;
-            font-size: 1.33vw;
-            color: rgba(248, 244, 244, 1);
-            font-family: Times New Roman;
+        nav li {
+            padding: 0vw 0.4vw;
         }
 
-        .home {
+        .r {
+            background-color: rgb(162, 0, 0);
+            padding: 0vw 0.5vw 0vw 0.2vw;
+
+
+        }
+
+        .b {
+            background-color: rgb(36, 36, 149);
+            padding: 0vw 0.5vw 0vw 0.5vw;
+
+        }
+
+        .maga {
             position: relative;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .phonehome {
-            display: none;
-        }
-
-        .homies {
-            position: relative;
-        }
-
-        .homies img {
-            height: 50vw;
-        }
-
-
-        .txt1 {
-            position: relative;
-            font-size: 4.3vw;
-            font-family: 'Times New Roman', Times, serif;
-            top: -15vw;
-            color: rgba(255, 255, 255, 1);
-            left: 5%;
-        }
-
-        .txt1 a {
-            text-decoration: none;
-            color: rgba(255, 255, 255, 1);
-            font-family: 'Times New Roman', Times, serif;
-
-
-        }
-
-        .txt2 {
-            position: relative;
-            font-size: 1.5vw;
-            font-family: 'Times New Roman', Times, serif;
-            top: -25vw;
-            color: rgba(255, 255, 255, 1);
-            left: 10%;
-            font-style: italic;
-        }
-
-        .txt3 {
-            position: relative;
-            font-size: 4.3vw;
-            font-family: 'Times New Roman', Times, serif;
-            top: -15vw;
-            color: rgba(255, 255, 255, 1);
+            margin: 6vw 0;
+            font-size: 2.5vw;
+            color: white;
             text-align: center;
         }
 
-        .txt3 a {
-            text-decoration: none;
-            color: rgba(255, 255, 255, 1);
-            font-family: 'Times New Roman', Times, serif;
-        }
-
-        .footer {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            background: rgb(52 47 47);
+        .mad {
             position: relative;
-            margin: -5vw 0;
+            font-size: 1.7vw;
+            margin: 0vw 5vw;
+            line-height: 2.9vw;
+            text-align: center;
         }
 
-        .phonefooter {
-            display: none;
+        .redt {
+            color: rgb(162, 0, 0);
         }
 
-        .thumb {
-
-            white-space: nowrap;
-            font-family: Times New Roman;
-            font-style: normal;
-            font-weight: normal;
-            padding: 0 13vw 0 3vw;
-            margin-top: 1.5vw;
-            font-size: 2.2vw;
-            color: rgba(255, 255, 255, 1);
+        .bluet {
+            color: rgb(36, 36, 149);
         }
 
-        .foot {
-            white-space: nowrap;
-            font-family: Times New Roman;
-            font-style: normal;
-            font-weight: normal;
-            padding: 0 3.4vw;
-            font-size: 1.5vw;
-            margin-top: 0.5vw;
-            color: rgba(255, 255, 255, 1);
-
-        }
-
-        .foot a {
-            color: rgba(255, 255, 255, 1);
-            text-decoration: none;
-        }
-
-        .social {
-            margin-top: 1vw;
-            margin-bottom: 1vw;
-        }
-
-        .social a {
-            color: rgba(255, 255, 255, 1);
-            padding: 0 1.3vw 0 0vw;
-        }
-
-        .whatsapp {
-            padding: 17px;
-        }
-
-
-        #logo {
+        .we {
             position: relative;
-            float: right;
+            display: flex;
+            justify-content: center;
+            margin: 3vw 0;
+            font-size: 3vw;
+            color: white;
         }
 
-        #logo img {
-            width: 3vw;
-            right: 3vw;
+        .w {
+            background-color: rgb(162, 0, 0);
+            color: white;
+            padding: 0vw 1vw 0vw 0vw;
         }
 
-
-        @media (max-width: 700px) {
-            .home {
-                display: none;
-            }
-
-            .header {
-                display: none;
-            }
-
-            .phonehome {
-                display: block;
-            }
-
-            .phonebooboo {
-                display: block;
-            }
-
-            .hamburger {
-                position: fixed;
-                cursor: pointer;
-                right: 18px;
-                display: block;
-                top: 1vw;
-            }
+        .e {
+            background-color: rgb(36, 36, 149);
+            color: white;
+            padding: 0vw 0vw 0vw 1vw;
 
 
+        }
 
-            .hamburger.active .bar:nth-child(2) {
-                opacity: 0;
-            }
+        .links {
+            position: relative;
+            text-align: center;
+        }
 
-            .hamburger.active .bar:nth-child(1) {
-                transform: translateY(8px) rotate(45deg);
-            }
+        .links li {
+            list-style: none;
+            font-size: 1.7vw;
+            line-height: 3vw;
+        }
 
-            .hamburger.active .bar:nth-child(3) {
-                transform: translateY(-8px) rotate(-45deg);
-            }
+        .usa {
+            position: relative;
+            text-align: center;
+            color: white;
+            margin: 5vw 0;
+        }
 
-            .bar {
-                display: block;
-                width: 30px;
-                height: 3px;
+        .usa h1 {
+            position: relative;
+            margin: 1vw 42vw 0vw;
+            font-size: 6vw;
+        }
 
-                margin: 5px auto;
-                -webkit-transition: all 0.3s ease-in-out;
-                transition: all 0.3s ease-in-out;
-                background-color: rgb(0, 0, 0);
-            }
+        .usa h2 {
+            margin: 1vw 42vw 0vw;
+            font-size: 1.75vw;
 
-            .topnav {
-                overflow: visible;
-                background-color: white;
-                position: absolute;
-                width: 100%;
-                height: 140vh;
+        }
 
-            }
+        .usa h3 {
+            color: black;
+        }
 
-            .topnav #myLinks {
-                display: none;
-                background-color: white;
-                width: 100%;
-                height: 100vh;
-                z-index: 1;
-                position: fixed;
-            }
+        .red {
+            background-color: rgb(162, 0, 0);
 
-            .topnav a {
-                padding: 20px 0px;
-                display: block;
-                text-align: right;
-                position: relative;
-                top: 10vw;
-                text-decoration: none;
-                font-family: Times New Roman;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 3.5vw;
-                color: white;
-                z-index: 3;
-                right: 5%;
+        }
 
-            }
+        .blue {
+            background-color: rgb(36, 36, 149);
 
-            #white {
-                z-index: 2;
-                position: fixed;
-                width: 100%;
-                height: 150vw;
-                top: 0;
-                opacity: 50%;
-                margin: 0;
-
-            }
-
-            .topnav a.icon {
-                background: white;
-                display: block;
-                position: absolute;
-                right: 0;
-                top: -16px;
-            }
-
-
-
-
-
-            .homiesfirst {
-                top: 3vw;
-                display: flex;
-                justify-content: space-between;
-                left: 0;
-                position: relative;
-                width: 100%;
-            }
-
-            .homiesfirst img {
-                height: 88vw;
-            }
-
-            #homie2 {
-                position: relative;
-                top: -5.5vw;
-                margin: 0 0 -10vw;
-            }
-
-            #homie2 img {
-                height: 130vw;
-                width: 100%;
-            }
-
-
-
-
-            .txt1 {
-                top: -25vw;
-                font-size: 6.3vw;
-            }
-
-            .txt1 a {
-                text-decoration: none;
-                color: rgba(255, 255, 255, 1);
-                font-family: 'Times New Roman', Times, serif;
-
-
-            }
-
-            .txt3 {
-                top: -19.5vw;
-                font-size: 6.3vw;
-            }
-
-            .txt3 a {
-                text-decoration: none;
-                color: rgba(255, 255, 255, 1);
-                font-family: 'Times New Roman', Times, serif;
-            }
-
-            .txt2 {
-                top: -75vw;
-                font-size: 4vw;
-                left: 9%;
-            }
-
-            .footer {
-                display: none;
-            }
-
-            .phonefooter {
-                display: flex;
-                width: 100%;
-                background: rgb(52 47 47);
-                z-index: 2;
-                position: relative;
-
-            }
-
-            .feet1 {
-                display: grid;
-                grid-template-columns: 1fr;
-                position: relative;
-            }
-
-            .thumb {
-                font-size: 5.5vw;
-                margin: 3vw 13vw 0 3vw;
-            }
-
-            .foot a {
-                color: rgba(255, 255, 255, 1);
-                text-decoration: none;
-            }
-
-            .foot {
-                font-size: 4vw;
-                padding: 0 6vw;
-            }
-
-            .feet2 {
-                position: relative;
-                right: 10%;
-                font-size: 5vw;
-                margin: 19vw 0;
-            }
-
-            .social {
-                row-gap: 5vw;
-                grid-template-columns: 1fr;
-                display: grid;
-            }
-
-            .logo {
-                position: relative;
-                right: 78%;
-                top: 25vw;
-            }
-
-            .logo img {
-                width: 10vw;
-            }
-
-            #last {
-                position: relative;
-                margin: 0 0 12vw;
-            }
         }
     </style>
 </head>
 
 <body>
-    <div class="top">
-        WOMAN’S BUSINESS WEAR
+    <nav>
+        <li><span class="r">MAGA</span><span class="b">MAD</span></li>
+        <li><span class="r">MAGA</span><span class="b">MANIFESTO</span></li>
+        <li><span class="r">ENOUGH</span><span class="b">IS</span><span class="r">ENOUGH</span></li>
+        <li><span class="r">MAGA</span><span class="b">BLM</span></li>
+
+    </nav>
+    <div class="maga">
+        <span class="r">MAGA</span><span class="b">MAD</span>
     </div>
-    <div class="header">
-        <div class="nav">
-            <li class="grow"><a href="#">SARTORIAL </a></li>
-            <li class="grow"><a href="#">COLLECTION</a></li>
-            <li class="grow"><a href="#">CUSTOMIZED PROCESS</a></li>
-            <li class="grow"><a href="#">PRODUCTION</a></li>
-            <li class="grow"><a href="#">SUITINGS / SHIRTINGS</a></li>
-            <li class="grow"><a href="#">ACCESSORIES</a></li>
-            <li class="grow"><a href="#">CLIENT PURCHASE</a></li>
-            <li class="grow"><a href="#">INQUIRY</a></li>
-        </div>
+    <div class="mad">
+        <span class="redt">MAGA</span>&nbsp; <span class="bluet">MAD</span>
+        a Platform of the People, by the People, for the People to post Their opinions, suggestions and frustrations so
+        that President TRUMP can review and have a more hands-on understanding of what
+        <span class="redt">WE THE PEOPLE </span>
+        are discussing and what Our collective concerns are.. WE need the
+        <span class="redt">TRUMP</span> &nbsp; <span class="bluet">ADMINISTRATION</span>
+        to support Our efforts and work with Us to accomplish
+        <span class="redt">MAGA</span>&nbsp; <span class="bluet">2.0..</span> <br>
+        Please do register, follow and message Us on IG so that We will continue to grow stronger as unified
+        <span class="redt">AMERICAN</span>&nbsp; <span class="bluet">PATRIOTS</span>
+        sharing and shaping the
+        <span class="redt">MAGA</span>&nbsp; <span class="bluet">2025</span>&nbsp; <span class="redt">agenda</span> <br>
+        <span class="redt">WE THE PEOPLE</span>&nbsp; <span class="bluet">ARE THE POWER</span>
+
     </div>
-    <div class="phonebooboo">
-        <div class="topnav">
-            <div id="myLinks">
-                <a class="grow" href="#">SARTORIAL </a>
-                <a class="grow" href="#">COLLECTION</a>
-                <a class="grow" href="#">CUSTOMIZED PROCESS</a>
-                <a class="grow" href="#">PRODUCTION</a>
-                <a class="grow" href="#">SUITINGS / SHIRTINGS</a>
-                <a class="grow" href="#">ACCESSORIES</a>
-                <a class="grow" href="#">CLIENT PURCHASE</a>
-                <a class="grow" href="#">INQUIRY</a>
-                </ul>
-                <img src="burgerbg.png" id="white">
-            </div>
-
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </a>
-        </div>
+    <div class="maga">
+        <span class="r">MAGA</span><span class="b">MANIFESTO</span>
     </div>
-    <div class="home">
-        <div class="homies">
-            <img src="index1.png" alt="">
-            <div class="txt1" id="txt">
-                <a href="empowerment.html"> Empowerment <br> Campaign ►
-                </a>
-            </div>
-        </div>
-        <div class="homies">
-            <img src="index2.png" alt="">
-            <div class="txt2" id="txtm">
-                The WBW Woman does not have an Attitude.. <br>
-                - She has High Standards -
-            </div>
-        </div>
-        <div class="homies">
-            <img src="index3.png" alt="">
-            <div class="txt3" id="txt">
-                <a href="#"> Fine <br> Suitings </a>
-            </div>
-        </div>
+    <div class="mad">
+        <span class="redt">MAGA</span>&nbsp; <span class="bluet">MANIFESTO</span>
+        a Written Platform of the People, by the People, for the People that intends to set new policies and principles
+        that
+        <span class="redt">WE THE PEOPLE</span>
+        need implemented and placed into law to continue
+        <span class="redt">TRUMPS </span> visionary
+        <span class="redt">MAGA</span>&nbsp; <span class="bluet">AGENDA</span>
+        for
+        <span class="redt">2025</span>
+        and beyond.. <br>
+        Please do review each suggested New Policy (Four Pillars of Change / Demands) and subscribe to its principles
+        beginning in
+        <span class="redt">TRUMPS </span>
+        first year in office..
+        <span class="redt">WE THE PEOPLE</span>&nbsp; <span class="bluet">ARE THE POWER</span>
+
     </div>
-    <div class="phonehome">
-        <div class="homiesfirst">
-            <div class="homies">
-                <img src="index1.png" alt="">
-                <div class="txt1">
-                    <a href="empowerment.html">Empowerment <br> Campaign ►
-                    </a>
-                </div>
-            </div>
-            <div class="homies">
-                <img src="index3.png" alt="">
-                <div class="txt3">
-                    <a href="#"> Fine <br> Suitings</a>
-                </div>
-            </div>
-        </div>
-        <div class="homies" id="homie2">
-            <img src="index2.png" alt="">
-            <div class="txt2">
-                The WBW Woman does not have an Attitude.. <br>
-                - She has High Standards -
-            </div>
-        </div>
+    <div class="maga">
+        <span class="r">ENOUGH</span><span class="b">IS</span><span class="r">ENOUGH</span>
     </div>
-    <div class="footer">
-
-        <div class="thumb">
-            Retail Client Services
-
-        </div>
-
-        <div class="thumb">
-            Wholesale Client Services
-        </div>
-
-        <div class="thumb">
-            Media
-        </div>
-
-        <div class="foot">
-            <a href=""> Joint Venture
-            </a>
-        </div>
-        <div class="foot">
-            <a href=""> Buyer Inquiry
-            </a>
-        </div>
-        <div class="foot">
-            <a href=""> Blog
-            </a>
-        </div>
-        <div class="foot">
-            <a href=""> JV Partner
-            </a>
-        </div>
-        <div class="foot">
-            <a href=""> Private Label
-            </a>
-        </div>
-        <div class="foot">
-            <a href=""> Editorial
-            </a>
-        </div>
-        <div class="foot">
-            <a href=""> Customized Order Process
-            </a>
-        </div>
-        <div class="foot">
-            <a href=""> Co - Branding
-            </a>
-        </div>
-        <div class="foot">
-            <a href=""> Affliliate Partnership
-            </a>
-        </div>
-        <div class="foot">
-
-        </div>
-        <div class="foot">
-            <div class="social">
-                <a href="https://instagram.com/womanswearbusiness?igshid=YmMyMTA2M2Y="><i
-                        class="fab fa-instagram"></i></a>
-                <a href="https://api.whatsapp.com/send?phone=12122102965" class="whatsapp"><i
-                        class="fab fa-whatsapp"></i></a>
-                <a href="https://www.pinterest.com/womenswearbusiness/_saved/"><i class="fab fa-pinterest"></i></a>
-
-            </div>
-        </div>
-        <div class="foot">
-            <div id="logo">
-                <img src="logo.png" alt="">
-            </div>
-        </div>
+    <div class="mad">
+        <span class="redt">ENOUGH</span>&nbsp; <span class="bluet">IS</span>&nbsp; <span>ENOUGH</span>
+        is a Post-Election set of Demands of the People, for the People, by the People directly linked to Our
+        Congressional Leaders and the passing of spending bills that are directly linked to Congressional Members
+        influential powers that placate to Big Business and Corrupt Practices in overspending of Our tax subsidies..
+        <br>
+        Please do review each suggested New Policy (Four Pillars of Change / Demands) and subscribe to its principles
+        beginning in
+        <span class="redt">TRUMPS </span>
+        first year in office.. <br>
+        <span class="redt">WE THE PEOPLE</span>&nbsp; <span class="bluet">ARE THE POWER</span>
     </div>
-    <div class="phonefooter">
-        <div class="feet1">
-            <div class="thumb">
-                Retail Client Services
-
-            </div>
-            <div class="foot">
-                <a href=""> Joint Venture
-                </a>
-            </div>
-            <div class="foot">
-                <a href=""> JV Partner
-                </a>
-            </div>
-            <div class="foot">
-                <a href=""> Customized Order Process
-                </a>
-            </div>
-            <div class="thumb">
-                Wholesale Client Services
-
-            </div>
-            <div class="foot">
-                <a href=""> Buyer Inquiry
-                </a>
-            </div>
-            <div class="foot">
-                <a href=""> Private Label
-                </a>
-            </div>
-            <div class="foot">
-                <a href=""> Co - Branding
-                </a>
-            </div>
-            <div class="thumb">
-                Media
-
-            </div>
-            <div class="foot">
-                <a href=""> WBW -Blog
-                </a>
-            </div>
-            <div class="foot">
-                <a href=""> Editorial
-                </a>
-            </div>
-            <div class="foot" id="last">
-                Affliliate Partnership
-            </div>
-        </div>
-
-        <div class="feet2">
-            <div class="social">
-                <a href="https://instagram.com/womanswearbusiness?igshid=YmMyMTA2M2Y="><i
-                        class="fab fa-instagram"></i></a>
-                <a href="https://api.whatsapp.com/send?phone=919980803612" class="whatsapp"><i
-                        class="fab fa-whatsapp"></i></a>
-                <a href="https://www.pinterest.com/womenswearbusiness/_saved/"><i class="fab fa-pinterest"></i></a>
-
-            </div>
-            <div class="logo">
-                <img src="logo.png" alt="">
-            </div>
-        </div>
+    <div class="maga">
+        <span class="r">MAGA</span><span class="b">BLM</span>
+    </div>
+    <div class="mad">
+        <span class="redt">MAGA</span>&nbsp; <span class="bluet">BLM</span>
+        in support to Our Black Brothers and Sisters who are Patriots and support TRUMP in His vision of Equality,
+        Prosperity of the People, for the People, by the People as a unified
+        <span class="redt">MAGA </span>
+        Agenda for all MERICA’S Citizens.. <br>
+        Please do register, follow and message Us on IG so that We will continue to grow stronger as unified
+        <span class="redt">AMERICAN</span>&nbsp; <span class="bluet">PATRIOTS</span>
+        sharing and shaping the
+        <span class="redt">MAGA</span>&nbsp; <span class="bluet">2025</span>&nbsp; <span>agenda</span>
 
 
     </div>
-    <script>
-        function myFunction() {
-            var x = document.getElementById("myLinks");
-            if (x.style.display === "block") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "block";
-            }
-        }
-    </script>
-    <script>
-        window.onload = function () {
-            const hamburger = document.querySelector(".hamburger");
-            const nav = document.querySelector(".navbar");
-            const womenswearbusiness = document.querySelector(".womenswearbusiness");
-
-            hamburger.addEventListener("click", () => {
-                hamburger.classList.toggle("active");
-                nav.classList.toggle("active");
-                womenswearbusiness.classList.toggle("active");
-            })
-        }
-
-        document.querySelectorAll(".li").forEach(n => n.
-            addEventListener("click", () => {
-                hamburger.classList.remove("active");
-                nav.classList.remove("active");
-            }))
-    </script>
-    <script id="applicationScript">
-        var Application = function () {
-            this.prefix = "--web-";
-            var self = this;
-            self.goToTargetView = function (event) {
-                var button = event.currentTarget;
-                var buttonComputedStyles = getComputedStyle(button);
-                var actionTargetValue = buttonComputedStyles.getPropertyValue(self.prefix + "action-target").trim();
-                var targetType = buttonComputedStyles.getPropertyValue(self.prefix + "action-type").trim();
-
-                if (self.application == false || targetType == "page") {
-                    document.location.href = "./" + actionTargetValue;
-                    return;
-                }
-                event.stopImmediatePropagation();
-            }
-            self.getElement = function (id) {
-                id = id ? id.trim() : id;
-                var element = id ? document.getElementById(id) : null;
-
-                return element;
-            }
-        }
-
-        window.application = new Application();
-    </script>
+    <div class="we">
+        <span class="w">WE THE PEOPLE</span>
+        <span class="e">ARE THE POWER</span>
+    </div>
+    <div class="links">
+        <li> <a href="http://www.wethepeoplearethepower.com/">wethepeoplearethepower</a></li>
+        <li> <a href="mailto:wethepeoplearethepower@gmail.com">wethepeoplearethepower@gmail.com</a></li>
+        <li> <a href="mailto:magamanifesto2024@gmail.com">magamanifesto2024@gmail.com</a></li>
+        <li> <a href="">INSTAGRAM</a></li>
+    </div>
+    <div class="usa">
+        <h1 class="red">USA</h1>
+        <h2 class="blue">WE THE PEOPLE</h2>
+        <h2 class="red">ARE THE POWER</h2>
+        <h1 class="blue">2025</h1>
+        <h3>(ALl Rights Reserved)</h3>
+    </div>
 </body>
 
 </html>

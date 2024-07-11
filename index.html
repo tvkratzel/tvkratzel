@@ -3,1046 +3,269 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>MAGAMAD</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            border: none;
-        }
-
-
         body {
-            overflow-x: hidden;
-
+            padding: 0 0;
+            margin: 0 0;
+            font-family: 'Times New Roman', Times, serif;
         }
 
-        .header {
-            position: relative;
-            margin: 0.9vw;
-        }
-
-        #heading {
-            overflow: visible;
-            top: 0.1vw;
+        .maga {
             position: relative;
             text-align: center;
-            white-space: nowrap;
-            font-family: Times New Roman;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 2.86vw;
-            color: rgba(92, 92, 92, 1);
-
+            color: white;
         }
 
-        .textiles {
-            font-size: 5vw;
-            top: -0.1vw;
+        .maga h1 {
+            background-color: rgb(162, 0, 0);
+            font-size: 6vw;
+            margin: 2vw 40vw 0vw;
+            padding: 0.4vw 0vw 0vw;
+        }
+
+        .maga h2 {
+            background-color: rgb(36, 36, 149);
+            font-size: 4.1vw;
+            margin: 1vw 40vw 0vw;
+            padding: 0.4vw 0vw 0vw;
+        }
+
+        .we {
             position: relative;
+            display: flex;
+            justify-content: center;
+            margin: 3vw 0;
+            font-size: 3vw;
+            color: white;
         }
 
-        #Line_31 {
-            fill: transparent;
-            stroke: rgba(112, 112, 112, 1);
-            stroke-width: 2px;
-            stroke-linejoin: miter;
-            stroke-linecap: butt;
-            stroke-miterlimit: 4;
-            shape-rendering: auto;
+        .w {
+            background-color: rgb(162, 0, 0);
+            color: white;
+            padding: 0vw 1vw 0vw 0vw;
         }
 
-        .Line_31 {
-            overflow: visible;
-            position: absolute;
-            left: 20.5%;
-            top: 4.8vw;
-            width: 57.5vw;
-            height: 3px;
-            transform: matrix(1, 0, 0, 1, 0, 0);
+        .e {
+            background-color: rgb(36, 36, 149);
+            color: white;
+            padding: 0vw 0vw 0vw 1vw;
+
+
         }
 
-
-        .cart a {
-            position: absolute;
-            text-decoration: none;
-            font-size: 2vw;
-            right: 3%;
-            top: 1vw;
-            z-index: 1;
-            color: rgba(92, 92, 92, 1);
-        }
-
-
-
-        .navbar {
-            text-align: center;
-            position: sticky;
-            margin-top: 2.3vw;
-        }
-
-        .navbar ul {
-            display: inline-flex;
-        }
-
-        .navbar ul li {
-            padding: 0 3.2vw;
+        nav {
+            position: relative;
+            display: flex;
             list-style: none;
-        }
-
-        .navbar ul li a {
-            font-size: 1.6vw;
-            text-decoration: none;
-            white-space: nowrap;
-            font-family: Times New Roman;
-            font-style: normal;
-            font-weight: normal;
-            color: rgba(92, 92, 92, 1);
-            border-bottom: 1.82px solid rgb(189 189 189);
-        }
-
-        #openblue {
-            --web-animation: fadein 0.30000001192092896s ease-out;
-            --web-action-type: page;
-            --web-action-target: blue.html;
-            cursor: pointer;
-        }
-
-        #model {
-            display: flex;
-            padding: 2.8vw 0;
-
-
-        }
-
-        .box {
-            transition: 1s;
-        }
-
-        #model img {
-            height: 25.4vw;
-
-        }
-
-        .box:hover {
-            transform: scale(1.1);
-            z-index: 2;
-        }
-
-        .ax {
-            display: flex;
             justify-content: center;
-
-        }
-
-        .ax img {
-            width: 97vw;
-            position: relative;
-            top: -7vw;
-        }
-
-        .btn {
-            position: relative;
-        }
-
-        .btn img {
-
-            position: absolute;
-            width: 2vw;
-            right: 14%;
-            top: -11vw;
-        }
-
-        .bot {
-            position: absolute;
-            font-family: Times New Roman;
-            font-style: italic;
-            z-index: 1;
-            font-weight: normal;
-            text-align: right;
-            right: 9%;
-            top: -8.5vw;
-            font-size: 1vw;
-            color: rgb(255 255 255);
-        }
-
-        #HAND {
-            --web-animation: fadein 0.30000001192092896s ease-out;
-            --web-action-type: page;
-            --web-action-target: BYHAND.html;
-            cursor: pointer;
-        }
-
-        #scarf {
-            display: flex;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        #scarf img {
-            margin: 0 -4vw;
-            position: relative;
-            width: 118vw;
-            left: 1.2%;
-        }
-
-
-        .text {
-            position: absolute;
-            margin: 7vw 0;
-            overflow: visible;
-            white-space: nowrap;
-            left: 23%;
-            text-align: center;
-            letter-spacing: 0.04vw;
-            word-spacing: 0.5vw;
-            font-family: Times New Roman;
-            font-style: italic;
-            z-index: 1;
-            font-size: 1.6vw;
-        }
-
-
-        .text u {
-            font-size: 1.6vw;
-        }
-
-        #aunt {
-            display: flex;
-            justify-content: space-around;
-        }
-
-        #aunt img {
-            height: 27vw;
-        }
-
-        .auntext {
-            position: absolute;
-            overflow: visible;
-            margin: 20vw 0;
-            left: 35%;
-            width: 394px;
-            text-align: left;
-            font-family: Times New Roman;
-            font-style: italic;
-            font-weight: normal;
-            font-size: 1.3vw;
-            color: rgba(0, 0, 0, 1);
-        }
-
-
-
-        .video {
-            position: absolute;
-            overflow: visible;
-            margin-top: 34vw;
-            left: 36%;
-            font-style: normal;
-            text-align: left;
-            font-family: Times New Roman;
-            font-weight: normal;
-            font-size: 1.8vw;
-            color: rgba(0, 0, 0, 1);
-        }
-
-        #Group_45 {
-            position: absolute;
-            margin: 34vw 0;
-            left: 62%;
-            overflow: visible;
-            --web-animation: fadein 0.30000001192092896s ease-out;
-            --web-action-type: page;
-            --web-action-target: Web_1920___29.html;
-            cursor: pointer;
-        }
-
-        #Rectangle_15 {
-            fill: rgba(200, 200, 200, 1);
-            stroke: rgba(192, 192, 192, 1);
-            stroke-width: 1px;
-            stroke-linejoin: miter;
-            stroke-linecap: butt;
-            stroke-miterlimit: 4;
-            shape-rendering: auto;
-        }
-
-        .Rectangle_15 {
-            position: absolute;
-            overflow: visible;
-            width: 49px;
-            height: 30px;
-            left: 0px;
-            top: 0px;
-        }
-
-        #Polygon_1 {
-            fill: rgba(70, 70, 70, 1);
-        }
-
-        .Polygon_1 {
-            overflow: visible;
-            position: absolute;
-            width: 15.067px;
-            height: 19.083px;
-            transform: translate(-1527px, -1871px) matrix(1, 0, 0, 1, 1547.2192, 1876.6916) rotate(90deg);
-            transform-origin: center;
-            left: 0px;
-            top: 0px;
-        }
-
-        .collection {
-            overflow: visible;
-            white-space: nowrap;
-            position: relative;
-            margin: 9vw;
-            text-align: center;
-            font-family: Times New Roman;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 3.6vw;
-            color: rgba(83, 83, 83, 1);
-        }
-
-        #Line_34 {
-            fill: transparent;
-            stroke: rgba(107, 107, 107, 1);
-            stroke-width: 4px;
-            stroke-linejoin: miter;
-            stroke-linecap: butt;
-            stroke-miterlimit: 4;
-            shape-rendering: auto;
-        }
-
-        .Line_34 {
-            overflow: visible;
-            position: absolute;
-            width: 39.6vw;
-            margin: -9.9vw 0;
-            left: 30.1%;
-            height: 1vw;
-            transform: matrix(1, 0, 0, 1, 0, 0);
-        }
-
-
-
-
-        .fash {
-            display: flex;
-            justify-content: space-evenly;
-        }
-
-        .ion {
-            text-align: center;
-            position: relative;
-            margin: -5vw 0;
-            top: -1vw;
-            transition: 1s;
-        }
-
-        .ion img {
-            height: 35vw;
-            width: 27vw;
-
-        }
-
-        #weaves {
-            --web-animation: fadein 0.30000001192092896s ease-out;
-            --web-action-type: page;
-            --web-action-target: weaves.html;
-            cursor: pointer;
-        }
-
-        .ion:hover {
-            transform: scale(1.1);
-            z-index: 2;
-        }
-
-        .sky {
-
-            font-family: Times New Roman;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 1.6vw;
-            color: rgba(92, 92, 92, 1);
-            left: 53.5%;
-        }
-
-
-
-        .wrapper-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            top: -6.5vw;
-            position: relative;
-            grid-row-gap: 5vw;
-        }
-
-        .grid {
-            text-align: center;
-        }
-
-        .grid img {
-            width: 18vw;
-            height: 18vw;
-
-        }
-
-        .color {
-            white-space: nowrap;
-            font-family: Times New Roman;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 1.5vw;
-            color: rgba(0, 0, 0, 1);
-        }
-
-        .design {
-            overflow: visible;
-            white-space: nowrap;
-            position: relative;
-            text-align: center;
-            font-family: Times New Roman;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 3.6vw;
-            color: rgba(83, 83, 83, 1);
-        }
-
-        #Line_41 {
-            fill: transparent;
-            stroke: rgba(112, 112, 112, 1);
-            stroke-width: 4px;
-            stroke-linejoin: miter;
-            stroke-linecap: butt;
-            stroke-miterlimit: 4;
-            shape-rendering: auto;
-        }
-
-        .Line_41 {
-            overflow: visible;
-            position: absolute;
-            width: 33.43vw;
-            margin-top: -1vw;
-            height: 1vw;
-            left: 33.2%;
-            transform: matrix(1, 0, 0, 1, 0, 0);
-        }
-
-
-
-
-
-
-
-        .wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            position: relative;
-            margin: 3vw 5vw;
-        }
-
-        .gride {
-            text-align: center;
-        }
-
-        .gride img {
-            width: 20vw;
-            height: 33vw;
-        }
-
-        .homies {
-            white-space: nowrap;
-            font-family: Times New Roman;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 1.5vw;
-            color: rgba(0, 0, 0, 1);
-        }
-
-
-        .gall {
-            overflow: visible;
-            white-space: nowrap;
-            position: relative;
-            text-align: center;
-            font-family: Times New Roman;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 3.6vw;
-            color: rgba(83, 83, 83, 1);
-        }
-
-        #Line_000 {
-            fill: transparent;
-            stroke: rgba(107, 107, 107, 1);
-            stroke-width: 4px;
-            stroke-linejoin: miter;
-            stroke-linecap: butt;
-            stroke-miterlimit: 4;
-            shape-rendering: auto;
-        }
-
-        .Line_000 {
-            overflow: visible;
-            position: absolute;
-            width: 28.2vw;
-            margin: -1vw 0;
-            left: 35.8%;
-            height: 1vw;
-            transform: matrix(1, 0, 0, 1, 0, 0);
-        }
-
-
-
-
-        .wrapper-grido {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            top: 2.5vw;
-            position: relative;
-            grid-row-gap: 5vw;
-        }
-
-        .grido {
-            text-align: center;
-        }
-
-        .grido img {
-            width: 26vw;
-            height: 15vw;
-        }
-
-
-
-
-        .baw {
-            white-space: nowrap;
-            font-family: Times New Roman;
-            font-style: normal;
-            font-weight: normal;
             font-size: 2vw;
-            color: rgba(0, 0, 0, 1);
+            gap: 7vw;
+            color: white;
+            margin: 3vw 0;
         }
 
-    
-
-        .addcart a {
+        nav li {
+            padding: 0.1vw 0.9vw;
+            border-top-right-radius: 0.5vw;
+            border-bottom-right-radius: 0.5vw;
+        }
+        nav li a {
             color: white;
             text-decoration: none;
+
+        }
+        .red {
+            background-color: rgb(162, 0, 0);
+
         }
 
-        .footer {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            background: rgb(52 47 47);
+        .blue {
+            background-color: rgb(36, 36, 149);
+
+        }
+
+        .usa {
             position: relative;
-            margin-top: 10vw;
-
-        }
-
-        .thumb {
-            white-space: nowrap;
-            font-family: Times New Roman;
-            font-style: normal;
-            font-weight: normal;
-            padding: 0px 8.1vw 0 4.7vw;
-            margin-top: 0.5vw;
-            font-size: 1.5vw;
-            color: rgba(255, 255, 255, 1);
-        }
-
-        .foot {
-            white-space: nowrap;
-            font-family: Times New Roman;
-            font-style: normal;
-            font-weight: normal;
-            padding: 0 4.4vw;
-            font-size: 1.2vw;
-            left: -5%;
             text-align: center;
-            margin-top: 0.2vw;
-            color: rgba(255, 255, 255, 1);
+            color: white;
+            margin: 5vw 0;
+        }
+
+        .usa h1 {
             position: relative;
+            margin: 1vw 42vw 0vw;
+            font-size: 6vw;
         }
 
-        .social {
-            margin-top: 0.5vw;
-            margin-bottom: 0.2vw;
+        .usa h2 {
+            margin: 1vw 42vw 0vw;
+            font-size: 1.75vw;
+
+        }
+
+        .usa h3 {
+            color: black;
+        }
+
+        .citizen {
             position: relative;
-            left: 2%;
-        }
-
-        .social a {
-            color: rgba(255, 255, 255, 1);
-            padding: 0 1.3vw 0 0vw;
-        }
-
-        .whatsapp {
-            padding: 17px;
-        }
-
-        .finger {
-            white-space: nowrap;
-            font-family: Times New Roman;
-            font-style: normal;
-            font-weight: normal;
-            padding: 0 3.4vw;
-            font-size: 1.5vw;
-            margin-top: 0.5vw;
-            color: rgba(255, 255, 255, 1);
-            height: 0;
+            display: flex;
+            justify-content: center;
+            margin: 3vw 0;
+            font-size: 3vw;
+            color: white;
+            text-decoration: underlines;
 
         }
 
-        .finger img {
-            width: 24vw;
+        .ci {
+            background-color: rgb(162, 0, 0);
+            padding: 0vw 1vw 0vw 0vw;
+        }
+
+        .ti {
+            background-color: rgb(36, 36, 149);
+            padding: 0vw 1vw 0vw 1vw;
+
+        }
+
+        .zen {
+            background-color: rgb(162, 0, 0);
+            padding: 0vw 0vw 0vw 1vw;
+        }
+
+        .para {
             position: relative;
-            top: 0.6vw;
+            font-size: 1.7vw;
+            margin: 0vw 5vw;
+            line-height: 2.9vw;
+            text-align: center;
+
         }
 
-        @media (max-width: 600px) {
-            .wrapper-grid {
-                grid-template-columns: 1fr 1fr;
-            }
+        .redt {
+            color: rgb(162, 0, 0);
+        }
 
-            .grid img {
-                width: 35vw;
-                height: 25vw;
-            }
+        .bluet {
+            color: rgb(36, 36, 149);
+        }
 
-            .wrapper-grido {
-                grid-template-columns: 1fr 1fr;
-            }
+        .graph {
+            position: relative;
+            font-size: 1.7vw;
+            margin: 0vw 5vw;
+            line-height: 2.9vw;
+            text-align: center;
+        }
 
-            .grido img {
-                width: 35vw;
-            }
+        .graph p {
+            color: rgb(36, 36, 149);
+            text-decoration: underline;
+            font-size: 1.9vw;
+        }
 
-            .footer {
-                display: grid;
-                grid-template-rows: 1fr;
-                background: rgb(52 47 47);
-                position: relative;
-                margin-top: 10vw;
-
-            }
-
-            .navbar ul li {
-                padding: 0 3vw;
-                list-style: none;
-            }
-
-            .navbar ul li a {
-                font-size: 2.2vw;
-                border-bottom: 1px solid rgb(189 189 189);
-
-            }
-
-
+        .graph h2 {
+            font-size: 2vw;
         }
     </style>
 </head>
 
 <body>
-    <div class="home">
-        <div class="header">
-            <div class="cart">
-                <a href="cart.html">
-                    🛒<span></span>
-                </a>
-            </div>
-
-            <div id="heading">
-                <div class="textiles">HAND MADE - TEXTILES </div>
-
-                <svg class="Line_31" viewBox="0 0 2040 1">
-                    <path id="Line_31" d="M 0 0 L 2040 0">
-                    </path>
-                </svg>
-                <p>BEAUTIFUL BOUCLÉ</p>
-
-            </div>
-
-            <nav class="navbar">
-                <ul>
-                    <li class="grow"><a href="#">BOUCLÉ LIBRARY</a></li>
-                    <li class="grow"><a href="#">HOME GALLERY</a></li>
-                    <li class="grow"><a href="#">ARTISANAL STORY </a></li>
-                    <li class="grow"><a href="#">CLIENT PURCHASE</a></li>
-                    <li class="grow"><a href="#">WHITE LABEL</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div id="model">
-            <div class="box">
-                <img src="5image.jpg">
-
-            </div>
-            <div class="box">
-                <img src="1image.jpg">
-
-            </div>
-            <div class="box">
-                <img src="6image.jpg">
-
-            </div>
-            <div class="box">
-                <img src="4image.jpg">
-
-            </div>
-            <div class="box">
-                <img src="2image.jpg">
-
-            </div>
-            <div class="box">
-                <img src="3image.jpg">
-
-            </div>
-
-        </div>
-        <div id="scarf">
-            <div class="text">
-                <u>BOUCLÉ FABRICS..</u> <BR>
-                “That's the thing with handmade textiles - They still have the <br> person's mark on them, and when
-                you hold
-                them, you feel less alone.”
-            </div>
-        </div>
-        <div class="ax">
-            <img src="picsart.jpg" alt="">
-            <!-- <img src="b1.jpg" alt="">
-            <img src="b2.jpg" alt="">
-            <img src="b3.jpg" alt="">
-            <img src="b4.jpg" alt="">
-            <img src="b5.jpg" alt="">
-            <img src="b6.jpg" alt="">-->
-
-        </div>
-        <div id="aunt">
-            <div class="auntext">
-
-            </div>
-
-
-        </div>
-        <div class="fash">
-            <div class="ion">
-                <a href="weaves.html"><img src="woven.jpeg"></a>
-                <p class="sky">WEAVES</p>
-            </div>
-            <div class="ion">
-                <img src="aota.jpeg" onclick="application.gotoTargetView(event)" id="HAND">
-                <p class="sky">BY HAND</p>
-
-
-            </div>
-            <div class="ion">
-                <img src="homeimage.jpg">
-                <p class="sky">HOME</p>
-            </div>
-        </div>
-        <!--  <div class="ion">
-                <img src="fashionimage.jpg">
-                <p class="sky">FASHION</p>
-            </div> -->
-
-
-        <!--   <div class="btn">
-            <img src="play.png" alt="">
-            <p class="bot"> Hand weaving bouclé fabric</p>
-        </div> -->
-
-        <div class="coll">
-            <div class="collection">
-                WOVEN'S COLLECTION
-            </div>
-            <svg class="Line_34" viewBox="0 0 1259 3">
-                <path id="Line_34" d="M 0 0 L 1259 3">
-                </path>
-            </svg>
-            <div class="wrapper-grid">
-                <div class="grid">
-                    <a href="morning sky.html"> <img src="A.jpeg"> </a>
-                    <p class="color">MORNING SKY</p>
-                   
-                </div>
-                <div class="grid">
-                    <a href="afternoon sky.html"> <img src="B.jpeg"> </a>
-                    <p class="color">AFTERNOON SKY</p>
-                   
-                </div>
-                <div class="grid">
-                    <a href="evening sky.html"> <img src="C.jpeg"> </a>
-                    <p class="color">EVENING SKY</p>
-                   
-                </div>
-                <div class="grid">
-                    <a href="dawn.html"> <img src="D.jpeg"> </a>
-                    <p class="color">DAWN</p>
-                   
-                </div>
-                <div class="grid">
-                    <a href="springfield.html"> <img src="E.jpeg"> </a>
-                    <p class="color">SPRINGFIELD</p>
-                </div>
-                <div class="grid">
-                    <a href="springtime.html"> <img src="F.jpeg"> </a>
-                    <p class="color">SPRINGTIME</p>
-                </div>
-                <div class="grid">
-                    <a href="sunset.html"> <img src="G.jpeg"> </a>
-                    <p class="color">SUNSET</p>
-                </div>
-                <div class="grid">
-                    <a href="summertime.html"> <img src="H.jpeg"> </a>
-                    <p class="color">SUMMERTIME</p>
-                </div>
-                <div class="grid">
-                    <a href="morning sun.html"><img src="I.jpeg">
-                    </a>
-                    <p class="color">MORNING SUN</p>
-                </div>
-                <div class="grid">
-                    <a href="afternoon sun.html"><img src="J.jpeg">
-                    </a>
-                    <p class="color">AFTERNOON SUN</p>
-                </div>
-                <div class="grid">
-                    <a href="storm sky.html"><img src="K.jpeg">
-                    </a>
-                    <p class="color">STORM SKY</p>
-                </div>
-                <div class="grid">
-                    <a href="storm break.html"><img src="L.jpeg">
-                    </a>
-                    <p class="color">STORM BREAK</p>
-                </div>
-                <!--  <div class="grid">
-                    <img src="M.jpeg">
-                    <p class="color">WINTER MORNING</p>
-                </div>-->
-                <div class="grid">
-                    <a href="confetti spring.html"> <img src="P.jpeg"></a>
-                    <p class="color">CONFETTI SPRING</p>
-                </div>
-                <div class="grid">
-                    <a href="confetti fall.html"><img src="Q.jpeg">
-                    </a>
-                    <p class="color">CONFETTI FALL</p>
-                </div>
-                <div class="grid">
-                    <a href="spring one.html"> <img src="R.jpeg"> </a>
-                    <p class="color">SPRING ONE</p>
-                </div>
-                <!--   <div class="grid">
-                    <img src="S.jpeg">
-                    <p class="color">SPRING TWO</p>
-                </div>-->
-
-                <div class="grid">
-                    <a href="summer one.html"> <img src="T.jpeg"> </a>
-                    <p class="color">SUMMER ONE</p>
-                </div>
-                <!-- <div class="grid">
-                    <img src="U.jpeg">
-                    <p class="color">SUMMER TWO</p>
-                </div>-->
-
-                <div class="grid">
-                    <a href="fall one.html"> <img src="V.jpeg"> </a>
-                    <p class="color">FALL ONE</p>
-                </div>
-                <div class="grid">
-                    <a href="fall two.html"> <img src="W.jpeg"> </a>
-                    <p class="color">FALL TWO</p>
-                </div>
-                <div class="grid">
-                    <a href="whiteout.html"> <img src="N.jpeg"> </a>
-                    <p class="color">WHITEOUT</p>
-                </div>
-                <!-- <div class="grid">
-                    <img src="X.jpeg">
-                    <p class="color">WINTER ONE</p>
-                </div>-->
-
-                <div class="grid">
-                    <a href="midnight.html"> <img src="O.jpeg"> </a>
-                    <p class="color">MIDNIGHT</p>
-                </div>
-
-
-
-
-
-            </div>
-        </div>
-        <!--  <div class="desi">
-            <div class="design">
-                FASHION GALLERY
-            </div>
-            <svg class="Line_41" viewBox="0 0 1567 4">
-                <path id="Line_41" d="M 0 0 L 1567 0">
-                </path>
-            </svg>
-            <div class="wrapper">
-                <div class="gride">
-                    <img src="KMR59668.jpg">
-                </div>
-                <div class="gride">
-                    <img src="KMR59666.jpg">
-                </div>
-                <div class="gride">
-                    <img src="KMR59672.jpg">
-                </div>
-            </div>
-        </div> -->
-
-        <div class="gall">
-            <div class="gallery">
-                HOME GALLERY
-            </div>
-            <svg class="Line_000" viewBox="0 0 1259 3">
-                <path id="Line_000" d="M 0 0 L 1259 3">
-                </path>
-            </svg>
-            <div class="wrapper-grido">
-                <div class="grido">
-                    <img onclick="application.goToTargetView(event)" id="#" src="home1.jpg">
-                    <p class="homies">DECORATIVE COUSIONS</p>
-
-                </div>
-                <div class="grido">
-                    <img src="home2.jpg">
-                    <p class="homies">THROWS</p>
-
-                </div>
-                <div class="grido">
-                    <img src="home3.jpg">
-                    <p class="homies">CHAIRS</p>
-
-                </div>
-                <div class="grido">
-                    <img src="home4.jpg">
-                    <p class="homies">BENCHES</p>
-
-                </div>
-                <div class="grido">
-                    <img src="home5.jpg">
-                    <p class="homies">SOFA</p>
-
-                </div>
-                <div class="grido">
-                    <img src="home6.jpg">
-                    <p class="homies">OTTOMAN</p>
-
-                </div>
-            </div>
-        </div>
-        <div class="footer">
-
-            <div class="thumb">
-                Retail Client Services
-
-            </div>
-
-            <div class="thumb">
-                Wholesale Client Services
-            </div>
-            <div class="thumb">
-                Handmade - Textiles
-            </div>
-            <div class="thumb">
-                &emsp; Media
-            </div>
-
-            <div class="foot">
-                Joint Venture
-            </div>
-            <div class="foot">
-                Buyer Inquiry
-            </div>
-            <div class="foot">
-                Boucle
-            </div>
-            <div class="foot">
-                Blog
-            </div>
-            <div class="foot">
-                JV Partner
-            </div>
-            <div class="foot">
-                Private Label
-            </div>
-            <div class="foot">
-                Hand Block
-            </div>
-            <div class="foot">
-                Editorial
-            </div>
-            <div class="foot">
-                Customized Order Process
-            </div>
-            <div class="foot">
-                Co - Branding
-            </div>
-            <div class="foot">
-                Hand Embroidery
-            </div>
-            <div class="foot">
-                Affliliate Partnership
-            </div>
-            <div class="foot">
-
-            </div>
-            <div class="foot">
-                <div class="social">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
-                    <a href="#"><i class="fab fa-pinterest"></i></a>
-
-                </div>
-            </div>
-
-            <div class="foot">
-                Hand Woven
-            </div>
-            <div class="finger">
-
-            </div>
-        </div>
+    <div class="maga">
+        <h1>MAGA</h1> <br>
+        <h2>2024 / 2025</h2>
     </div>
-    <script src="main.js"></script>
+    <div class="we">
+        <span class="w">WE THE PEOPLE</span>
+        <span class="e">ARE THE POWER</span>
+    </div>
+    <nav>
+        <li class="red"><a href="about.html">ABOUT</a> </li>
+        <li class="blue"><a href="regestration.html">REGESTRATION</a></li>
+        <li class="red"><a href="contact.html">CONTACT US</a></li>
+        <li class="blue"><a href="support.html">SUPPORT</a></li>
+        <li class="red"><a href="shop.html">SHOP</a></li>
+    </nav>
+  
+    <div class="citizen">
+        <div class="ci">CITIZENS</div>
+        <div class="ti">MANIFESTO</div>
+        <div class="zen">2025</div>
+    </div>
+    <div class="para">
+        <span class="redt">WE THE PEOPLE..</span> <span class="bluet">ARE THE POWER</span> of
+        <span class="redt">AMERICA</span> must awaken and take back Our country through the
+        <span class="redt">NEW MAGA</span>&nbsp;<span class="bluet">MOVEMENT..</span> Assuring that THE TRUE PATRIOTS MOVEMENT
+        CONTINUES to strengthen and grow stronger in numbers and conviction, We must recognized that the
+        <span class="redt">USA</span> under President Trump's tenured business acumen WAS MADE GREAT AGAIN during His
+        first term in office.. <br>
+        <span class="redt">WE THE PEOPLE</span>&nbsp;<span class="bluet">ARE THE POWER</span> &nbsp;<span class="redt">USA</span>
+        "ONLY RECOGNISE" President Donald J. Trump as Our RIGHTFUL President.. WE THE PEOPLE ARE THE POWER USA are
+        committed to continuing President Elect (2020) Donald Trump's Platform
+        <span class="redt">MAGA</span> &nbsp;<span class="bluet">MOVEMENT</span>.. President Trump had already MADE
+        <span class="redt">AMERICA GREAT AGAIN</span>&nbsp;<span class="bluet">(2017-2020)</span>&nbsp;prior to the systematic VOTER
+        FRAUD, across Our Nation in every state.. <br>
+        <span class="redt">WE THE PEOPLE</span>&nbsp;<span class="bluet">ARE THE POWER</span>&nbsp;<span class="redt">USA</span>
+        have formed a UNIFIED PATRIOTS PLATFORM that is strategically focused on the Original <span class="redt">MAGA
+            MOVEMENT,</span>
+        with the exception that President Trump had already awakened the Patriotic Masses and has accomplished His set
+        Goals & Objectives when He was seated in the White House.. <br>
+        <span class="redt">WE THE PEOPLE</span>&nbsp;<span class="bluet">ARE THE POWER</span>&nbsp;<span class="redt">USA,</span>
+        believe what President Trump has accomplished MUST NOW CONTINUE!! Continue as an extension of
+        <span class="redt">MAGA</span>. Under <span class="redt">TRUMPS</span>&nbsp;GREAT LEADERSHIP the
+        <span class="redt">USA</span> will become <span class="bluet">GREATER AGAIN.</span>ALL TRUE
+        <span class="redt">TRUMP</span>&nbsp;<span class="bluet">SUPPORTERS</span> believe this.. <br>
+        A UNIFIED Patriots Driven <span class="redt">NEW MAGA</span> Agenda that will continue the
+        <span class="redt">TRUMP</span> MESSAGE of unwavering struggle MUST EXPAND and GROW STRONGER..
 
-    <script id="applicationScript">
-        var Application = function () {
-            this.prefix = "--web-";
-            var self = this;
-            self.goToTargetView = function (event) {
-                var button = event.currentTarget;
-                var buttonComputedStyles = getComputedStyle(button);
-                var actionTargetValue = buttonComputedStyles.getPropertyValue(self.prefix + "action-target").trim();
-                var targetType = buttonComputedStyles.getPropertyValue(self.prefix + "action-type").trim();
+    </div>
+    <div class="graph">
+        <p>AMERICA WILL BE GREATER THAN EVER BEFORE!!!</p>
+        <span class="redt">WE THE PEOPLE</span>&nbsp;<span class="bluet">ARE THE POWER</span>&nbsp;<span class="redt">USA</span>
+        must continue to carry the movement forward with a UNIFIED PATRIOTS Platform that does not divide Democrats
+        against Republicans, or use Race, Sexuality, and Gender as a Political Basis for DIVISION.. <br>
+        <span class="redt">WE THE PEOPLE</span>&nbsp;<span class="bluet">ARE THE POWER</span>&nbsp;<span class="redt">USA</span>
+        INCLUDE EVERYONE IN OUR STRUGGLE TO UNIFY, STRENGTHEN, EMPOWER and above all build bridges with ALL CITIZENS to
+        FORENSICLLY FOCUS on the
+        <span class="redt">NEW MAGA</span>&nbsp;MOVEMENT of - <span class="bluet">"MAKING</span>&nbsp;<span
+            class="redt">AMERICA</span>&nbsp;<span class="bluet">GREATER</span>&nbsp;<span class="redt">AGAIN"!!</span> <br>
+        <span class="bluet">"MAKING</span>&nbsp;<span class="redt">AMERICA</span>&nbsp;<span class="bluet">GREATER</span>&nbsp;<span
+            class="redt">AGAIN"</span> <span class="redt">(MAGA)</span>&nbsp;must eclipse the former <span
+            class="redt">MAGA</span>
+        Platform and UNIFY US ALL WHO BELIEVE IN TRUTH, JUSTICE AND OUR CONSTITUTIONAL FREEDOM.. NO POLITICAL ELECTED
+        OFFICIAL has POWER OVER THE PEOPLE!! <br>
+        <span class="redt">WE THE PEOPLE</span>&nbsp;<span class="bluet">ARE THE POWER</span>&nbsp;<span class="redt">USA</span>
+        GOVERN OURSELVES.. <br>
+        We must NOT STOP.. WE MUST NOT GIVE UP... WE MUST COMMIT TO CONTINUE THE
+        <span class="redt">MAGA</span>&nbsp;<span class="bluet">METHODOLOGIES</span>
+        President Trump fought so unselfishly for.. <br>
+        With a NEW BATTLE CRY for All CITIZENS.. - "
+        <span class="bluet">"MAKING</span>&nbsp;<span class="redt">AMERICA</span>&nbsp;<span class="bluet">GREATER</span>&nbsp;<span
+            class="redt">AGAIN"!!</span> <br>
+        Only the <span class="redt">MAGA</span> &nbsp;<span class="bluet">MOVEMENT</span>!!! will unify this
+        <span class="redt">NEW MAGA</span>&nbsp; <span class="bluet">CITIZENRY</span> return the United States back in control
+        of It's People with the end result to REINSTATE President
+        <span class="redt">TRUMP</span> 2024. <br>
+        <span class="redt">WE THE PEOPLE</span> &nbsp;<span class="bluet">ARE THE POWER</span> ", "HOLD ALL POWER" with "THE
+        POWER TO TAKE BACK
+        <span class="redt">AMERICA</span> WHEN WE DEEM NECESSARY".. Our Elected Officials MUST COMMIT Their time to the
+        BETTERMENT OF THE
+        <span class="redt">USA</span> , and its <span class="bluet">CITIZENS</span>
+        <div class=""></div>
+        <h2 class="bluet">-GOD BLESS AMERICA- </h2>
+        <h2 class="redt">-GOD BLESS IT’S CITIZENRY </h2>
+    </div>
+    <div class="usa">
+        <h1 class="red">USA</h1>
+        <h2 class="blue">WE THE PEOPLE</h2>
+        <h2 class="red">ARE THE POWER</h2>
+        <h1 class="blue">2025</h1>
+        <h3>(ALl Rights Reserved)</h3>
+    </div>
 
-                if (self.application == false || targetType == "page") {
-                    document.location.href = "./" + actionTargetValue;
-                    return;
-                }
-                event.stopImmediatePropagation();
-            }
-            self.getElement = function (id) {
-                id = id ? id.trim() : id;
-                var element = id ? document.getElementById(id) : null;
-
-                return element;
-            }
-        }
-
-        window.application = new Application();
-    </script>
 </body>
 
 </html>

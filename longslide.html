@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  
+    .middle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        overflow: hidden
+    }
+
+    .navigation {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translate(-50%);
+        display: flex;
+    }
+
+    .bar {
+        width: 3.3vw;
+        height: 10px;
+        border: 2px solid #fff;
+        margin: 0.4vw;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+
+    .bar:hover {
+        background: #fff;
+    }
+
+    input[name="r"] {
+        position: absolute;
+        visibility: hidden;
+    }
+
+    .slides {
+        width: 2200%;
+        height: 100%;
+        display: flex;
+    }
+
+    .slide {
+        width: 4.5454545454545454%;
+        transition: 0.6s;
+    }
+
+   
+    .slide img{
+        object-fit: contain;
+    user-select: text;
+    top: 0px !important;
+    right: 0px !important;
+    bottom: 0px !important;
+    left: 0px !important;
+    box-sizing: border-box !important;
+    min-width: 0px !important;
+    max-width: none !important;
+    min-height: 0px !important;
+    max-height: none !important;
+    width: 100% !important;
+    height: 100% !important;
+    transform: none !important;
+    margin: 0px !important;
+    background: black;
+    }
+.txt{
+    position: relative;
+  
+}
+.txt h1{
+    position: absolute;
+    left: 7vw;
+    top: 10vw;
+    color: cyan;
+}
+    #r1:checked~.s1 {
+        margin-left: 0;
+    }
+
+    #r2:checked~.s1 {
+        margin-left: -4.54545454545454%;
+    }
+    #r3:checked~.s1 {
+        margin-left: -9.090909090909090%;
+    }
+    #r4:checked~.s1 {
+        margin-left: -13.63636363636363%;
+    }
+    #r5:checked~.s1 {
+        margin-left: -18.18181818181818%;
+    }
+    #r6:checked~.s1 {
+        margin-left: -22.72727272727272%;
+    }
+    #r7:checked~.s1 {
+        margin-left: -27.27272727272727%;
+    }
+    #r8:checked~.s1 {
+        margin-left: -31.81818181818181%;
+    }
+    #r9:checked~.s1 {
+        margin-left: -36.36363636363636%;
+    }
+    #r10:checked~.s1 {
+        margin-left: -40.90909090909090%;
+    }
+    #r11:checked~.s1 {
+        margin-left: -45.45454545454445%;
+    }
+    #r12:checked~.s1 {
+        margin-left: -50.0000001%;
+    }
+    #r13:checked~.s1 {
+        margin-left: -54.54545454%;
+    }
+    #r14:checked~.s1 {
+        margin-left: -59.090909090%;
+    }
+    #r15:checked~.s1 {
+        margin-left: -63.636363636363%;
+    }
+    #r16:checked~.s1 {
+        margin-left: -68.181818181818%;
+    }
+    #r17:checked~.s1 {
+        margin-left: -72.727272727272%;
+    }
+    #r18:checked~.s1 {
+        margin-left: -77.2727272727272%;
+    }
+    #r19:checked~.s1 {
+        margin-left: -81.81818181818181%;
+    }
+    #r20:checked~.s1 {
+        margin-left: -86.36363636363636%;
+    }
+    #r21:checked~.s1 {
+        margin-left: -90.90909090909090%;
+    }
+    #r22:checked~.s1 {
+        margin-left: -95.45454545454545%;
+    }
+
+</style>
+
+<body>
+    <div class="slidershow middle">
+        <div class="slides">
+            <input type="radio" name="r" id="r1" checked>
+            <input type="radio" name="r" id="r2">
+            <input type="radio" name="r" id="r3">
+            <input type="radio" name="r" id="r4">
+            <input type="radio" name="r" id="r5">
+            <input type="radio" name="r" id="r6">
+            <input type="radio" name="r" id="r7">
+            <input type="radio" name="r" id="r8">
+            <input type="radio" name="r" id="r9">
+            <input type="radio" name="r" id="r10">
+            <input type="radio" name="r" id="r11">
+            <input type="radio" name="r" id="r12">
+            <input type="radio" name="r" id="r13">
+            <input type="radio" name="r" id="r14">
+            <input type="radio" name="r" id="r15">
+            <input type="radio" name="r" id="r16">
+            <input type="radio" name="r" id="r17">
+            <input type="radio" name="r" id="r18">
+            <input type="radio" name="r" id="r19">
+            <input type="radio" name="r" id="r20">
+            <input type="radio" name="r" id="r21">
+            <input type="radio" name="r" id="r22">
+            <div class="slide s1">
+                <div class="txt"><h1> Indian Paigly</h1></div>
+                <img class="otis" src="Indian Floral 40x40 75.jpg" alt="">
+            </div>
+            <div class="txt"><h1>Purple Paigly</h1></div>
+            <div class="slide">
+                <img class="maeve" src="Art Deco Stripes 20x20  10.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img class="maeve" src="Art Deco Lightning Angled  20x20  142.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img class="maeve" src="Flower Power Cornered 16x16  113.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img class="maeve" src="Flower Power Field 20x20  114.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img class="maeve" src="Italian Paisley 40x40 87.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img class="maeve" src="Art Deco Tile 20x20  34.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img class="maeve" src="Art Deco Bubble 16x16 141.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img class="maeve" src="Indian Floral 20x20 70.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img class="maeve" src="Art Deco Lightning Straight 40x40  147.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img class="maeve" src="Indian Floral 20x20 74.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img class="maeve" src="Art  Deco Cornered Stripes 40x40 15.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img class="maeve" src="Italian Paisley Exploded  20x20 86.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img class="maeve" src="Art Deco Tile 20x20  30.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img class="maeve" src="Art Deco Box 16x16  29.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img class="maeve" src="Art Deco Tile 40x40  31.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img class="maeve" src="Art Deco Box 16x16  33.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img class="maeve" src="Art Deco Triangle Stripes16x16  9.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img class="maeve" src="Art Deco Lightning Angled 20x20 146.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img class="maeve" src="Art Deco Tile  40x40  35.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img class="maeve" src="Art Deco Tile Triangle Stripes 16x16  13.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img class="maeve" src="" alt="">
+            </div>
+            <div class="slide">
+                <img class="maeve" src="" alt="">
+            </div>
+        </div>
+        <div class="navigation">
+            <label for="r1" class="bar"></label>
+            <label for="r2" class="bar"></label>
+            <label for="r3" class="bar"></label>
+            <label for="r4" class="bar"></label>
+            <label for="r5" class="bar"></label>
+            <label for="r6" class="bar"></label>
+            <label for="r7" class="bar"></label>
+            <label for="r8" class="bar"></label>
+            <label for="r9" class="bar"></label>
+            <label for="r10" class="bar"></label>
+            <label for="r11" class="bar"></label>
+            <label for="r12" class="bar"></label>
+            <label for="r13" class="bar"></label>
+            <label for="r14" class="bar"></label>
+            <label for="r15" class="bar"></label>
+            <label for="r16" class="bar"></label>
+            <label for="r17" class="bar"></label>
+            <label for="r18" class="bar"></label>
+            <label for="r19" class="bar"></label>
+            <label for="r20" class="bar"></label>
+            <label for="r21" class="bar"></label>
+            <label for="r22" class="bar"></label>
+        </div>
+    </div>
+</body>
+
+</html>

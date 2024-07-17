@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Client Inquiry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .phonebooboo {
+            display: none;
+        }
+
+        html,
+        body {
+            overflow-x: hidden;
+        }
+
+        .grow {
+            transition: all .2s ease-in-out;
+        }
+
+        .grow:hover {
+            transform: scale(1.1);
+        }
+
+        .womenswearbusiness {
+            position: fixed;
+            background-color: white;
+            width: 100%;
+            white-space: nowrap;
+            text-align: center;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 4.1vw;
+            color: rgba(92, 92, 92, 1);
+            z-index: 1;
+            padding: 7px;
+            --web-action-type: page;
+            --web-action-target: index.html;
+            cursor: pointer;
+        }
+
+        .navbar {
+
+            margin-top: 5.7vw;
+            position: fixed;
+            height: 2.09vw;
+            overflow: visible;
+            z-index: 1;
+            width: 100%;
+
+        }
+
+        .navbar li {
+            display: inline-block;
+            list-style: none;
+            padding: 0.3vw 0px;
+            position: relative;
+            left: 0.55vw;
+        }
+
+        .navbar ul {
+            background-color: rgb(97, 97, 97);
+            width: 100%;
+        }
+
+        .navbar li a {
+            background-color: rgb(97, 97, 97);
+            margin: 1.04vw;
+            text-align: justify;
+            padding: 0px 0px;
+            text-decoration: none;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1.33vw;
+            color: rgba(248, 244, 244, 1);
+        }
+
+        .content {
+            margin-top: auto;
+            padding: 8vw 0px;
+        }
+
+        .footer {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            background: rgb(52 47 47);
+            position: relative;
+
+        }
+
+        .phonefooter {
+            display: none;
+        }
+
+        .thumb {
+
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            padding: 0 13vw 0 3vw;
+            margin-top: 1.5vw;
+            font-size: 2.2vw;
+            color: rgba(255, 255, 255, 1);
+        }
+
+          .foot {
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            padding: 0 3.4vw;
+            font-size: 1.5vw;
+            margin-top: 0.5vw;
+            color: rgba(255, 255, 255, 1);
+
+        }
+        .policy a {
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1.5vw;
+            margin-top: 0.5vw;
+            color: rgba(255, 255, 255, 1);
+            text-decoration: none;
+
+        }
+
+        .foot a {
+            color: rgba(255, 255, 255, 1);
+            text-decoration: none;
+        }
+
+        .social {
+            margin-top: 1vw;
+            margin-bottom: 1vw;
+        }
+
+        .social a {
+            color: rgba(255, 255, 255, 1);
+            padding: 0 1.3vw 0 0vw;
+        }
+
+        .whatsapp {
+            padding: 17px;
+        }
+
+
+        #logo {
+            position: relative;
+        }
+
+        #logo img {
+            width: 20vw;
+        }
+
+        @media (min-width: 2470px) {
+            .navbar {
+                margin-top: 5.2vw;
+            }
+
+            .womenswearbusiness {
+                padding: 13px;
+            }
+
+            .navbar li a {
+                margin: 1.12vw;
+            }
+
+        }
+
+        @media (min-width: 1726px) {
+            .navbar {
+                margin-top: 5.4vw;
+            }
+
+            .womenswearbusiness {
+                padding: 13px;
+            }
+
+            .navbar li a {
+                margin: 1.12vw;
+            }
+
+
+        }
+
+        @media (min-width: 1900px) {
+            .navbar {
+                margin-top: 5.25vw;
+            }
+
+            .womenswearbusiness {
+                padding: 13px;
+            }
+
+            .navbar li a {
+                margin: 1.12vw;
+            }
+        }
+
+        @media (min-width: 1400px) {
+            .navbar {
+                margin-top: 5.5vw;
+            }
+
+            .navbar li a {
+                margin: 1.12vw;
+            }
+
+            .womenswearbusiness {
+                padding: 13px;
+            }
+
+        }
+
+        @media(max-width: 1074px) {
+
+
+            .womenswearbusiness {
+                position: fixed;
+                background-color: white;
+                width: 100%;
+                white-space: nowrap;
+                text-align: center;
+                font-family: Times New Roman;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 4.1vw;
+                color: rgba(92, 92, 92, 1);
+                z-index: 1;
+                padding: 7px;
+
+            }
+
+            .boobooo {
+                display: none;
+            }
+
+            .phonebooboo {
+                display: block;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            .header {
+                min-height: 100vh;
+                width: 100%;
+            }
+
+            .grow {
+                transition: all .2s ease-in-out;
+            }
+
+            .grow:hover {
+                transform: scale(1.1);
+            }
+
+            .hamburger {
+                position: fixed;
+                cursor: pointer;
+                right: 18px;
+                display: block;
+                top: 1vw;
+            }
+
+
+
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+
+            .bar {
+                display: block;
+                width: 30px;
+                height: 3px;
+
+                margin: 5px auto;
+                -webkit-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+                background-color: rgb(0, 0, 0);
+            }
+
+            .topnav {
+                overflow: visible;
+                background-color: white;
+                position: absolute;
+                width: 100%;
+                height: 140vh;
+
+            }
+
+            .topnav #myLinks {
+                display: none;
+                background-color: white;
+                width: 100%;
+                height: 100vh;
+                z-index: 1;
+                position: fixed;
+            }
+
+            .topnav a {
+                padding: 20px 0px;
+                display: block;
+                text-align: right;
+                position: relative;
+                top: 10vw;
+                text-decoration: none;
+                font-family: Times New Roman;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 3.5vw;
+                color: white;
+                z-index: 3;
+                right: 5%;
+
+            }
+
+            #white {
+                z-index: 2;
+                position: fixed;
+                width: 100%;
+                height: 150vw;
+                top: 0;
+                opacity: 50%;
+                margin: 0;
+
+            }
+
+            .topnav a.icon {
+                background: white;
+                display: block;
+                position: absolute;
+                right: 0;
+                top: -16px;
+            }
+
+
+
+        }
+
+        @media(max-width: 600px) {
+            .boobooo {
+                display: none;
+            }
+
+            .phonebooboo {
+                display: block;
+            }
+
+
+
+
+
+            .womenswearbusiness {
+                position: absolute;
+                background-color: white;
+                width: 60%;
+                left: 18%;
+                white-space: nowrap;
+                text-align: center;
+                font-family: Times New Roman;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                color: rgba(92, 92, 92, 1);
+                z-index: 1;
+                padding: 7px;
+            }
+
+            .womenswearbusiness.active {
+                text-align: center;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            .header {
+                min-height: 100vh;
+                width: 100%;
+            }
+
+            .grow {
+                transition: all .2s ease-in-out;
+            }
+
+            .grow:hover {
+                transform: scale(1.1);
+            }
+
+            .hamburger {
+                position: absolute;
+                cursor: pointer;
+                right: 14px;
+                display: block;
+                top: 20px;
+            }
+
+
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+
+            .bar {
+                display: block;
+                width: 30px;
+                height: 3px;
+
+                margin: 5px auto;
+                -webkit-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+                background-color: rgb(0, 0, 0);
+            }
+
+            .topnav {
+                overflow: visible;
+                background-color: white;
+                position: absolute;
+                width: 100%;
+                height: 140vh;
+
+            }
+
+            .topnav #myLinks {
+                display: none;
+                background-color: white;
+                width: 100%;
+                height: 100vh;
+                z-index: 1;
+                position: fixed;
+            }
+
+            .topnav a {
+                padding: 20px 0px;
+                display: block;
+                text-align: right;
+                position: relative;
+                top: 110px;
+                text-decoration: none;
+                font-family: Times New Roman;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 4.35vw;
+                color: white;
+                z-index: 3;
+                right: 5%;
+
+            }
+
+            #white {
+                z-index: 2;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                opacity: 50%;
+            }
+
+            .topnav a.icon {
+                background: white;
+                display: block;
+                position: absolute;
+                right: 0;
+            }
+
+            .footer {
+                display: none;
+            }
+
+            .phonefooter {
+                display: flex;
+                width: 100%;
+                background: rgb(52 47 47);
+                position: relative;
+                z-index: 2;
+
+            }
+
+            .feet1 {
+                display: grid;
+                grid-template-columns: 1fr;
+                position: relative;
+            }
+
+            .thumb {
+                font-size: 5.5vw;
+                margin: 3vw 13vw 0 3vw;
+            }
+
+            .foot a {
+                color: rgba(255, 255, 255, 1);
+                text-decoration: none;
+            }
+
+            .foot {
+                font-size: 4vw;
+                padding: 0 6vw;
+            }
+
+            .feet2 {
+                position: relative;
+                right: 10%;
+                font-size: 5vw;
+                margin: 19vw 0;
+            }
+
+            .social {
+                row-gap: 5vw;
+                grid-template-columns: 1fr;
+                display: grid;
+            }
+
+            .logo {
+                position: relative;
+                right: 78%;
+                top: 25vw;
+            }
+
+            .logo img {
+                width: 40vw;
+            }
+
+            #last {
+                position: relative;
+                margin: 0 0 12vw;
+            }
+        }
+    </style>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: none;
+        }
+
+        .inqwhole {
+            position: relative;
+            margin: 9vw 0;
+        }
+
+        .client {
+            font-size: 3.9vw;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: normal;
+            font-weight: normal;
+            border-bottom: 0.2vw solid;
+            height: 4vw;
+            width: 32.2%;
+            position: relative;
+            left: 33%;
+            color: rgb(117, 117, 117, 1);
+        }
+
+        .clientinquirybg {
+            position: absolute;
+            left: 0;
+            width: 100%;
+        }
+
+        .clientinquirybg img {
+            width: 100%;
+            height: 125vw;
+        }
+
+        .inquiry {
+            position: relative;
+            text-align: center;
+            font-family: "Times New Roman";
+            font-style: normal;
+            font-weight: normal;
+            color: rgb(18, 18, 18);
+            margin: 5vw 0;
+            font-size: 1.6vw;
+        }
+
+        .phoneinquiry {
+            display: none;
+        }
+
+        .clientinquiry {
+            margin: 10vw 0px;
+
+        }
+
+        .info {
+            overflow: visible;
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-size: 1.7vw;
+            margin: 3vw 0;
+            background: none;
+            outline: none;
+            border-bottom: 1px solid rgb(133, 133, 133, 1);
+            font-family: "Times New Roman";
+            font-style: normal;
+            font-weight: normal;
+            color: rgb(0, 0, 0);
+        }
+
+        .long {
+            overflow: visible;
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-size: 1.7vw;
+            margin: 3vw 0;
+            background: none;
+            outline: none;
+            border-bottom: 1px solid rgb(133, 133, 133, 1);
+            font-family: "Times New Roman";
+            font-style: normal;
+            font-weight: normal;
+            color: rgb(0, 0, 0);
+        }
+
+        .message {
+            overflow: visible;
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1.7vw;
+            color: rgba(0, 0, 0, 1);
+            margin: 3vw 0;
+            border: 1.4px solid;
+        }
+
+        .btn {
+            position: relative;
+            padding: 0 0vw;
+            font-size: 1.5vw;
+            background: none;
+            float: right;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            border-style: groove;
+            color: rgba(0, 0, 0, 1);
+            margin-right: 12%;
+            cursor: pointer;
+        }
+
+        #contact1 {
+            display: flex;
+            position: relative;
+            gap: 24%;
+            margin: 0 12vw;
+        }
+
+        #contact2 {
+            display: flex;
+            position: relative;
+            gap: 24%;
+            margin: 0 12vw;
+
+        }
+
+        #contact3 {
+            display: flex;
+            position: relative;
+            gap: 24%;
+            margin: 0 12vw;
+
+        }
+
+        #contact4 {
+            display: flex;
+            position: relative;
+            margin: 0 12vw;
+
+        }
+
+        #contact5 {
+            display: flex;
+            position: relative;
+            gap: 24%;
+            margin: 0 12vw;
+
+        }
+
+        #contact6 {
+            display: flex;
+            position: relative;
+            margin: 0 12vw;
+
+        }
+
+        #contact7 {
+            display: flex;
+            position: relative;
+            margin: 0 12vw;
+
+        }
+
+        #contact8 {
+            display: flex;
+            position: relative;
+            margin: 0 12vw;
+
+        }
+
+        .products {
+            position: relative;
+            margin: 5vw 0vw;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2vw;
+            border: 1px solid;
+            margin: 5vw 12vw;
+        }
+
+        .designs {
+            position: relative;
+            margin: 2vw 0 1vw 0;
+            text-align: center;
+        }
+
+        .designs h1 {
+            font-size: 2vw;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: underline;
+        }
+
+        .designs span {
+            cursor: pointer;
+            font-size: 1vw;
+            margin: 0 0.5vw;
+            transform: 0.2s;
+            transition: 0.3s;
+        }
+
+        .designs span:hover {
+            color: grey;
+
+        }
+
+        .cart a {
+            position: absolute;
+            text-decoration: none;
+            font-size: 2vw;
+            right: 3%;
+            top: 1vw;
+            z-index: 1;
+            color: rgba(92, 92, 92, 1);
+        }
+
+
+
+
+        .product span {
+            position: relative;
+            font-size: 1.8vw;
+            margin: 0 1vw;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+        }
+
+        .product sub {
+            color: grey;
+            cursor: pointer;
+        }
+
+        .product {
+            position: relative;
+        }
+
+
+
+
+
+
+        @media (max-width: 1450px) {
+            #contact1 {
+                display: flex;
+                position: relative;
+                gap: 21%;
+                margin: 0 16vw;
+            }
+
+            #contact2 {
+                display: flex;
+                position: relative;
+                gap: 21%;
+                margin: 0 16vw;
+
+            }
+
+            #contact3 {
+                display: flex;
+                position: relative;
+                gap: 21%;
+                margin: 0 16vw;
+
+            }
+
+            #contact4 {
+                display: flex;
+                position: relative;
+                margin: 0 16vw;
+
+            }
+
+            #contact5 {
+                display: flex;
+                position: relative;
+                gap: 21%;
+                margin: 0 16vw;
+
+            }
+
+            #contact6 {
+                display: flex;
+                position: relative;
+                margin: 0 16vw;
+
+            }
+
+            #contact7 {
+                display: flex;
+                position: relative;
+                margin: 0 16vw;
+
+            }
+
+            #contact8 {
+                display: flex;
+                position: relative;
+                margin: 0 16vw;
+
+            }
+
+        }
+
+        @media (max-width: 1074px) {
+            .client {
+                border-bottom: none;
+                text-align: center;
+                width: 100vw;
+                left: 0;
+                text-decoration: underline;
+                font-size: 3.5vw;
+            }
+
+            .foot {
+                padding: 0 5.5vw;
+            }
+
+            .thumb {
+                padding: 0 5.5vw;
+            }
+
+            .clientinquirybg img {
+                height: 150vw;
+            }
+
+            .info {
+                margin: 3vw;
+            }
+
+            .long {
+                margin: 3vw;
+            }
+
+            #contact1 {
+                display: flex;
+                position: relative;
+                gap: 27%;
+                margin: 0 4vw;
+            }
+
+            #contact2 {
+                display: flex;
+                position: relative;
+                gap: 27%;
+                margin: 0 4vw;
+
+            }
+
+            #contact3 {
+                display: flex;
+                position: relative;
+                gap: 27%;
+                margin: 0 4vw;
+
+            }
+
+            #contact4 {
+                display: flex;
+                position: relative;
+                margin: 0 4vw;
+
+            }
+
+            #contact5 {
+                display: flex;
+                position: relative;
+                gap: 27%;
+                margin: 0 4vw;
+
+            }
+
+            #contact6 {
+                display: flex;
+                position: relative;
+                margin: 0 4vw;
+
+            }
+
+            #contact7 {
+                display: flex;
+                position: relative;
+                margin: 0 4vw;
+
+            }
+
+            #contact8 {
+                display: flex;
+                position: relative;
+                margin: 0 4vw;
+
+            }
+
+            .btn {
+                margin-right: 8%;
+            }
+
+        }
+
+        @media (max-width: 650px) {
+            .foot {
+                padding: 0 9vw;
+            }
+
+            .client {
+                font-size: 6vw;
+                margin: 0 0 3vw;
+            }
+
+            .clientinquirybg img {
+                height: 220vw;
+            }
+
+            .inquiry {
+                display: none;
+            }
+
+            .phoneinquiry {
+                position: relative;
+                text-align: center;
+                font-family: "Times New Roman";
+                font-style: normal;
+                font-weight: normal;
+                color: rgb(18, 18, 18);
+                margin: 9vw 0 7vw;
+                font-size: 3.6vw;
+                display: block;
+            }
+
+            #contact1 {
+                display: flex;
+                position: relative;
+                gap: 10%;
+                margin: 0 5vw;
+            }
+
+            #contact2 {
+                display: flex;
+                position: relative;
+                gap: 10%;
+                margin: 5vw;
+            }
+
+            #contact3 {
+                display: flex;
+                position: relative;
+                gap: 10%;
+                margin: 5vw;
+            }
+
+            #contact4 {
+                display: flex;
+                position: relative;
+                margin: 0 5vw;
+
+            }
+
+            #contact5 {
+                display: flex;
+                position: relative;
+                gap: 10%;
+                margin: 5vw;
+
+            }
+
+            #contact6 {
+                display: flex;
+                position: relative;
+                margin: 0 5vw;
+
+            }
+
+            #contact7 {
+                display: flex;
+                position: relative;
+                margin: 0 5vw;
+
+            }
+
+            #contact8 {
+                display: flex;
+                position: relative;
+                margin: 0 2vw;
+
+            }
+
+            .info {
+                font-size: 3.5vw;
+                width: 40vw;
+                margin: 5vw 0;
+                border-bottom: 1.85px solid rgb(133, 133, 133, 1);
+            }
+
+
+
+            .long {
+                width: 88.5vw;
+                font-size: 3.5vw;
+                margin: 5vw 0;
+                border-bottom: 1.85px solid rgb(133, 133, 133, 1);
+
+            }
+
+            #contact8 {
+                left: 3.7%;
+            }
+
+            .message {
+                font-size: 3vw;
+                width: 89vw;
+                height: 30vw;
+                border: 2px solid;
+            }
+
+            .btn {
+                font-size: 2.5vw;
+                margin-right: 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+ 
+    <div onclick="application.goToTargetView(event)" class="womenswearbusiness">
+        <span>WOMAN’S WEAR BUSINESS</span>
+    </div>
+    <div class="phonebooboo">
+        <div class="topnav">
+            <div id="myLinks">
+                <a class="grow" href="sartorial.html">SARTORIAL </a>
+                <a class="grow" href="collection.html">COLLECTION</a>
+                <a class="grow" href="customized.html">CUSTOMIZED PROCESS</a>
+                <a class="grow" href="production.html">PRODUCTION</a>
+                <a class="grow" href="businesssuiting.html">SUITINGS / SHIRTINGS</a>
+                <a class="grow" href="accessories.html">ACCESSORIES</a>
+                <a class="grow" href="clientpurchase.html">CLIENT PURCHASE</a>
+                <a class="grow" style="text-decoration: underline;" href="clientinquiry.html">INQUIRY</a>
+                </ul>
+                <img src="burgerbg.png" id="white">
+            </div>
+
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="boobooo">
+        <nav class="navbar">
+            <ul>
+                <li class="grow"><a href="sartorial.html">SARTORIAL </a></li>
+                <li class="grow"><a href="collection.html">COLLECTION</a></li>
+                <li class="grow"><a href="customized.html">CUSTOMIZED PROCESS</a></li>
+                <li class="grow"><a href="production.html">PRODUCTION</a></li>
+                <li class="grow"><a href="businesssuiting.html">SUITINGS / SHIRTINGS</a></li>
+                <li class="grow"><a href="accessories.html">ACCESSORIES</a></li>
+                <li class="grow"><a href="clientpurchase.html">CLIENT PURCHASE</a></li>
+                <li class="grow"><a style="text-decoration: underline;" href="clientinquiry.html">INQUIRY</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </div>
+ 
+    <div class="inqwhole">
+        <div class="client">
+            CLIENT INQUIRY
+        </div>
+        <div class="clientinquirybg">
+            <img src="clientinquirybg.png" alt="">
+        </div>
+        <div class="inquiry">
+            WW/B requests that You fill out the Client Inquiry below.. WW/B would like to <br> inform You of Seasonal
+            Collection Updates, and Trade Show, Trunk Show Calender <br> Events within Your City.. <br><br> If there are
+            any
+            Specific Request You may have concerning WW/B, Please leave Your <br> Comments below.. <br>
+            Thank You..
+        </div>
+        <div class="phoneinquiry">
+            WW/B requests that You fill out the Client Inquiry <br> below.. WW/B would like to inform You of Seasonal
+            <br>
+            Collection Updates, and Trade Show, <br> Trunk Show Calender Events within Your City.. <br> If there are any
+            Specific Request You may <br> have concerning WW/B, Please leave Your <br> Comments below.. <br>
+            Thank You..
+        </div>
+        <div class="clientinquiry">
+
+            <form method="post" action="contact.php">
+               
+                <div id="contact1">
+                    <input class="info" type="text" id="FIRSTNAME" name="FIRSTNAME" placeholder="FIRST NAME" size="30"
+                        required>
+                    <input class="info" type="text" id="LASTNAME" name="LASTNAME" placeholder="LAST NAME" size="30">
+                </div>
+                <div id="contact2">
+                    <input class="info" type="phone number" id="PHONENUMBER" name="PHONENUMBER"
+                        placeholder="PHONE NUMBER" size="30">
+                    <input class="info" type="email" id="EMAIL" name="EMAIL" placeholder="EMAIL" required size="30">
+                </div>
+                <div id="contact3">
+                    <input class="info" type="social media info" id="SOCIALMEDIAINFO" name="SOCIALMEDIAINFO"
+                        placeholder="SOCIAL MEDIA INFO" size="30">
+                    <input class="info" type="company name" id="COMPANYNAME" name="COMPANYNAME"
+                        placeholder="COMPANY NAME" size="30">
+                </div>
+                <div id="contact4">
+                    <input class="long" type="address" id="ADDRESS" name="ADDRESS" placeholder="ADDRESS" size="86.5">
+                </div>
+                <div id="contact5">
+                    <input class="info" type="city" id="CITY" name="CITY" placeholder="CITY" size="30">
+                    <input class="info" type="zip code" id="ZIPCODE" name="ZIPCODE" placeholder="ZIP CODE" size="30">
+                </div>
+                <div id="contact6">
+                    <input class="info" type="country" id="COUNTRY" name="COUNTRY" placeholder="COUNTRY" size="30">
+                </div>
+                <div id="contact7">
+                    <input class="long" type="subject" id="SUBJECT" name="SUBJECT" placeholder="SUBJECT" required
+                        size="86.5">
+                </div>
+               
+
+                <div id="contact8">
+                    <textarea class="message" name="MESSAGE" id="MESSAGE" cols="91" rows="12" placeholder="MESSAGE"
+                        required></textarea>
+                </div>
+
+                <button class="btn" id="SUBMIT"> SUBMIT</button>
+
+            </form>
+        </div>
+
+    </div>
+    <div class="footer">
+
+        <div class="thumb">
+            Retail Client Services
+
+        </div>
+
+        <div class="thumb">
+            Wholesale Client Services
+        </div>
+
+        <div class="thumb">
+            Media
+        </div>
+
+        <div class="foot">
+            <a href="clientinquiry.html"> Joint Venture
+            </a>
+        </div>
+        <div class="foot">
+            <a href="clientinquiry.html"> Buyer Inquiry
+            </a>
+        </div>
+        <div class="foot">
+            <a href="clientinquiry.html"> Blog
+            </a>
+        </div>
+        <div class="foot">
+            <a href="clientinquiry.html"> JV Partner
+            </a>
+        </div>
+        <div class="foot">
+            <a href="clientinquiry.html"> Private Label
+            </a>
+        </div>
+        <div class="foot">
+            <a href="clientinquiry.html"> Editorial
+            </a>
+        </div>
+        <div class="foot">
+            <a href="customized.html"> Customized Order Process
+            </a>
+        </div>
+        <div class="foot">
+            <a href="clientinquiry.html"> Co - Branding
+            </a>
+        </div>
+        <div class="foot">
+            <a href="clientinquiry.html"> Affliliate Partnership
+            </a>
+        </div>
+        <div class="foot">
+
+        </div>
+        <div class="foot">
+            <div class="social">
+                <a href="https://instagram.com/womanswearbusiness?igshid=YmMyMTA2M2Y="><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=12122102965" class="whatsapp"><i
+                        class="fab fa-whatsapp"></i></a>
+                <a href="https://www.pinterest.com/womenswearbusiness/_saved/"><i class="fab fa-pinterest"></i></a>
+
+            </div>
+        </div>
+        <div class="foot">
+            <div id="logo">
+                <img src="logo.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="phonefooter">
+        <div class="feet1">
+            <div class="thumb">
+                Retail Client Services
+
+            </div>
+            <div class="foot">
+                <a href="clientinquiry.html"> Joint Venture
+                </a>
+            </div>
+            <div class="foot">
+                <a href="clientinquiry.html"> JV Partner
+                </a>
+            </div>
+            <div class="foot">
+                <a href="customized.html"> Customized Order Process
+                </a>
+            </div>
+            <div class="thumb">
+                Wholesale Client Services
+
+            </div>
+            <div class="foot">
+                <a href="clientinquiry.html"> Buyer Inquiry
+                </a>
+            </div>
+            <div class="foot">
+                <a href="clientinquiry.html"> Private Label
+                </a>
+            </div>
+            <div class="foot">
+                <a href="clientinquiry.html"> Co - Branding
+                </a>
+            </div>
+            <div class="thumb">
+                Media
+
+            </div>
+            <div class="foot">
+                <a href="clientinquiry.html"> WW/B -Blog
+                </a>
+            </div>
+            <div class="foot">
+                <a href="clientinquiry.html"> Editorial
+                </a>
+            </div>
+            <div class="foot" id="last">
+                Affliliate Partnership
+            </div>
+        </div>
+
+        <div class="feet2">
+            <div class="social">
+                <a href="https://instagram.com/womanswearbusiness?igshid=YmMyMTA2M2Y="><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=12122102965" class="whatsapp"><i
+                        class="fab fa-whatsapp"></i></a>
+                <a href="https://www.pinterest.com/womenswearbusiness/_saved/"><i class="fab fa-pinterest"></i></a>
+
+            </div>
+            <div class="logo">
+                <img src="logo.png" alt="">
+            </div>
+        </div>
+
+
+    </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+    <script>
+        window.onload = function () {
+            const hamburger = document.querySelector(".hamburger");
+            const nav = document.querySelector(".navbar");
+            const womenswearbusiness = document.querySelector(".womenswearbusiness");
+
+            hamburger.addEventListener("click", () => {
+                hamburger.classList.toggle("active");
+                nav.classList.toggle("active");
+                womenswearbusiness.classList.toggle("active");
+            })
+        }
+
+        document.querySelectorAll(".li").forEach(n => n.
+            addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                nav.classList.remove("active");
+            }))
+    </script>
+    <script id="applicationScript">
+        var Application = function () {
+            this.prefix = "--web-";
+            var self = this;
+            self.goToTargetView = function (event) {
+                var button = event.currentTarget;
+                var buttonComputedStyles = getComputedStyle(button);
+                var actionTargetValue = buttonComputedStyles.getPropertyValue(self.prefix + "action-target").trim();
+                var targetType = buttonComputedStyles.getPropertyValue(self.prefix + "action-type").trim();
+
+                if (self.application == false || targetType == "page") {
+                    document.location.href = "./" + actionTargetValue;
+                    return;
+                }
+                event.stopImmediatePropagation();
+            }
+            self.getElement = function (id) {
+                id = id ? id.trim() : id;
+                var element = id ? document.getElementById(id) : null;
+
+                return element;
+            }
+        }
+
+        window.application = new Application();
+    </script>
+
+
+
+
+</html>

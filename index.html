@@ -3,269 +3,977 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAGAMAD</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Home</title>
     <style>
         body {
-            padding: 0 0;
-            margin: 0 0;
-            font-family: 'Times New Roman', Times, serif;
+            margin: 0 0 0 0;
         }
 
-        .maga {
-            position: relative;
-            text-align: center;
-            color: white;
-        }
-
-        .maga h1 {
-            background-color: rgb(162, 0, 0);
-            font-size: 6vw;
-            margin: 2vw 40vw 0vw;
-            padding: 0.4vw 0vw 0vw;
-        }
-
-        .maga h2 {
-            background-color: rgb(36, 36, 149);
-            font-size: 4.1vw;
-            margin: 1vw 40vw 0vw;
-            padding: 0.4vw 0vw 0vw;
-        }
-
-        .we {
+        .heading {
             position: relative;
             display: flex;
             justify-content: center;
-            margin: 3vw 0;
-            font-size: 3vw;
-            color: white;
         }
 
-        .w {
-            background-color: rgb(162, 0, 0);
-            color: white;
-            padding: 0vw 1vw 0vw 0vw;
-        }
-
-        .e {
-            background-color: rgb(36, 36, 149);
-            color: white;
-            padding: 0vw 0vw 0vw 1vw;
-
-
+        .heading a {
+            font-size: 4.3vw;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            color: rgba(92, 92, 92, 1);
+            border-bottom: 2px solid rgba(92, 92, 92, 1);
+            margin: 1vw 0;
+            text-decoration: none;
         }
 
         nav {
             position: relative;
             display: flex;
+            justify-content: space-evenly;
+            margin: 2vw 0;
+        }
+
+        .navbar ul {
+            display: inline-flex;
+        }
+
+        .navbar ul li {
+            padding: 0 5.5vw;
             list-style: none;
-            justify-content: center;
-            font-size: 2vw;
-            gap: 7vw;
-            color: white;
-            margin: 3vw 0;
         }
 
-        nav li {
-            padding: 0.1vw 0.9vw;
-            border-top-right-radius: 0.5vw;
-            border-bottom-right-radius: 0.5vw;
-        }
-        nav li a {
-            color: white;
+        .navbar ul li a {
+            font-size: 1.6vw;
             text-decoration: none;
-
-        }
-        .red {
-            background-color: rgb(162, 0, 0);
-
-        }
-
-        .blue {
-            background-color: rgb(36, 36, 149);
-
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            color: rgba(92, 92, 92, 1);
+            border-bottom: 1.82px solid rgb(189 189 189);
         }
 
-        .usa {
-            position: relative;
-            text-align: center;
-            color: white;
-            margin: 5vw 0;
-        }
-
-        .usa h1 {
-            position: relative;
-            margin: 1vw 42vw 0vw;
-            font-size: 6vw;
-        }
-
-        .usa h2 {
-            margin: 1vw 42vw 0vw;
-            font-size: 1.75vw;
-
-        }
-
-        .usa h3 {
-            color: black;
-        }
-
-        .citizen {
+        .homefirst {
             position: relative;
             display: flex;
             justify-content: center;
-            margin: 3vw 0;
+            margin: 4vw 0;
+        }
+
+        .homefirst img {
+            height: 18.2vw;
+        }
+
+        .homesecond {
+            position: relative;
+            color: rgba(0, 0, 0, 1);
+            font-weight: normal;
+            font-style: italic;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            font-size: 1vw;
+            top: 7vw;
+            z-index: 1;
+        }
+
+        .homesecondimg {
+            position: relative;
+            text-align: center;
+            top: -5vw;
+        }
+
+        .homesecondimg img {
+            height: 23vw;
+            width: 97vw;
+        }
+
+        .homethird {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            text-align: center;
+        }
+
+        .ftbt {
+            position: relative;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.2vw;
+            font-style: normal;
+            font-weight: normal;
+            color: rgba(32, 32, 32, 1);
+            margin: 0.3vw 0;
+            top: 28vw;
+        }
+
+        .thirdflexi img {
+            height: 28vw;
+            width: 22vw;
+        }
+
+        .thirdflexi {
+            position: relative;
+        }
+
+        .container1 {
+            position: relative;
+        }
+
+        .container2 {
+            position: relative;
+        }
+
+        .slide1,
+        .slide2 {
+            position: absolute;
+            top: 0;
+            opacity: 0;
+            transition: opacity 1.5s ease;
+        }
+
+        .slide1 {
+            left: 5vw;
+        }
+
+        .slide2 {
+            right: 5vw;
+        }
+
+
+        .show {
+            opacity: 1;
+        }
+
+        .thirdflex {
+            position: relative;
+        }
+
+        .thirdflex img {
+            height: 28vw;
+            width: 32vw;
+        }
+
+
+        .thirdflex h2 {
+            position: relative;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            color: rgba(92, 92, 92, 1);
+            font-weight: normal;
+            font-style: normal;
             font-size: 3vw;
-            color: white;
-            text-decoration: underlines;
-
+            margin: 1vw 0;
         }
 
-        .ci {
-            background-color: rgb(162, 0, 0);
-            padding: 0vw 1vw 0vw 0vw;
-        }
-
-        .ti {
-            background-color: rgb(36, 36, 149);
-            padding: 0vw 1vw 0vw 1vw;
-
-        }
-
-        .zen {
-            background-color: rgb(162, 0, 0);
-            padding: 0vw 0vw 0vw 1vw;
-        }
-
-        .para {
+        .thirdflex h3 {
             position: relative;
-            font-size: 1.7vw;
-            margin: 0vw 5vw;
-            line-height: 2.9vw;
-            text-align: center;
-
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+            font-weight: normal;
+            color: rgba(0, 0, 0, 1);
+            top: -13vw;
+            margin: 0 0.8vw;
+            font-size: 1.2vw;
+            text-align: left;
         }
 
-        .redt {
-            color: rgb(162, 0, 0);
-        }
 
-        .bluet {
-            color: rgb(36, 36, 149);
-        }
-
-        .graph {
+        .wwbcollection {
             position: relative;
-            font-size: 1.7vw;
-            margin: 0vw 5vw;
-            line-height: 2.9vw;
-            text-align: center;
         }
 
-        .graph p {
-            color: rgb(36, 36, 149);
+        .maintitle {
+            text-align: center;
             text-decoration: underline;
-            font-size: 1.9vw;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: normal;
+            font-weight: normal;
+            color: rgba(83, 83, 83, 1);
+            font-size: 4.5vw;
+            margin: 0 0 3vw 0;
         }
 
-        .graph h2 {
-            font-size: 2vw;
+        .collection {
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .collection img {
+            height: 25vw;
+        }
+
+        .title {
+            position: relative;
+            text-align: center;
+            font-size: 1.5vw;
+            font-weight: normal;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: normal;
+            margin: 0 0 5vw 0;
+        }
+
+        .wwbdesign {
+            position: relative;
+            margin: 3vw 0;
+        }
+
+        .wwbsilk {
+            position: relative;
+            margin: 3vw 0;
+        }
+
+        .wwbphoto {
+            position: relative;
+            margin: 3vw 0;
+        }
+
+        .scarfphoto {
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            row-gap: 7vw;
+        }
+
+        .scarfphoto img {
+            height: 25vw;
+        }
+
+        .colorbig img {
+            height: 56vw;
+            width: 91vw;
+        }
+
+        .colormedium img {
+            height: 46vw;
+        }
+
+        .phonefooter {
+            display: none;
+        }
+
+        .footer {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            background: rgb(52 47 47);
+            position: relative;
+            margin-top: 10vw;
+        }
+
+        .thumb {
+
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            padding: 0 13vw 0 3vw;
+            margin-top: 1.5vw;
+            font-size: 2.2vw;
+            color: rgba(255, 255, 255, 1);
+        }
+
+        .foot {
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            padding: 0 3.4vw;
+            font-size: 1.5vw;
+            margin-top: 0.5vw;
+            color: rgba(255, 255, 255, 1);
+
+        }
+
+        .policy a {
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1.5vw;
+            margin-top: 0.5vw;
+            color: rgba(255, 255, 255, 1);
+            text-decoration: none;
+
+        }
+
+        .social {
+            margin-top: 1vw;
+            margin-bottom: 1vw;
+        }
+
+        .social a {
+            color: rgba(255, 255, 255, 1);
+            padding: 0 1.3vw 0 0vw;
+        }
+
+        .whatsapp {
+            padding: 17px;
+        }
+
+        .finger {
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            padding: 0 0vw;
+            font-size: 1.5vw;
+            margin: 0 0 6vw 0;
+            color: rgba(255, 255, 255, 1);
+            height: 0;
+            position: relative;
+        }
+
+       .finger img {
+            width: 20vw;
+            position: relative;
+            top: 0vw;
+        }
+
+        .billing a {
+            position: relative;
+            top: -2.6vw;
+            left: 3.3vw;
+            font-size: 1.4vw;
+            color: white;
+            font-family: Times New Roman;
+            text-decoration: none;
+        }
+
+        .billing a {
+            position: relative;
+            top: -2.6vw;
+            left: 3.3vw;
+            font-size: 1.4vw;
+            color: white;
+            font-family: Times New Roman;
+            text-decoration: none;
+        }
+
+        @media(max-width: 650px) {
+            nav {
+                position: relative;
+                display: block;
+                margin: 1vw 0 2vw 0;
+                left: -5vw;
+            }
+
+            .navbar ul {
+                display: flex;
+                justify-content: center;
+            }
+
+            .navbar ul li {
+                padding: 0 3vw;
+                list-style: none;
+            }
+
+            .navbar ul li a {
+                font-size: 2.3vw;
+
+            }
+
+            .homefirst img {
+                height: 18vw;
+            }
+
+            .homesecond {
+                font-size: 2.2vw;
+                top: 6vw;
+
+            }
+
+            .homesecondimg {
+                position: relative;
+                text-align: center;
+                top: -10vw;
+            }
+
+
+            .homesecondimg img {
+                height: 23vw;
+                width: 96vw;
+            }
+
+            .ftbt {
+                font-size: 2.3vw;
+                top: 37vw;
+            }
+
+            .thirdflexi img {
+                height: 36vw;
+                width: 28vw;
+            }
+
+            .thirdflexi {
+                position: relative;
+            }
+
+            .container1 {
+                position: relative;
+            }
+
+            .container2 {
+                position: relative;
+            }
+
+
+
+            .slide1 {
+                left: 1vw;
+            }
+
+            .slide2 {
+                right: 1vw;
+            }
+
+            .thirdflex img {
+                height: 36vw;
+                width: 32vw;
+            }
+
+
+            .thirdflex h2 {
+                position: relative;
+                text-align: center;
+                font-family: 'Times New Roman', Times, serif;
+                color: rgba(92, 92, 92, 1);
+                font-weight: normal;
+                font-style: normal;
+                font-size: 3.2vw;
+                margin: 1vw 0;
+            }
+
+            .thirdflex h3 {
+                top: -18vw;
+                font-size: 2vw;
+            }
+
+
+            .scarfphoto img {
+                height: 38vw;
+            }
+
+            .collection img {
+                height: 38vw;
+            }
+
+            .title {
+                font-size: 3.2vw;
+            }
+
+            .footer {
+                display: none;
+            }
+
+
+
+            .phonefooter {
+                position: relative;
+                display: flex;
+                width: 100%;
+                background: rgb(52, 47, 47);
+                z-index: 2;
+                height: 107vw;
+            }
+
+            .feet1 {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+
+            .thumb {
+                font-size: 5.5vw;
+                margin: 5vw 5vw 3vw 3vw;
+            }
+
+            .foot a {
+                color: rgba(255, 255, 255, 1);
+                text-decoration: none;
+            }
+
+            .policy a {
+                white-space: nowrap;
+                font-family: Times New Roman;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 4vw;
+                margin-top: 0.5vw;
+                color: rgba(255, 255, 255, 1);
+                text-decoration: none;
+
+            }
+
+            .foot {
+                font-size: 4vw;
+                padding: 0 6vw;
+            }
+
+            .feet2 {
+                position: absolute;
+                right: 0;
+                font-size: 5vw;
+                margin: 5vw 0 0 0;
+            }
+
+            .social {
+                row-gap: 5vw;
+                display: grid;
+                position: absolute;
+                right: 10vw;
+                top: 12vw;
+            }
+
+            .logo {
+                position: relative;
+                left: 0;
+                top: 50vw;
+            }
+
+            .logo img {
+                width: 50vw;
+            }
+
+            #last {
+                margin-bottom: 12vw;
+            }
+
+            .billing a {
+                position: relative;
+                top: 69vw;
+                left: -5.7vw;
+                display: flex;
+                font-size: 3vw;
+                color: white;
+                font-family: Times New Times New Roman;
+                text-decoration: none;
+            }
+
+            .billing a {
+                position: relative;
+                top: 69vw;
+                left: -5.7vw;
+                display: flex;
+                font-size: 3vw;
+                color: white;
+                font-family: Times New Times New Roman;
+                text-decoration: none;
+            }
+
+
         }
     </style>
 </head>
 
 <body>
-    <div class="maga">
-        <h1>MAGA</h1> <br>
-        <h2>2024 / 2025</h2>
+    <div class="header">
+        <div class="heading">
+            <a href="index.html">WOMAN'S WEAR BUSINESS / ACCESSORIES</a>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li class="grow"><a href="scarfhistory.html">SCARF HISTORY</a></li>
+                <li class="grow"><a href="tutorial.html">TUTORIAL</a></li>
+                <li class="grow"><a href="clientpurchase.html">CLIENT PURCHASE</a></li>
+                <li class="grow"><a href="inquiry.html">CLIENT INQUIRY</a></li>
+            </ul>
+        </nav>
     </div>
-    <div class="we">
-        <span class="w">WE THE PEOPLE</span>
-        <span class="e">ARE THE POWER</span>
+    <div class="homefirst">
+        <img src="home1.png" alt="">
+        <img src="home2.png" alt="">
+        <img src="home3.png" alt="">
+        <img src="home4.png" alt="">
+        <img src="home5.png" alt="">
+        <img src="home6.png" alt="">
     </div>
-    <nav>
-        <li class="red"><a href="about.html">ABOUT</a> </li>
-        <li class="blue"><a href="regestration.html">REGESTRATION</a></li>
-        <li class="red"><a href="contact.html">CONTACT US</a></li>
-        <li class="blue"><a href="support.html">SUPPORT</a></li>
-        <li class="red"><a href="shop.html">SHOP</a></li>
-    </nav>
-  
-    <div class="citizen">
-        <div class="ci">CITIZENS</div>
-        <div class="ti">MANIFESTO</div>
-        <div class="zen">2025</div>
+    <div class="homesecond">
+        The Executive Women today wears Silk Accessories with Their <br>
+        Suiting's and Separates in place of a Man's style ties and pocket squares.. <br>
+        The WW/B woman has countless styles to select from to enhance Her Professional Wardrobe, <br>
+        while contributing to Her more fashioned casual business attire when travelling..
     </div>
-    <div class="para">
-        <span class="redt">WE THE PEOPLE..</span> <span class="bluet">ARE THE POWER</span> of
-        <span class="redt">AMERICA</span> must awaken and take back Our country through the
-        <span class="redt">NEW MAGA</span>&nbsp;<span class="bluet">MOVEMENT..</span> Assuring that THE TRUE PATRIOTS MOVEMENT
-        CONTINUES to strengthen and grow stronger in numbers and conviction, We must recognized that the
-        <span class="redt">USA</span> under President Trump's tenured business acumen WAS MADE GREAT AGAIN during His
-        first term in office.. <br>
-        <span class="redt">WE THE PEOPLE</span>&nbsp;<span class="bluet">ARE THE POWER</span> &nbsp;<span class="redt">USA</span>
-        "ONLY RECOGNISE" President Donald J. Trump as Our RIGHTFUL President.. WE THE PEOPLE ARE THE POWER USA are
-        committed to continuing President Elect (2020) Donald Trump's Platform
-        <span class="redt">MAGA</span> &nbsp;<span class="bluet">MOVEMENT</span>.. President Trump had already MADE
-        <span class="redt">AMERICA GREAT AGAIN</span>&nbsp;<span class="bluet">(2017-2020)</span>&nbsp;prior to the systematic VOTER
-        FRAUD, across Our Nation in every state.. <br>
-        <span class="redt">WE THE PEOPLE</span>&nbsp;<span class="bluet">ARE THE POWER</span>&nbsp;<span class="redt">USA</span>
-        have formed a UNIFIED PATRIOTS PLATFORM that is strategically focused on the Original <span class="redt">MAGA
-            MOVEMENT,</span>
-        with the exception that President Trump had already awakened the Patriotic Masses and has accomplished His set
-        Goals & Objectives when He was seated in the White House.. <br>
-        <span class="redt">WE THE PEOPLE</span>&nbsp;<span class="bluet">ARE THE POWER</span>&nbsp;<span class="redt">USA,</span>
-        believe what President Trump has accomplished MUST NOW CONTINUE!! Continue as an extension of
-        <span class="redt">MAGA</span>. Under <span class="redt">TRUMPS</span>&nbsp;GREAT LEADERSHIP the
-        <span class="redt">USA</span> will become <span class="bluet">GREATER AGAIN.</span>ALL TRUE
-        <span class="redt">TRUMP</span>&nbsp;<span class="bluet">SUPPORTERS</span> believe this.. <br>
-        A UNIFIED Patriots Driven <span class="redt">NEW MAGA</span> Agenda that will continue the
-        <span class="redt">TRUMP</span> MESSAGE of unwavering struggle MUST EXPAND and GROW STRONGER..
+    <div class="homesecondimg">
+        <img src="SCARF.png" alt="">
+    </div>
+    <div class="homethird">
+
+
+        <div class="thirdflexi">
+            <div class="container1">
+                <img class="slide1" src="FTBTL1.jpg" alt="">
+                <img class="slide1" src="FTBTL2.jpg" alt="">
+                <img class="slide1" src="FTBTL3.jpg" alt="">
+                <img class="slide1" src="FTBTL4.jpg" alt="">
+                <img class="slide1" src="FTBTL5.jpg" alt="">
+                <img class="slide1" src="FTBTL6.jpg" alt="">
+                <img class="slide1" src="FTBTL7.jpg" alt="">
+                <img class="slide1" src="FTBTL8.jpg" alt="">
+                <img class="slide1" src="FTBTL9.jpg" alt="">
+                <img class="slide1" src="FTBTL10.jpg" alt="">
+                <img class="slide1" src="FTBTL11.jpg" alt="">
+            </div>
+            <div class="ftbt">"FIT TO BE TIED"</div>
+        </div>
+        <div class="thirdflex">
+            <img src="third2.png" alt="">
+            <h2>WOMEN'S SCARVES</h2>
+            <h3>When I wear a Silk Scarf <br>
+                I never feel so definitely like a <br>
+                Woman.. ‘A Beautiful Woman’.. <br>
+                -Audrey Hepburn-</h3>
+        </div>
+        <div class="thirdflexi">
+            <div class="container2">
+                <img class="slide2" src="FTBTR1.jpg" alt="">
+                <img class="slide2" src="FTBTR2.jpg" alt="">
+                <img class="slide2" src="FTBTR3.jpg" alt="">
+                <img class="slide2" src="FTBTR4.jpg" alt="">
+                <img class="slide2" src="FTBTR5.jpg" alt="">
+                <img class="slide2" src="FTBTR6.jpg" alt="">
+                <img class="slide2" src="FTBTR7.jpg" alt="">
+                <img class="slide2" src="FTBTR8.jpg" alt="">
+                <img class="slide2" src="FTBTR9.jpg" alt="">
+                <img class="slide2" src="FTBTR10.jpg" alt="">
+                <img class="slide2" src="FTBTR11.jpg" alt="">
+            </div>
+            <div class="ftbt">"FIT TO BE TIED"</div>
+        </div>
 
     </div>
-    <div class="graph">
-        <p>AMERICA WILL BE GREATER THAN EVER BEFORE!!!</p>
-        <span class="redt">WE THE PEOPLE</span>&nbsp;<span class="bluet">ARE THE POWER</span>&nbsp;<span class="redt">USA</span>
-        must continue to carry the movement forward with a UNIFIED PATRIOTS Platform that does not divide Democrats
-        against Republicans, or use Race, Sexuality, and Gender as a Political Basis for DIVISION.. <br>
-        <span class="redt">WE THE PEOPLE</span>&nbsp;<span class="bluet">ARE THE POWER</span>&nbsp;<span class="redt">USA</span>
-        INCLUDE EVERYONE IN OUR STRUGGLE TO UNIFY, STRENGTHEN, EMPOWER and above all build bridges with ALL CITIZENS to
-        FORENSICLLY FOCUS on the
-        <span class="redt">NEW MAGA</span>&nbsp;MOVEMENT of - <span class="bluet">"MAKING</span>&nbsp;<span
-            class="redt">AMERICA</span>&nbsp;<span class="bluet">GREATER</span>&nbsp;<span class="redt">AGAIN"!!</span> <br>
-        <span class="bluet">"MAKING</span>&nbsp;<span class="redt">AMERICA</span>&nbsp;<span class="bluet">GREATER</span>&nbsp;<span
-            class="redt">AGAIN"</span> <span class="redt">(MAGA)</span>&nbsp;must eclipse the former <span
-            class="redt">MAGA</span>
-        Platform and UNIFY US ALL WHO BELIEVE IN TRUTH, JUSTICE AND OUR CONSTITUTIONAL FREEDOM.. NO POLITICAL ELECTED
-        OFFICIAL has POWER OVER THE PEOPLE!! <br>
-        <span class="redt">WE THE PEOPLE</span>&nbsp;<span class="bluet">ARE THE POWER</span>&nbsp;<span class="redt">USA</span>
-        GOVERN OURSELVES.. <br>
-        We must NOT STOP.. WE MUST NOT GIVE UP... WE MUST COMMIT TO CONTINUE THE
-        <span class="redt">MAGA</span>&nbsp;<span class="bluet">METHODOLOGIES</span>
-        President Trump fought so unselfishly for.. <br>
-        With a NEW BATTLE CRY for All CITIZENS.. - "
-        <span class="bluet">"MAKING</span>&nbsp;<span class="redt">AMERICA</span>&nbsp;<span class="bluet">GREATER</span>&nbsp;<span
-            class="redt">AGAIN"!!</span> <br>
-        Only the <span class="redt">MAGA</span> &nbsp;<span class="bluet">MOVEMENT</span>!!! will unify this
-        <span class="redt">NEW MAGA</span>&nbsp; <span class="bluet">CITIZENRY</span> return the United States back in control
-        of It's People with the end result to REINSTATE President
-        <span class="redt">TRUMP</span> 2024. <br>
-        <span class="redt">WE THE PEOPLE</span> &nbsp;<span class="bluet">ARE THE POWER</span> ", "HOLD ALL POWER" with "THE
-        POWER TO TAKE BACK
-        <span class="redt">AMERICA</span> WHEN WE DEEM NECESSARY".. Our Elected Officials MUST COMMIT Their time to the
-        BETTERMENT OF THE
-        <span class="redt">USA</span> , and its <span class="bluet">CITIZENS</span>
-        <div class=""></div>
-        <h2 class="bluet">-GOD BLESS AMERICA- </h2>
-        <h2 class="redt">-GOD BLESS IT’S CITIZENRY </h2>
+
+
+    <div class="wwbcollection">
+        <div class="maintitle">
+            WW/B COLLECTION
+        </div>
+        <div class="collection">
+            <div class="color">
+                <a href="colblue.html"> <img src="collection1.png" alt=""></a>
+                <div class="title">BLUE</div>
+            </div>
+            <div class="color">
+                <a href="colyellow.html"> <img src="collection2.png" alt=""></a>
+                <div class="title">YELLOW</div>
+            </div>
+            <div class="color">
+                <a href="colgreen.html"> <img src="collection3.png" alt=""></a>
+                <div class="title">GREEN</div>
+            </div>
+            <div class="color">
+                <a href="colpurple.html"> <img src="collection4.png" alt=""></a>
+                <div class="title">PURPLE</div>
+            </div>
+            <div class="color">
+                <a href="colgrey.html"> <img src="collection5.png" alt=""></a>
+                <div class="title">GRAY</div>
+            </div>
+            <div class="color">
+                <a href="colbrown.html"> <img src="collection6.png" alt=""></a>
+                <div class="title">BROWN</div>
+            </div>
+        </div>
     </div>
-    <div class="usa">
-        <h1 class="red">USA</h1>
-        <h2 class="blue">WE THE PEOPLE</h2>
-        <h2 class="red">ARE THE POWER</h2>
-        <h1 class="blue">2025</h1>
-        <h3>(ALl Rights Reserved)</h3>
+    <div class="wwbdesign">
+        <div class="maintitle">
+            WW/B DESIGN GALLERY
+        </div>
+        <div class="collection">
+            <div class="color">
+                <a href="artdeco.html"><img src="design1.png" alt=""></a>
+                <div class="title">ART DECO</div>
+            </div>
+            <div class="color">
+                <a href="flora.html"><img src="design2.png" alt=""></a>
+                <div class="title">FLORAL</div>
+            </div>
+            <div class="color">
+                <a href="paisley.html"><img src="design3.png" alt=""></a>
+                <div class="title">PAISLEY</div>
+            </div>
+        </div>
+    </div>
+    <div class="wwwbsilk">
+        <div class="maintitle">
+            WW/B SILK PRINTS GALLERY
+        </div>
+        <div class="collection">
+            <div class="color">
+                <a href="psg.html"> <img src="silk1.png" alt=""></a>
+                <div class="title">GREY</div>
+            </div>
+            <div class="color">
+                <a href="psp.html"> <img src="silk2.png" alt=""></a>
+                <div class="title">PURPLE</div>
+            </div>
+            <div class="color">
+                <a href="psh.html"> <img src="silk3.png" alt=""></a>
+                <div class="title">GREEN</div>
+            </div>
+            <div class="color">
+                <a href="psb.html"> <img src="silk4.png" alt=""></a>
+                <div class="title">BROWN</div>
+            </div>
+            <div class="color">
+                <a href="psn.html"> <img src="silk5.png" alt=""></a>
+                <div class="title">BLUE</div>
+            </div>
+            <div class="color">
+                <a href="psy.html"> <img src="silk6.png" alt=""></a>
+                <div class="title">YELLOW</div>
+            </div>
+        </div>
+    </div>
+    <div class="wwbphoto">
+        <div class="maintitle">
+            SCARF PHOTO GALLERY
+        </div>
+        <div class="scarfphoto">
+            <div class="color">
+                <a href="spg1.html"> <img src="photo1.png" alt="">
+                </a>
+            </div>
+            <div class="color">
+                <a href="spg2.html"> <img src="photo2.png" alt="">
+                </a>
+            </div>
+            <div class="color">
+                <a href="spg3.html"> <img src="photo3.png" alt="">
+                </a>
+            </div>
+            <div class="color">
+                <a href="spg4.html"> <img src="photo4.png" alt="">
+                </a>
+            </div>
+            <div class="color">
+                <a href="spg5.html"><img src="photo5.png" alt="">
+                </a>
+            </div>
+            <div class="color">
+                <a href="spg6.html"><img src="photo6.png" alt="">
+                </a>
+            </div>
+            <div class="color">
+                <a href="spg7.html"><img src="photo7.png" alt="">
+                </a>
+            </div>
+            <div class="color">
+                <a href="spg8.html"> <img src="photo8.png" alt="">
+                </a>
+            </div>
+            <div class="color">
+                <a href="spg9.html"> <img src="photo9.png" alt="">
+                </a>
+            </div>
+            <div class="color">
+                <a href="spg10.html"> <img src="photo10.png" alt=""></a>
+            </div>
+            <div class="color">
+                <a href="spg11.html"> <img src="photo11.png" alt=""></a>
+            </div>
+            <div class="color">
+                <a href="spg12.html"> <img src="photo12.png" alt=""></a>
+            </div>
+            <div class="colorbig">
+                <a href="spg13.html"> <img src="photo13.png" alt=""></a>
+            </div>
+            <div class="colormedium">
+                <a href="spg14.html"> <img src="photo14.png" alt=""></a>
+            </div>
+            <div class="colormedium">
+                <a href="spg15.html"> <img src="photo15.png" alt=""></a>
+            </div>
+            <div class="colorbig">
+                <a href="spg16.html"> <img src="photo16.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+
+        <div class="thumb">
+            Retail Client Services
+
+        </div>
+
+        <div class="thumb">
+            Wholesale Client Services
+        </div>
+
+        <div class="thumb">
+            Media
+        </div>
+
+        <div class="foot">
+            Joint Venture
+        </div>
+        <div class="foot">
+            Buyer Inquiry
+        </div>
+        <div class="foot">
+            WWB-Blog
+        </div>
+        <div class="foot">
+            JV Partner
+        </div>
+        <div class="foot">
+            Private Label
+        </div>
+        <div class="foot">
+            Editorial
+        </div>
+        <div class="foot">
+            Customized Order Process
+        </div>
+        <div class="foot">
+            Co - Branding
+        </div>
+        <div class="foot">
+            Affliliate Partnership
+        </div>
+        <div class="foot">
+            <div class="policy"> <a href="policy.html">Policies</a></div>
+        </div>
+        <div class="foot">
+            <div class="social">
+                <a href="https://instagram.com/womanswearbusiness?igshid=YmMyMTA2M2Y="><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=12122102965" class="whatsapp"><i
+                        class="fab fa-whatsapp"></i></a>
+                <a href="https://www.pinterest.com/womenswearbusiness/_saved/"><i class="fab fa-pinterest"></i></a>
+
+            </div>
+        </div>
+        <div class="finger">
+            <img src="logopit-16448465792391x.png">
+        </div>
+        <div class="billing"><a href="https://www.pnrao.com">P N RAO</a></div>
+
+    </div>
+    <div class="phonefooter">
+        <div class="feet1">
+            <div class="thumb">
+                Retail Client Services
+
+            </div>
+            <div class="foot">
+                <a href="clientinquiry.html"> Joint Venture
+                </a>
+            </div>
+            <div class="foot">
+                <a href="clientinquiry.html"> JV Partner
+                </a>
+            </div>
+            <div class="foot">
+                <a href="customized.html"> Customized Order Process
+                </a>
+            </div>
+            <div class="foot">
+                <a href="policy.html">Policies</a>
+            </div>
+            <div class="thumb">
+                Wholesale Client Services
+
+            </div>
+            <div class="foot">
+                <a href="clientinquiry.html"> Buyer Inquiry
+                </a>
+            </div>
+            <div class="foot">
+                <a href="clientinquiry.html"> Private Label
+                </a>
+            </div>
+            <div class="foot">
+                <a href="clientinquiry.html"> Co - Branding
+                </a>
+            </div>
+            <div class="thumb">
+                Media
+
+            </div>
+            <div class="foot">
+                <a href="clientinquiry.html"> WW/B -Blog
+                </a>
+            </div>
+            <div class="foot">
+                <a href="clientinquiry.html"> Editorial
+                </a>
+            </div>
+            <div class="foot" id="last">
+                Affliliate Partnership
+            </div>
+        </div>
+
+        <div class="feet2">
+
+            <div class="social">
+                <a href="https://instagram.com/womanswearbusiness?igshid=YmMyMTA2M2Y="><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=12122102965" class="whatsapp"><i
+                        class="fab fa-whatsapp"></i></a>
+                <a href="https://www.pinterest.com/womenswearbusiness/_saved/"><i class="fab fa-pinterest"></i></a>
+
+            </div>
+            <div class="logo">
+                <img src="logo.png" alt="">
+            </div>
+        </div>
+        <div class="billing"><a href="https://www.pnrao.com">P N RAO</a></div>
+
     </div>
 
+    <script>
+        // Set the interval time for switching images (in milliseconds)
+        var intervalTime = 3000;
+
+        // Select the image containers
+        var container1 = document.querySelector('.container1');
+        var container2 = document.querySelector('.container2');
+
+        // Get all the images inside the containers
+        var slides1 = container1.querySelectorAll('.slide1');
+        var slides2 = container2.querySelectorAll('.slide2');
+
+        // Set the index of the currently displayed image
+        var index1 = 0;
+        var index2 = 0;
+
+        // Define the function to switch images in container1
+        function switchSlides1() {
+            // Hide the currently displayed image
+            slides1[index1].classList.remove('show');
+            // Increment the index
+            index1++;
+            // Check if the index is out of bounds
+            if (index1 >= slides1.length) {
+                index1 = 0;
+            }
+            // Show the next image
+            slides1[index1].classList.add('show');
+        }
+
+        // Define the function to switch images in container2
+        function switchSlides2() {
+            // Hide the currently displayed image
+            slides2[index2].classList.remove('show');
+            // Increment the index
+            index2++;
+            // Check if the index is out of bounds
+            if (index2 >= slides2.length) {
+                index2 = 0;
+            }
+            // Show the next image
+            slides2[index2].classList.add('show');
+        }
+
+        // Call the switchSlides function every intervalTime milliseconds
+        setInterval(switchSlides1, intervalTime);
+        setInterval(switchSlides2, intervalTime);
+
+    </script>
 </body>
 
 </html>

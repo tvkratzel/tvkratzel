@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .col-2 {
+            position: relative;
+            width: 400px;
+            left: 20px;
+            top: 10px;
+            display: inline-block;
+        }
+
+        .info {
+            position: relative;
+            left: 100px;
+            top: -100px;
+        }
+
+        .info p {
+            top: -106px;
+    position: relative;
+    font-size: 66px;
+    left: 25%;
+    color: #6161c3;
+    font-weight: bold;
+        }
+
+        .info h1 {
+            position: relative;
+            top: -30px;
+            font-size: 30px;
+        }
+
+        .btn {
+            color: rgb(0, 0, 0);
+    cursor: pointer;
+    position: relative;
+    top: 73px;
+    left: -17%;
+    font-size: 25px;
+    text-decoration: none;
+    border-radius: 10px;
+    background: red;
+    border: 1px solid;
+        }
+
+        .small-img-row {
+            display: flex;
+            justify-content: space-between;
+        }
+        .small-img-col{
+            flex-basis: 27%;
+            cursor: pointer;
+        }
+    .quant{
+        position: relative;
+        left: 27%;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="small-container">
+        <div class="row">
+            <div class="col-2">
+                <img src="artdeco1616.jpg" width="100%" id="productimg">
+                <div class="small-img-row">
+                    <div class="small-img-col">
+                        <img src="artdeco1616.jpg" width="100%" class="smallimg">
+                    </div> 
+                    <div class="small-img-col"> 
+                        <img src="photo_2022-07-07_04-19-36.jpg" width="100%" class="smallimg">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="KMR55197.jpg" width="100%" class="smallimg">
+                    </div>
+                  
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="info">
+                    <p>ARTDECO</p>
+
+                   
+                    <input class="quant" type="number" value="1">
+                    <a href="clientpurchase.html" class="btn">Add To Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var productimg = document.getElementById("productimg");
+        var smallimg = document.getElementsByClassName("smallimg");
+        smallimg[0].onclick = function()
+        {
+            productimg.src = smallimg[0].src;
+        }
+        smallimg[1].onclick = function()
+        {
+            productimg.src = smallimg[1].src;
+        }
+        smallimg[2].onclick = function()
+        {
+            productimg.src = smallimg[2].src;
+        }
+      
+    </script>
+</body>
+
+</html>

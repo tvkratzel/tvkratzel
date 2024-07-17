@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        width: 100%;
+        height: 100vh;
+        background: white;
+        display: flex;
+        align-items: center;
+
+    }
+
+    .swiper {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .swiper-slide {
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .swiper-slide img {
+        height: 56vw;
+        justify-content: center;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: gray;
+    }
+
+    .swiper .swiper-pagination-bullet-active {
+        background: white;
+    }
+
+    .title {
+        color: black;
+        position: relative;
+        top: 50vw;
+        padding: 0 1vw;
+        font-size: 1.3vw;
+        font-family: 'Times New Roman', Times, serif;
+        white-space: nowrap;
+    }
+
+    .size {
+        color: black;
+        position: relative;
+        top: 50vw;
+        padding: 0 5.6vw 0 1vw;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .bsize {
+        color: black;
+        position: relative;
+        top: 50vw;
+        padding: 0 12vw 0 1vw;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .size h1 {
+        font-size: 1.4vw;
+        font-style: italic;
+    }
+
+    .bsize h1 {
+        font-size: 1.4vw;
+        font-style: italic;
+    }
+
+    .size h2 {
+        font-size: 1.2vw;
+    }
+
+    .bsize h2 {
+        font-size: 1.2vw;
+    }
+
+    .ltitle {
+        color: black;
+        position: relative;
+        top: 35vw;
+        padding: 0 1vw;
+        font-size: 1.3vw;
+        font-family: 'Times New Roman', Times, serif;
+        white-space: nowrap;
+        text-align: center;
+        right: 10vw;
+    }
+
+    .lsize {
+        color: black;
+        position: relative;
+        top: 35vw;
+        padding: 0 12vw 0 1vw;
+        font-family: 'Times New Roman', Times, serif;
+        left: 17vw;
+    }
+
+    .lsize h1 {
+        font-size: 1.4vw;
+        font-style: italic;
+    }
+
+    .lsize h2 {
+        font-size: 1.2vw;
+    }
+
+    #carting {
+        color: black;
+        position: absolute;
+        top: 52vw;
+        font-size: 1.3vw;
+        font-family: 'Times New Roman', Times, serif;
+        white-space: nowrap;
+        right: 5vw;
+    }
+
+    .cart a {
+        position: absolute;
+        text-decoration: none;
+        font-size: 2vw;
+        right: 3%;
+        top: 1vw;
+        z-index: 2;
+        color: rgba(92, 92, 92, 1);
+    }
+    .rashi{
+        color: black;
+        position: absolute;
+        top: 49.5vw;
+        font-size: 1.3vw;
+        font-family: 'Times New Roman', Times, serif;
+        white-space: nowrap;
+        right: 5.3vw;
+    }
+</style>
+
+<body>
+    <div class="cart">
+        <a href="cart.html">
+            🛒<span>0</span>
+        </a>
+    </div>
+    <div class="container">
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+
+                <div class="swiper-slide">
+                    <div class="title">
+                        Art Deco Lightning Angled
+                    </div>
+                    <div class="images">
+                        <img src="Art Deco Lightning Angled  20X20 122.jpg" alt="">
+                    </div>
+                    <div class="bsize">
+                        <h1>WW/S</h1>
+                        <h2>#122<br>20×20</h2>
+                    </div>
+                    <a class="add-cart cart1" id="carting" href="#">Add To Cart</a>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title">
+                        Art Deco Triangle Stripes
+                    </div>
+                    <div class="images">
+                        <img src="Art Deco Triangle Stripes  16x16  1.jpg" alt="">
+                    </div>
+                    <div class="bsize">
+                        <h1>WW/S</h1>
+                        <h2>#1<br>16×16 </h2>
+                    </div>
+                    <a class="add-cart cart2" id="carting" href="#">Add To Cart</a>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title">
+                        Art Deco Box
+                    </div>
+                    <div class="images">
+                        <img src="Art Deco Box 16x16  37.jpg" alt="">
+                    </div>
+                    <div class="size">
+                        <h1>WW/S</h1>
+                        <h2>#37<br>16×16 </h2>
+                    </div>
+                    <a class="add-cart cart3" id="carting" href="#">Add To Cart</a>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title">
+                        Art Deco Bubble
+                    </div>
+                    <div class="images">
+                        <img src="Art Deco Bubble 16X16  121.jpg" alt="">
+                    </div>
+                    <div class="size">
+                        <h1>WW/S</h1>
+                        <h2>#121<br>16×16 </h2>
+                    </div>
+                     <div class="rashi">Price: <div class="exchange" id="currency" style="display:inline-block;">65$</div></div>
+                    <a class="add-cart cart4" id="carting" href="#">Add To Cart</a>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title">
+                        Flower Power Field
+                    </div>
+                    <div class="images">
+                        <img src="Flower Power Field  20x20 98.jpg" alt="">
+                    </div>
+                    <div class="bsize">
+                        <h1>WW/S</h1>
+                        <h2>#98<br>20×20</h2>
+                    </div>
+                    <a class="add-cart cart5" id="carting" href="#">Add To Cart</a>
+
+                </div>
+                <div class="swiper-slide">
+                    <div class="title">
+                        Flower Power
+                    </div>
+                    <div class="images">
+                        <img src="Flower Power 40x40  99.jpg" alt="">
+                    </div>
+                    <div class="size">
+                        <h1>WW/S</h1>
+                        <h2>#99<br>40×40</h2>
+                    </div>
+                     <div class="rashi">Price: <div class="exchange" id="currency" style="display:inline-block;">225$</div></div>
+                    <a class="add-cart cart4" id="carting" href="#">Add To Cart</a>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title">
+                        Art Deco Tile
+                    </div>
+                    <div class="images">
+                        <img src="Art Deco Tile  20x20  38.jpg" alt="">
+                    </div>
+                    <div class="size">
+                        <h1>WW/S</h1>
+                        <h2>#38<br>20×20</h2>
+                    </div>
+                    <div class="rashi">Price: <div class="exchange" id="currency" style="display:inline-block;">105$</div></div>
+                    <a class="add-cart cart4" id="carting" href="#">Add To Cart</a>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title">
+                        Art Deco Cornered Stripes
+                    </div>
+                    <div class="images">
+                        <img src="Art Deco Cornered Stripes 40x40  3.jpg" alt="">
+                    </div>
+                    <div class="bsize">
+                        <h1>WW/S</h1>
+                        <h2>#3<br>40×40</h2>
+                    </div>
+                     <div class="rashi">Price: <div class="exchange" id="currency" style="display:inline-block;">225$</div></div>
+                    <a class="add-cart cart4" id="carting" href="#">Add To Cart</a>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title">
+                        Flower Power Cornered
+                    </div>
+                    <div class="images">
+                        <img src="Flower Power Cornered 16x16  97.jpg" alt="">
+                    </div>
+                    <div class="bsize">
+                        <h1>WW/S</h1>
+                        <h2>#97<br>16×16 </h2>
+                    </div>
+                     <div class="rashi">Price: <div class="exchange" id="currency" style="display:inline-block;">65$</div></div>
+                    <a class="add-cart cart4" id="carting" href="#">Add To Cart</a>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title">
+                        Art Deco Tile
+                    </div>
+                    <div class="images">
+                        <img src="Art Deco Tile 40x40  39.jpg" alt="">
+                    </div>
+                    <div class="size">
+                        <h1>WW/S</h1>
+                        <h2>#39<br>40×40</h2>
+                    </div>
+                     <div class="rashi">Price: <div class="exchange" id="currency" style="display:inline-block;">225$</div></div>
+                    <a class="add-cart cart4" id="carting" href="#">Add To Cart</a>
+                </div>
+                <div class="swiper-slide">
+                    <div class="ltitle">
+                        Art Deco TIle
+                    </div>
+                    <div class="images">
+                        <img style="transform: rotate(90deg);" src="Art Deco Tile 20x100  40.jpg" alt="">
+                    </div>
+                    <div class="lsize">
+                        <h1>WW/S</h1>
+                        <h2>#40<br>20×100</h2>
+                    </div>
+                     <div class="rashi">Price: <div class="exchange" id="currency" style="display:inline-block;">295$</div></div>
+                    <a class="add-cart cart4" id="carting" href="#">Add To Cart</a>
+                </div>
+                <div class="swiper-slide">
+                    <div class="ltitle">
+                        Art Deco Lightning
+                    </div>
+                    <div class="images">
+                        <img style="transform: rotate(90deg);" src="Art Deco Lightning  20x100 124.jpg" alt="">
+                    </div>
+                    <div class="lsize">
+                        <h1>WW/S</h1>
+                        <h2>#124<br>20×100</h2>
+                    </div>
+                     <div class="rashi">Price: <div class="exchange" id="currency" style="display:inline-block;">295$</div></div>
+                    <a class="add-cart cart4" id="carting" href="#">Add To Cart</a>
+                </div>
+                <div class="swiper-slide">
+                    <div class="ltitle">
+                        Flower Power Cornered
+                    </div>
+                    <div class="images">
+                        <img style="transform: rotate(90deg);" src="Flower power Cornered 20x100  100.jpg" alt="">
+                    </div>
+                    <div class="lsize">
+                        <h1>WW/S</h1>
+                        <h2>#100<br>20×100</h2>
+                    </div>
+                     <div class="rashi">Price: <div class="exchange" id="currency" style="display:inline-block;">295$</div></div>
+                    <a class="add-cart cart4" id="carting" href="#">Add To Cart</a>
+                </div>
+                <div class="swiper-slide">
+                    <img src="yellow all.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="yellow all  – 1.jpg" alt="">
+                </div>
+                ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+
+
+        </div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+
+        });</script>
+    <script src="maincart.js"></script>
+
+</body>
+
+</html>

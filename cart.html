@@ -2,371 +2,819 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <title>Document</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            border: none;
-        }
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      border: none;
+    }
 
 
-        body {
-            overflow-x: hidden;
+    body {
+      overflow-x: hidden;
+      margin: 0 0 0 0;
 
-        }
+    }
 
-        .header {
-            position: relative;
-            margin: 0.9vw;
-        }
+    .heading {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
 
-        #heading {
-            overflow: visible;
-            top: 0.1vw;
-            position: relative;
-            text-align: center;
-            white-space: nowrap;
-            font-family: Times New Roman;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 2.86vw;
-            color: rgba(92, 92, 92, 1);
+    .heading h1 {
+      font-size: 4.3vw;
+      font-family: Times New Roman;
+      font-style: normal;
+      font-weight: normal;
+      color: rgba(92, 92, 92, 1);
+      border-bottom: 2px solid rgba(92, 92, 92, 1);
+      margin: 1vw 0;
+    }
 
-        }
+    nav {
+      position: relative;
+      display: flex;
+      justify-content: space-evenly;
+      margin: 2vw 0;
+    }
 
-        .textiles {
-            font-size: 5vw;
-            top: -0.1vw;
-            position: relative;
-        }
+    .navbar ul {
+      display: inline-flex;
+    }
 
-        #Line_31 {
-            fill: transparent;
-            stroke: rgba(112, 112, 112, 1);
-            stroke-width: 2px;
-            stroke-linejoin: miter;
-            stroke-linecap: butt;
-            stroke-miterlimit: 4;
-            shape-rendering: auto;
-        }
+    .navbar ul li {
+      padding: 0 5.5vw;
+      list-style: none;
+    }
 
-        .Line_31 {
-            overflow: visible;
-            position: absolute;
-            left: 20.5%;
-            top: 4.8vw;
-            width: 57.5vw;
-            height: 3px;
-            transform: matrix(1, 0, 0, 1, 0, 0);
-        }
-
+    .navbar ul li a {
+      font-size: 1.6vw;
+      text-decoration: none;
+      white-space: nowrap;
+      font-family: Times New Roman;
+      font-style: normal;
+      font-weight: normal;
+      color: rgba(92, 92, 92, 1);
+      border-bottom: 1.82px solid rgb(189 189 189);
+    }
 
 
+    .carti {
+      position: relative;
+      font-size: 4vw;
+      margin: 4vw 0;
+      text-align: center;
+    }
+
+    .my {
+      display: flex;
+      justify-content: space-around;
+      border-top: 2px solid;
+      border-bottom: 2px solid;
+      padding: 0.5vw 0;
+    }
 
 
+    .shopping h2 {
+      font-size: 2.5vw;
+      font-family: Times New Roman;
+      font-style: normal;
+      font-weight: normal;
+    }
 
-        .navbar {
-            text-align: center;
-            position: sticky;
-            margin-top: 2.3vw;
-        }
+    #shop {
+      position: relative;
+      background-color: rgb(190, 190, 190);
+      padding: 0.4vw 1vw;
+      border-radius: 3vw;
+    }
 
-        .navbar ul {
-            display: inline-flex;
-        }
+    #shop h2:hover {
+      background-color: rgb(130, 202, 156);
+    }
 
-        .navbar ul li {
-            padding: 0 3.2vw;
-            list-style: none;
-        }
+    #continue h2 {
+      position: relative;
+      background-color: rgb(130, 202, 156);
+      padding: 0.4vw 0.4vw;
+      border-radius: 3vw;
+    }
 
-        .navbar ul li a {
-            font-size: 1.6vw;
-            text-decoration: none;
-            white-space: nowrap;
-            font-family: Times New Roman;
-            font-style: normal;
-            font-weight: normal;
-            color: rgba(92, 92, 92, 1);
-            border-bottom: 1.82px solid rgb(189 189 189);
-        }
+    #continue h2:hover {
+      background-color: orange;
+    }
 
-        .carti {
-            position: relative;
-            font-size: 4vw;
-            margin: 4vw 0;
-            text-align: center;
-        }
+    .pro {
+      display: flex;
+      justify-content: space-around;
+      margin: 4vw 0;
+    }
 
-        .my {
-            display: flex;
-            justify-content: space-around;
-            border-top: 2px solid;
-            border-bottom: 2px solid;
-            padding: 0.5vw 0;
-        }
+    .duct h1 {
+      font-family: Times New Roman;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 2vw;
+    }
 
-
-        .shopping h2 {
-            font-size: 2.5vw;
-            font-family: Times New Roman;
-            font-style: normal;
-            font-weight: normal;
-        }
-
-        #shop {
-            position: relative;
-            background-color: rgb(190, 190, 190);
-            padding: 0.4vw 1vw;
-            border-radius: 3vw;
-        }
-
-        #shop h2:hover {
-            background-color: rgb(130, 202, 156);
-        }
-
-        #continue h2 {
-            position: relative;
-            background-color: rgb(130, 202, 156);
-            padding: 0.4vw 0.4vw;
-            border-radius: 3vw;
-        }
-
-        #continue h2:hover {
-            background-color: orange;
-        }
-
-        .pro {
-            display: flex;
-            justify-content: space-around;
-            margin: 4vw 0;
-        }
-
-        .duct h1 {
-            font-family: Times New Roman;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 2vw;
-        }
-
-        .duct h2 {
-            font-family: Times New Roman;
-            font-style: normal;
-            font-weight: normal;
-            margin: 2vw 0;
-            font-size: 1.5vw
-        }
+    .duct h2 {
+      font-family: Times New Roman;
+      font-style: normal;
+      font-weight: normal;
+      margin: 2vw 0;
+      font-size: 1.5vw
+    }
 
 
-        .duct h4 {
-            font-family: Times New Roman;
-            font-style: normal;
-            font-weight: normal;
-            margin: 2vw 0;
-            font-size: 2vw;
-        }
+    .duct h4 {
+      font-family: Times New Roman;
+      font-style: normal;
+      font-weight: normal;
+      margin: 2vw 0;
+      font-size: 2vw;
+    }
 
 
 
-        .price {
-            font-family: Times New Roman;
-            font-style: normal;
-            font-weight: normal;
-            margin: 2vw 0;
-            font-size: 3vw;
-        }
+    .price {
+      font-family: Times New Roman;
+      font-style: normal;
+      font-weight: normal;
+      margin: 2vw 0;
+      font-size: 3vw;
+    }
 
 
 
 
 
-        .cart a {
-            position: absolute;
-            text-decoration: none;
-            font-size: 2vw;
-            right: 3%;
-            top: 1vw;
-            z-index: 1;
-            color: rgba(92, 92, 92, 1);
-        }
+    .cart a {
+      position: absolute;
+      text-decoration: none;
+      font-size: 2vw;
+      right: 3%;
+      top: 1vw;
+      z-index: 1;
+      color: rgba(92, 92, 92, 1);
+    }
 
-        .details {
-            position: relative;
-            margin: 2vw 0vw 0 10vw;
-        }
+    .details {
+      position: relative;
+      margin: 2vw 0vw;
+    }
 
-        .produce {
-            display: flex;
-            font-family: "Times New Roman";
-            font-style: normal;
-            font-weight: normal;
-            color: rgb(0, 0, 0);
-            position: relative;
-            font-size: 2.5vw;
-            margin: 0 auto;
-            width: 100%;
-        }
+    .produce {
+      display: flex;
+      font-family: "Times New Roman";
+      font-style: normal;
+      font-weight: normal;
+      color: rgb(0, 0, 0);
+      position: relative;
+      font-size: 2.5vw;
+      margin: 0 auto;
+      width: 100%;
+      justify-content: space-around;
+    }
 
-        .title {
-            width: 28%;
-            display: flex;
-            align-items: center;
-        }
-        .quantity {
-            width: 25%;
-            display: flex;
-            align-items: center;
-        }
-        .meter{
-            width: 24%;
-            display: flex;
-            align-items: center;
-        }
+    .pid {
+      display: none;
+    }
 
-        .total {
-            width: 23%;
-            display: flex;
-            align-items: center;
-        }
 
-        .product {
-            position: relative;
-            margin: 5vw 1vw;
-            display: flex;
-            width: 100%;
+    .product {
+      position: relative;
+      margin: 5vw 1vw;
+      display: flex;
+      width: 100%;
 
-        }
+    }
 
-        .prodet {
-            width: 28%;
-            display: flex;
-            align-items: center;
-        }
+    .prodet {
+      width: 24%;
+      display: flex;
+      align-items: center;
+    }
 
-      
+    .hashtag {
+      display: flex;
+      align-items: center;
+      width: 16%;
+      position: relative;
+      left: 8%;
+      font-size: 1.4vw;
+    }
 
-        .sizdet {
-            width: 25%;
-            display: flex;
-            align-items: center;
 
-        }
 
-        .quandet {
-            width: 24%;
-            display: flex;
-            align-items: center;
+    .sizdet {
+      width: 21%;
+      display: flex;
+      align-items: center;
+      position: relative;
+      left: 11%;
+      font-size: 1.4vw;
+    }
 
-        }
+    .quandet {
+      width: 20%;
+      display: flex;
+      align-items: center;
+      position: relative;
+      left: 6%;
 
-        #totaldet {
-            width: 23%;
-            display: flex;
-            align-items: center;
+    }
 
-        }
+    .totaldet {
+      width: 19%;
+      display: flex;
+      align-items: center;
+      position: relative;
+      left: 7%;
+    }
 
-        .prodet span {
-            position: relative;
-            font-size: 1.8vw;
-            margin: 0 1vw;
-            font-family: Times New Roman;
-            font-style: normal;
-            font-weight: normal;
-        }
+    .prodet span {
+      position: relative;
+      font-size: 1.6vw;
+      margin: 0 1vw;
+      font-family: Times New Roman;
+      font-style: normal;
+      font-weight: normal;
+    }
 
-        .prodet img {
-            width: 5vw;
-        }
+    .prodet img {
+      width: 10vw;
+    }
 
-        .fa-solid {
-            position: relative;
-            top: -2vw;
-            margin: 0 0.5vw;
-            font-size: 0.8vw;
-        }
-        #quantity{
-            font-size: 1.4vw;
-            border: 2px solid;      
-        padding: 0 0vw 0 3vw;
-        }
-        #sizerange{
-            font-size: 1.4vw;
-            border: 2px solid;      
-        padding: 0 0vw 0 3vw;
-        }
-    </style>
+    .fa-solid {
+      position: relative;
+      top: -4.5vw;
+      margin: 0 0.5vw;
+      font-size: 0.8vw;
+    }
+
+    #quantity {
+      font-size: 1.4vw;
+      border: 2px solid;
+      padding: 0 0vw 0 3vw;
+    }
+
+    #sizerange {
+      width: 21%;
+      display: flex;
+      align-items: center;
+      position: relative;
+      left: 11%;
+    }
+
+
+
+    .cart a {
+      position: absolute;
+      text-decoration: none;
+      font-size: 2vw;
+      right: 1%;
+      z-index: 2;
+      color: rgba(92, 92, 92, 1);
+    }
+
+    .totalmulay {
+      position: relative;
+      font-size: 1.6vw;
+    }
+
+    .pesado {
+      position: relative;
+      font-size: 2vw;
+      float: right;
+      right: 10vw;
+    }
+
+    .address {
+      position: relative;
+    }
+
+    .address a {
+      position: relative;
+      font-size: 1.4vw;
+      background: none;
+      font-family: Times New Roman;
+      color: white;
+      background-color: rgba(0, 0, 0, 1);
+      cursor: pointer;
+      padding: 0.4vw 1vw;
+      text-decoration: none;
+      border-radius: 1vw;
+    }
+
+    .contine {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      gap: 65vw;
+      margin: 2vw 0;
+    }
+
+    .modal-container {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .modal-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    .modal-image {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .phonefooter {
+      display: none;
+    }
+
+    @media (max-width: 650px) {
+      #quantity {
+        font-size: 2vw;
+      }
+
+      .prodet span {
+        font-size: 2.2vw;
+      }
+
+      .prodet img {
+        width: 14vw;
+      }
+
+      .hashtag {
+        font-size: 2vw;
+      }
+
+      .sizdet {
+        font-size: 2vw;
+      }
+
+
+      .fa-solid {
+        font-size: 2vw;
+      }
+
+      .product {
+        margin: 5vw 2vw;
+      }
+
+      .cart a {
+        position: absolute;
+        text-decoration: none;
+        font-size: 4vw;
+        z-index: 1;
+        color: rgba(92, 92, 92, 1);
+        top: -1vw;
+        right: 3vw;
+      }
+
+      .address a {
+        font-size: 2vw;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <div class="home">
-        <div class="header">
-            <div class="cart">
-                <a href="cart.html">
-                    🛒<span>0</span>
-                </a>
-            </div>
-            <div id="heading">
-                <div class="textiles">HAND MADE - TEXTILES</div>
-                <svg class="Line_31" viewBox="0 0 2040 1">
-                    <path id="Line_31" d="M 0 0 L 2040 0">
-                    </path>
-                </svg>
-                <p>BEAUTIFUL BOUCLÉ</p>
+  <div class="header">
+    <div class="heading">
+      <h1>
+        WOMAN'S WEAR BUSINESS / ACCESSORIES
+      </h1>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li class="grow"><a href="scarfhistory.html">SCARF HISTORY</a></li>
+        <li class="grow"><a href="tutorial.html">TUTORIAL</a></li>
+        <li class="grow"><a href="clientpurchase.html">CLIENT PURCHASE</a></li>
+        <li class="grow"><a href="inquiry.html">CLIENT INQUIRY</a></li>
+      </ul>
+    </nav>
+  </div>
 
-            </div>
-            <nav class="navbar">
-                <ul>
-                    <li class="grow"><a href="#">BOUCLÉ LIBRARY</a></li>
-                    <li class="grow"><a href="#">HOME GALLERY</a></li>
-                    <li class="grow"><a href="#">ARTISANAL STORY </a></li>
-                    <li class="grow"><a href="#">CLIENT PURCHASE</a></li>
-                    <li class="grow"><a href="#">WHITE LABEL</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="carti">
-            SHOPPING CART
-        </div>
-        <div class="my">
-            <div class="shopping" id="shop">
-                <h2> My Cart</h2>
-            </div>
-            <div class="shopping" id="continue">
-                <h2>Continue Shopping</h2>
-            </div>
-        </div>
-        <div class="details">
-            <div class="produce">
-                <h5 class="title">PRODUCT</h5>
-                <h5 class="quantity">QUANTITY</h5>
+  <div class="carti">
+    SHOPPING CART
+    <div class="cart">
+      <a href="cart.html">
+        🛒<span>0</span>
+      </a>
+    </div>
+  </div>
+  <button onclick="multiplyBy80()" id="multiplyBtn">INR</button>
+  <button onclick="divideBy80()" id="divideBtn" disabled>USD</button>
 
-                <h5 class="meter">SIZE</h5>
+  <div class="details">
+    <div class="produce">
+      <h5 class="title">PRODUCT NAME</h5>
 
-                <h5 class="total">TOTAL</h5>
-            </div>
-            <div class="products">
+      <h5 class="productno">FABRIC</h5>
 
-            </div>
+      <h5 class="meter">SIZE</h5>
+
+      <h5 class="quantity">QUANTITY</h5>
+
+      <h5 class="total">TOTAL</h5>
+    </div>
+    <div class="products">
+
+    </div>
+  </div>
+  <div class="contine">
+    <div class="address">
+      <a href="address.html" onclick="saveCartToDatabase()">Proceed to buy</a>
+    </div>
+    <div class="totalmulay">
+      Sub Total: <span id="total-price"></span>$
+      <span id="inrtotal-price"></span>₹ <br>
+      Shiping Cost: <span id="spc"></span>$
+      <span id="inrspc"></span>₹
+    </div>
+  </div>
+  <div class="pesado">
+    Total: <span id="keemat"></span>
+    <span id="inrkeemat"></span>₹
+  </div>
+
+
+
+
+
+
+
+  <script>
+    let carts = document.querySelectorAll('.add-cart');
+    let products = [];
+
+    for (let i = 0; i < carts.length; i++) {
+      carts[i].addEventListener('click', () => {
+        event.preventDefault();
+        cartNumbers(products[i]);
+      });
+    }
+
+    function onLoadCartNumbers() {
+      let productNumbers = localStorage.getItem('cartNumbers');
+
+      if (productNumbers) {
+        document.querySelector('.cart span').textContent = productNumbers;
+      }
+    }
+
+    function cartNumbers(product) {
+      let productNumbers = localStorage.getItem('cartNumbers');
+      let cartItems = localStorage.getItem('productsInCart');
+      cartItems = JSON.parse(cartItems);
+
+      productNumbers = parseInt(productNumbers);
+
+      if (productNumbers) {
+        if (!cartItems || !cartItems[product.tag]) {
+          localStorage.setItem('cartNumbers', productNumbers + 1);
+          document.querySelector('.cart span').textContent = productNumbers + 1;
+        }
+      } else {
+        localStorage.setItem('cartNumbers', 1);
+        document.querySelector('.cart span').textContent = 1;
+      }
+
+      setItems(product);
+    }
+
+    function setItems(product) {
+      let cartItems = localStorage.getItem('productsInCart');
+      cartItems = JSON.parse(cartItems);
+
+      if (cartItems != null) {
+        if (cartItems[product.tag] == undefined) {
+          // Product not in cart, add it
+          product.inCart = 1;
+          cartItems = {
+            ...cartItems,
+            [product.tag]: product
+          };
+        } else {
+          // Product already in cart
+          alert('Product already in cart');
+        }
+      } else {
+        product.inCart = 1;
+        cartItems = {
+          [product.tag]: product
+        };
+      }
+
+      localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+      displayCart();
+    }
+    function calculateCartSubTotal(cartItems) {
+      let cartSubTotal = 0;
+      if (cartItems) {
+        Object.values(cartItems).forEach(item => {
+          cartSubTotal += item.pesa * item.inCart;
+        });
+      }
+      return cartSubTotal;
+    }
+    function displayCart() {
+      let cartItems = localStorage.getItem("productsInCart");
+      cartItems = JSON.parse(cartItems);
+      let productContainer = document.querySelector(".products");
+      let total = 0;
+      let quantity = 0; // define quantity variable
+
+      let shipCount = {};
+
+      if (cartItems && productContainer) {
+        productContainer.innerHTML = '';
+        Object.values(cartItems).forEach(item => {
+          productContainer.innerHTML += `
+        <div class="product">
+          <div class="prodet">
+            <i class="fa-solid fa-rectangle-xmark" data-tag="${item.tag}"></i>
+            <img src="${item.tag}.jpg" onclick="displayImage('${item.tag}')">
+            <span>${item.name}</span>
+          </div>
+          <div class="hashtag">
+            <span>Silk Weave 100%</span>
+          </div>
+          <div class="sizdet">
+            <span>${item.size}</span>
+          </div>
+          <div class="quandet">
+            <input type="number" id="quantity" name="${item.tag}" value="${item.inCart}" min="1" max="10" onchange="updateTotalPrice('${item.tag}')">
+          </div>
+          <div class="totaldet">
+            <span id="total-${item.tag}">$${item.pesa * item.inCart}</span>
+            <span id="inr-total-${item.tag}">(₹${item.pesa * item.inCart * 80})</span>
+          </div>
+          <div class="ship">
+            <span>${item.ship}</span>
+          </div>
+          <div class="pid">
+            <span>${item.pid}</span>
+          </div>
         </div>
-
-        <!--
-        <div class="total">
-            <div class="price">
-                TOTAL
-            </div>
-            <div class="price">
-                225$
-            </div>
+        <br>
+        <div id="modal-container" class="modal-container" onclick="hideImage()">
+          <div id="modal-content" class="modal-content">
+            <img id="modal-image" class="modal-image" src="" alt="">
+          </div>
         </div>
-    -->
-        <script src="main.js"></script>
+      `;
+
+          // Update the existing span for the total price
+          let productTotalElement = document.getElementById(`total-${item.tag}`);
+          productTotalElement.textContent = `$${item.pesa * item.inCart}`;
+
+          // Add the new span for the Indian Rupee price
+          let inrProductTotalElement = document.getElementById(`inr-total-${item.tag}`);
+          inrProductTotalElement.textContent = `(₹${item.pesa * item.inCart * 80})`;
+
+          total += item.pesa * item.inCart;
+          quantity += item.inCart; // update quantity
+          // log ship count
+          console.log(shipCount);
+        });
+
+        // display the total price and quantity
+        document.getElementById('total-price').textContent = total.toFixed(2);
+        document.getElementById('quantity').textContent = quantity;
+
+        // calculate the shipping price
+        let shippingPrice = 10;
+        if (quantity > 1 && quantity <= 5) {
+          shippingPrice += 2.5 * (quantity - 1);
+        } else if (quantity > 5) {
+          shippingPrice += 2.5 * 4 + 3 * (quantity - 5);
+        }
+
+        // multiply shippingPrice by 80 for Indian Rupee
+        let inrShippingPrice = shippingPrice * 80;
+        // display the shipping price
+        document.getElementById('spc').textContent = `$${shippingPrice.toFixed(2)}`;
+
+        // display the shipping price in Indian Rupee
+        document.getElementById('inrspc').textContent = `(₹${inrShippingPrice.toFixed(2)})`;
+
+        // Calculate the Indian Rupee total price including shipping
+        let inrTotalPrice = total * 80 + inrShippingPrice;
+
+        // Display the Indian Rupee total price
+        document.getElementById('inrkeemat').textContent = `(₹${inrTotalPrice.toFixed(2)})`;
+      }
+    }
+
+
+    // Rest of the code...
+
+    function updateTotalPriceAndShipping() {
+      let totalPrice = 0;
+      let shippingPrice = parseFloat(document.getElementById('spc').textContent.slice(1)); // Remove the $ sign
+
+      // Calculate the total price by summing the individual product prices
+      let productPrices = document.querySelectorAll('.totaldet span[id^="total-"]');
+      productPrices.forEach(price => {
+        totalPrice += parseFloat(price.textContent.slice(1)); // Remove the $ sign
+      });
+
+      // Calculate the total price with shipping
+      let totalPriceWithShipping = totalPrice + shippingPrice;
+
+      // Fill the span element with the id "keemat" with the total price
+      document.getElementById('keemat').textContent = `$${totalPriceWithShipping.toFixed(2)}`;
+    }
+
+    // ... rest of the code
+
+    function updateTotalAndShipping() {
+      displayCart();
+      updateTotalPriceAndShipping();
+    }
+
+
+
+    // ... rest of the code
+
+
+    function removeItemFromCart(tag) {
+      let cartItems = JSON.parse(localStorage.getItem("productsInCart"));
+      let productNumbers = parseInt(localStorage.getItem("cartNumbers"));
+      let item = cartItems[tag];
+
+      if (item) {
+        // Decrease cart count
+        localStorage.setItem("cartNumbers", productNumbers - 1);
+
+        // Update cart span
+        document.querySelector('.cart span').textContent = parseInt(document.querySelector('.cart span').textContent) - 1;
+
+        // Remove item from cart
+        delete cartItems[tag];
+        localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+      }
+    }
+
+    function saveCartToDatabase() {
+      let cartItems = localStorage.getItem("productsInCart");
+      cartItems = JSON.parse(cartItems);
+
+      // Create a new FormData object and append the cart data to it
+      let formData = new FormData();
+      formData.append("products", JSON.stringify(cartItems));
+
+      // Send a POST request to your PHP script with the form data
+      let xhr = new XMLHttpRequest();
+      xhr.open("POST", "saveCart.php", true);
+      xhr.onreadystatechange = function () {
+        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+          // Request completed successfully
+          console.log(this.responseText);
+        }
+      };
+      xhr.send(formData);
+    }
+
+    function displayImage(tag) {
+      let imageSrc = tag + '.jpg';
+      let modalContainer = document.getElementById('modal-container');
+      let modalImage = document.getElementById('modal-image');
+      modalImage.src = imageSrc;
+      modalContainer.style.display = 'block';
+    }
+
+    function hideImage() {
+      let modalContainer = document.getElementById('modal-container');
+      modalContainer.style.display = 'none';
+    }
+
+
+    function updateTotalPrice(productTag) {
+      let cartItems = localStorage.getItem('productsInCart');
+      cartItems = JSON.parse(cartItems);
+
+      let quantity = parseInt(document.getElementsByName(productTag)[0].value);
+
+      cartItems[productTag].inCart = quantity;
+      cartItems[productTag].total = cartItems[productTag].pesa * quantity;
+
+      localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+
+      // Calculate the total quantity of all products in the cart
+      let totalQuantity = Object.values(cartItems).reduce((total, item) => {
+        return total + item.inCart;
+      }, 0);
+
+      // Calculate the total price of all products in the cart
+      let cartTotal = Object.values(cartItems).reduce((total, item) => {
+        return total + item.pesa * item.inCart;
+      }, 0);
+
+      let cartSubTotal = cartTotal * 80; // Calculate the sub total in Indian Rupees
+
+      localStorage.setItem("Total", JSON.stringify(cartTotal));
+      localStorage.setItem("Quantity", JSON.stringify(totalQuantity));
+
+      // Display the updated total and quantity of all products
+      document.getElementById('total-price').textContent = cartTotal.toFixed(2);
+      document.getElementById('quantity').textContent = totalQuantity;
+
+      // Update the total of the changed product
+      let productTotalElement = document.getElementById(`total-${productTag}`);
+      productTotalElement.textContent = `$${cartItems[productTag].total.toFixed(2)}`;
+
+      // Update the Indian Rupee price of the changed product
+
+      let inrProductTotalElement = document.getElementById(`inr-total-${productTag}`);
+      inrProductTotalElement.textContent = `(₹${(cartItems[productTag].total * 80).toFixed(2)})`;
+
+      // Update the sub total in Indian Rupees
+      document.getElementById('inrtotal-price').textContent = `(₹${cartSubTotal.toFixed(2)})`;
+
+      // Calculate the shipping price
+      let shippingPrice = 10;
+      if (totalQuantity > 1 && totalQuantity <= 5) {
+        shippingPrice += 2.5 * (totalQuantity - 1);
+      } else if (totalQuantity > 5) {
+        shippingPrice += 2.5 * 4 + 3 * (totalQuantity - 5);
+      }
+
+      // Display the shipping price
+      document.getElementById('spc').textContent = `$${shippingPrice.toFixed(2)}`;
+
+      // Calculate the total price including shipping
+      let totalPrice = cartTotal + shippingPrice;
+
+      // Display the total price
+      document.getElementById('keemat').textContent = `$${totalPrice.toFixed(2)}`;
+
+      // Calculate the Indian Rupee total price including shipping
+      let inrTotalPrice = totalPrice * 80;
+
+      // Display the Indian Rupee total price
+      document.getElementById('inrkeemat').textContent = `(₹${inrTotalPrice.toFixed(2)})`;
+    }
+    let quantityInputs = document.querySelectorAll('.quandet input');
+    quantityInputs.forEach(input => {
+      input.addEventListener('change', () => {
+        let productTag = input.getAttribute('name');
+        updateTotalPrice(productTag);
+      });
+    });
+
+
+
+
+    // Define a function to update the content of the element
+    function updateElement() {
+      const element = document.getElementById("total-price");
+    }
+
+    // Call the function immediately to update the element once when the page loads
+    updateElement();
+
+    // Call the function every 5 seconds to update the element periodically
+    setInterval(updateElement, 5000);
+
+
+
+    // Display the new span when the page loads
+    window.addEventListener('DOMContentLoaded', function () {
+      let inrTotalPriceElement = document.getElementById('inrtotal-price');
+      let cartItems = JSON.parse(localStorage.getItem('productsInCart'));
+      let cartSubTotal = calculateCartSubTotal(cartItems);
+      let inrSubTotal = (cartSubTotal * 80).toFixed(2);
+      inrTotalPriceElement.textContent = `(₹${inrSubTotal})`;
+    });
+
+
+    displayCart();
+    onLoadCartNumbers();
+    updateTotalPriceAndShipping();
+    updateTotalPrice();
+
+
+  </script>
 </body>
 
 </html>

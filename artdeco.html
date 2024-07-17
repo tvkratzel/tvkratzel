@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: none;
+        }
+
+
+        body {
+            overflow-x: hidden;
+
+        }
+
+        .header {
+            position: relative;
+            margin: 0.9vw;
+        }
+
+        .heading {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .heading a {
+            font-size: 4.3vw;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            color: rgba(92, 92, 92, 1);
+            border-bottom: 2px solid rgba(92, 92, 92, 1);
+            margin: 1vw 0;
+            text-decoration: none;
+        }
+
+
+        .navbar {
+            text-align: center;
+            position: sticky;
+            margin-top: 2.3vw;
+        }
+
+        .navbar ul {
+            display: inline-flex;
+        }
+
+        .navbar ul li {
+            padding: 0 5.5vw;
+            list-style: none;
+        }
+
+        .navbar ul li a {
+            font-size: 1.6vw;
+            text-decoration: none;
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            color: rgba(92, 92, 92, 1);
+            border-bottom: 1.82px solid rgb(189 189 189);
+        }
+
+        .relaitve {
+            position: relative;
+        }
+
+        .art {
+            transform: rotate(-90deg);
+            position: absolute;
+            overflow: visible;
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 6.5vw;
+            left: -12%;
+            top: 34vw;
+            border-bottom: 0.2vw solid;
+            color: rgba(0, 0, 0, 1);
+
+        }
+
+        .deco {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-column-gap: 2.5vw;
+            position: absolute;
+            left: 10%;
+            margin: 4vw 0;
+
+        }
+
+        .design {
+
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 2vw;
+            text-align: center;
+            color: rgba(0, 0, 0, 1);
+        }
+
+        .artdeco img {
+            width: 20vw;
+        }
+
+        .footer {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            background: rgb(52 47 47);
+            position: relative;
+            left: -1%;
+            width: 102%;
+            margin-top: 54vw;
+        }
+
+        .thumb {
+
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            padding: 0 13vw 0 3vw;
+            margin-top: 1.5vw;
+            font-size: 2.2vw;
+            color: rgba(255, 255, 255, 1);
+        }
+
+          .foot {
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            padding: 0 3.4vw;
+            font-size: 1.5vw;
+            margin-top: 0.5vw;
+            color: rgba(255, 255, 255, 1);
+
+        }
+        .policy a {
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1.5vw;
+            margin-top: 0.5vw;
+            color: rgba(255, 255, 255, 1);
+            text-decoration: none;
+
+        }
+
+        .social {
+            margin-top: 1vw;
+            margin-bottom: 1vw;
+        }
+
+        .social a {
+            color: rgba(255, 255, 255, 1);
+            padding: 0 1.3vw 0 0vw;
+        }
+
+        .whatsapp {
+            padding: 17px;
+        }
+
+        .finger {
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            padding: 0 3.4vw;
+            font-size: 1.5vw;
+            margin: 0 0 6vw 0;
+            color: rgba(255, 255, 255, 1);
+            height: 0;
+
+        }
+
+        .finger img {
+            width: 20vw;
+            position: relative;
+        }
+
+        .phonefooter {
+            display: none;
+        }
+
+        @media (max-width: 650px) {
+
+            nav {
+                position: relative;
+                display: block;
+                margin: 1vw 0 2vw 0;
+                left: -5vw;
+            }
+
+            .navbar ul {
+                display: flex;
+                justify-content: center;
+            }
+
+            .navbar ul li {
+                padding: 0 3vw;
+                list-style: none;
+            }
+
+            .navbar ul li a {
+                font-size: 2.3vw;
+
+            }
+
+            .design {
+                font-size: 3vw;
+            }
+            
+            .footer {
+                display: none;
+            }
+
+
+
+            .phonefooter {
+                position: relative;
+                display: flex;
+                width: 100%;
+                background: rgb(52, 47, 47);
+                z-index: 2;
+                height: 107vw;
+                top: 70vw;
+            }
+
+            .feet1 {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+
+            .thumb {
+                font-size: 5.5vw;
+                margin: 5vw 5vw 3vw 3vw;
+            }
+
+            .foot a {
+                color: rgba(255, 255, 255, 1);
+                text-decoration: none;
+            }
+
+            .foot {
+                font-size: 4vw;
+                padding: 0 6vw;
+            }
+
+            .feet2 {
+                position: absolute;
+                right: 0;
+                font-size: 5vw;
+                margin: 5vw 0 0 0;
+            }
+
+            .social {
+                row-gap: 5vw;
+                display: grid;
+                position: absolute;
+                right: 10vw;
+                top: 12vw;
+            }
+
+            .logo {
+                position: relative;
+                left: 0;
+                top: 50vw;
+            }
+
+            .logo img {
+                width: 50vw;
+            }
+
+            #last {
+                margin-bottom: 12vw;
+            }
+
+            .billing a {
+                position: relative;
+                top: 69vw;
+                left: -5.7vw;
+                display: flex;
+                font-size: 3vw;
+                color: white;
+                font-family: Times New Times New Roman;
+                text-decoration: none;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="home">
+        <div class="header">
+            <div class="heading">
+                <a href="index.html">WOMAN'S WEAR BUSINESS / ACCESSORIES</a>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li class="grow"><a href="scarfhistory.html">SCARF HISTORY</a></li>
+                    <li class="grow"><a href="tutorial.html">TUTORIAL</a></li>
+                    <li class="grow"><a href="clientpurchase.html">CLIENT PURCHASE</a></li>
+                    <li class="grow"><a href="inquiry.html">CLIENT INQUIRY</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="relative">
+            <div class="art">
+                ART DECO
+            </div>
+            <div class="deco">
+                <div class="artdeco">
+                    <p class="design">BUBBLE</p>
+                    <a href="bubble.html"> <img src="n_6X16_COMBO_7-01.png"></a>
+                </div>
+                <div class="artdeco">
+                    <p class="design">LIGHTNING</p>
+                    <a href="lightning.html"> <img src="blue.png"></a>
+                </div>
+                <div class="artdeco">
+                    <p class="design">TILE</p>
+                    <a href="tile.html"> <img src="gray.png"></a>
+                </div>
+                <div class="artdeco">
+                    <p class="design">STRIPES</p>
+                    <a href="stripes.html"> <img src="PicsArt_05-25-100256.png"></a>
+                </div>
+                <div class="artdeco">
+                    <a href="bubble.html"> <img src="n_6X16_COMBO_7-01.png"></a>
+                </div>
+                <div class="artdeco">
+                    <a href="lightning.html"> <img src="blue.png"></a>
+                </div>
+                <div class="artdeco">
+                    <a href="tile.html"> <img src="gray.png"></a>
+                </div>
+                <div class="artdeco">
+                    <a href="stripes.html"> <img src="PicsArt_05-25-100256.png"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+
+            <div class="thumb">
+                Retail Client Services
+
+            </div>
+
+            <div class="thumb">
+                Wholesale Client Services
+            </div>
+
+            <div class="thumb">
+                Media
+            </div>
+
+            <div class="foot">
+                Joint Venture
+            </div>
+            <div class="foot">
+                Buyer Inquiry
+            </div>
+            <div class="foot">
+                WWB-Blog
+            </div>
+            <div class="foot">
+                JV Partner
+            </div>
+            <div class="foot">
+                Private Label
+            </div>
+            <div class="foot">
+                Editorial
+            </div>
+            <div class="foot">
+                Customized Order Process
+            </div>
+            <div class="foot">
+                Co - Branding
+            </div>
+            <div class="foot">
+                Affliliate Partnership
+            </div>
+            <div class="foot">
+
+            </div>
+            <div class="foot">
+                <div class="social">
+                    <a href="https://instagram.com/womanswearbusiness?igshid=YmMyMTA2M2Y="><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=12122102965" class="whatsapp"><i
+                            class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.pinterest.com/womenswearbusiness/_saved/"><i class="fab fa-pinterest"></i></a>
+
+                </div>
+            </div>
+            <div class="finger">
+                <img src="logopit-16448465792391x.png">
+            </div>
+        </div>
+        <div class="phonefooter">
+            <div class="feet1">
+                <div class="thumb">
+                    Retail Client Services
+
+                </div>
+                <div class="foot">
+                    <a href="clientinquiry.html"> Joint Venture
+                    </a>
+                </div>
+                <div class="foot">
+                    <a href="clientinquiry.html"> JV Partner
+                    </a>
+                </div>
+                <div class="foot">
+                    <a href="customized.html"> Customized Order Process
+                    </a>
+                </div>
+                <div class="thumb">
+                    Wholesale Client Services
+
+                </div>
+                <div class="foot">
+                    <a href="clientinquiry.html"> Buyer Inquiry
+                    </a>
+                </div>
+                <div class="foot">
+                    <a href="clientinquiry.html"> Private Label
+                    </a>
+                </div>
+                <div class="foot">
+                    <a href="clientinquiry.html"> Co - Branding
+                    </a>
+                </div>
+                <div class="thumb">
+                    Media
+
+                </div>
+                <div class="foot">
+                    <a href="clientinquiry.html"> WW/B -Blog
+                    </a>
+                </div>
+                <div class="foot">
+                    <a href="clientinquiry.html"> Editorial
+                    </a>
+                </div>
+                <div class="foot" id="last">
+                    Affliliate Partnership
+                </div>
+            </div>
+
+            <div class="feet2">
+                <div class="social">
+                    <a href="https://instagram.com/womanswearbusiness?igshid=YmMyMTA2M2Y="><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=12122102965" class="whatsapp"><i
+                            class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.pinterest.com/womenswearbusiness/_saved/"><i class="fab fa-pinterest"></i></a>
+
+                </div>
+                <div class="logo">
+                    <img src="logo.png" alt="">
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <script id="applicationScript">
+        var Application = function () {
+            this.prefix = "--web-";
+            var self = this;
+            self.goToTargetView = function (event) {
+                var button = event.currentTarget;
+                var buttonComputedStyles = getComputedStyle(button);
+                var actionTargetValue = buttonComputedStyles.getPropertyValue(self.prefix + "action-target").trim();
+                var targetType = buttonComputedStyles.getPropertyValue(self.prefix + "action-type").trim();
+
+                if (self.application == false || targetType == "page") {
+                    document.location.href = "./" + actionTargetValue;
+                    return;
+                }
+                event.stopImmediatePropagation();
+            }
+            self.getElement = function (id) {
+                id = id ? id.trim() : id;
+                var element = id ? document.getElementById(id) : null;
+
+                return element;
+            }
+        }
+
+        window.application = new Application();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: none;
+        }
+
+
+        body {
+            overflow-x: hidden;
+
+        }
+
+        .header {
+            position: relative;
+            margin: 0.9vw 0 0 0;
+        }
+
+        #heading {
+            overflow: visible;
+            top: 0px;
+            position: relative;
+            white-space: nowrap;
+            text-align: center;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 4.65vw;
+            color: rgba(92, 92, 92, 1);
+            --web-animation: fadein 0.30000001192092896s ease-out;
+            --web-action-type: page;
+            --web-action-target: index.html;
+            cursor: pointer;
+
+        }
+
+        #Line_31 {
+            fill: transparent;
+            stroke: rgba(112, 112, 112, 1);
+            stroke-width: 2px;
+            stroke-linejoin: miter;
+            stroke-linecap: butt;
+            stroke-miterlimit: 4;
+            shape-rendering: auto;
+        }
+
+        .Line_31 {
+            overflow: visible;
+            position: absolute;
+            left: 1.5%;
+            width: 94vw;
+            height: 1px;
+            transform: matrix(1, 0, 0, 1, 0, 0);
+        }
+
+        .navbar {
+            text-align: center;
+            position: sticky;
+            margin-top: 2.3vw;
+        }
+
+        .navbar ul {
+            display: inline-flex;
+        }
+
+        .navbar ul li {
+            padding: 0 5.5vw;
+            list-style: none;
+        }
+
+        .navbar ul li a {
+            font-size: 1.6vw;
+            text-decoration: none;
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            color: rgba(92, 92, 92, 1);
+            border-bottom: 1.82px solid rgb(189 189 189);
+        }
+
+        .BLUEB {
+            overflow: visible;
+            white-space: nowrap;
+            position: relative;
+            margin: 9vw;
+            text-align: center;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 7vw;
+            color: rgb(103 130 191);
+        }
+
+        #Line_54 {
+            fill: transparent;
+            stroke: rgb(103 130 191);
+            stroke-width: 4px;
+            stroke-linejoin: miter;
+            stroke-linecap: butt;
+            stroke-miterlimit: 4;
+            shape-rendering: auto;
+        }
+
+        .Line_54 {
+            overflow: visible;
+            position: absolute;
+            width: 18.5vw;
+            margin: -10.6vw;
+            left: 51.4%;
+            height: 1vw;
+            transform: matrix(1, 0, 0, 1, 0, 0);
+        }
+
+        #artdeco {
+            position: relative;
+            text-align: center;
+            font-size: 3vw;
+            top: -4vw;
+            text-decoration: underline;
+            margin: 1vw 0;
+        }
+
+        #bubble {
+            position: relative;
+            text-align: center;
+            font-size: 3vw;
+            top: 1vw;
+            text-decoration: underline;
+            margin: 5vw 0;
+        }
+
+        #floral {
+            position: relative;
+            text-align: center;
+            font-size: 3vw;
+            top: 1vw;
+            text-decoration: underline;
+            margin: 5vw 0;
+        }
+
+        #flowerpower {
+            position: relative;
+            text-align: center;
+            font-size: 3vw;
+            top: 1vw;
+            text-decoration: underline;
+            margin: 5vw 0;
+        }
+
+        #lightning {
+            position: relative;
+            text-align: center;
+            font-size: 3vw;
+            top: 1vw;
+            text-decoration: underline;
+            margin: 5vw 0;
+        }
+
+        #blue16 {
+            --web-animation: fadein 0.30000001192092896s ease-out;
+            --web-action-type: page;
+            --web-action-target: blue16.html;
+            cursor: pointer;
+        }
+
+        .flex {
+            display: flex;
+            grid-column-gap: 2vw;
+            justify-content: space-evenly;
+        }
+
+        .color {
+            text-align: center;
+            font-size: 1.5vw;
+        }
+
+        .flex img {
+            height: 21vw;
+        }
+
+        .footer {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            background: rgb(52 47 47);
+            position: relative;
+            margin-top: 10vw;
+
+        }
+
+        .thumb {
+
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            padding: 0 13vw 0 3vw;
+            margin-top: 1.5vw;
+            font-size: 2.2vw;
+            color: rgba(255, 255, 255, 1);
+        }
+
+        .foot {
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            padding: 0 3.4vw;
+            font-size: 1.5vw;
+            margin-top: 0.5vw;
+            color: rgba(255, 255, 255, 1);
+
+        }
+
+        .policy a {
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1.5vw;
+            margin-top: 0.5vw;
+            color: rgba(255, 255, 255, 1);
+            text-decoration: none;
+
+        }
+
+        .social {
+            margin-top: 1vw;
+            margin-bottom: 1vw;
+        }
+
+        .social a {
+            color: rgba(255, 255, 255, 1);
+            padding: 0 1.3vw 0 0vw;
+        }
+
+        .whatsapp {
+            padding: 17px;
+        }
+
+        .finger {
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            padding: 0 3.4vw;
+            font-size: 1.5vw;
+            margin-top: 0.5vw;
+            color: rgba(255, 255, 255, 1);
+            height: 0;
+
+        }
+
+        .finger img {
+            width: 24vw;
+            position: relative;
+            top: 0.6vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="home">
+        <div class="header">
+            <div onclick="application.goToTargetView(event)" id="heading">
+                <p>WOMAN'S WEAR BUSINESS / ACCESSORIES</p>
+                <svg class="Line_31" viewBox="0 0 1810 1">
+                    <path id="Line_31" d="M 0 0 L 1810 0">
+                    </path>
+                </svg>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li class="grow"><a href="scarfhistory.html">SCARF HISTORY</a></li>
+                    <li class="grow"><a href="tutorial.html">TUTORIAL</a></li>
+                    <li class="grow"><a href="clientpurchase.html">CLIENT PURCHASE</a></li>
+                    <li class="grow"><a href="inquiry.html">CLIENT INQUIRY</a></li>
+                </ul      
+             </nav>
+        </div>
+        <div class="BLUE">
+            <div class="BLUEB">
+                BLUE
+            </div>
+            <svg class="Line_54" viewBox="0 0 1259 3">
+                <path id="Line_54" d="M 0 0 L 1259 3">
+                </path>
+            </svg>
+            <div id="artdeco">
+                ARTDECO
+            </div>
+            <div class="flex">
+                <div class="design">
+                    <img onclick="application.goToTargetView(event)" id="blue16" src="artdeco1616.jpg">
+                    <p class="color">16×16 </p>
+                </div>
+                <div class="design">
+                    <img src="artdeco2020.jpg">
+                    <p class="color">20×20</p>
+                </div>
+                <div class="design">
+                    <img src="artdeco2040.jpg">
+                    <p class="color">40×40</p>
+                </div>
+                <div class="design">
+                    <img src="artdeco20100.jpg">
+                    <p class="color">20×100</p>
+                </div>
+            </div>
+            <div id="bubble">
+                BUBBLE
+            </div>
+            <div class="flex">
+                <div class="design">
+                    <img src="bubble1616.jpg">
+                    <p class="color">16×16 </p>
+                </div>
+                <div class="design">
+                    <img src="bubble2020.jpg">
+                    <p class="color">20×20</p>
+                </div>
+                <div class="design">
+                    <img src="bubble2040.jpg">
+                    <p class="color">40×40</p>
+                </div>
+                <div class="design">
+                    <img src="bubble20100.jpg">
+                    <p class="color">20×100</p>
+                </div>
+            </div>
+            <div id="floral">
+                FLORAL
+            </div>
+            <div class="flex">
+                <div class="design">
+                    <img src="floral1616.jpg">
+                    <p class="color">16×16 </p>
+                </div>
+                <div class="design">
+                    <img src="floral2020.jpg">
+                    <p class="color">20×20</p>
+                </div>
+                <div class="design">
+                    <img src="floral2040.jpg">
+                    <p class="color">40×40</p>
+                </div>
+                <div class="design">
+                    <img src="floral20100.jpg">
+                    <p class="color">20×100</p>
+                </div>
+            </div>
+            <div id="flowerpower">
+                FLOWERPOWER
+            </div>
+            <div class="flex">
+                <div class="design">
+                    <img src="flowerpower1616.jpg">
+                    <p class="color">16×16 </p>
+                </div>
+                <div class="design">
+                    <img src="flowerpower2020.jpg">
+                    <p class="color">20×20</p>
+                </div>
+                <div class="design">
+                    <img src="flowerpower2040.jpg">
+                    <p class="color">40×40</p>
+                </div>
+                <div class="design">
+                    <img src="flowepower20100.jpg">
+                    <p class="color">20×100</p>
+                </div>
+            </div>
+            <div id="lightning">
+                LIGHTNING
+            </div>
+            <div class="flex">
+                <div class="design">
+                    <img src="lightning1616.jpg">
+                    <p class="color">16×16 </p>
+                </div>
+                <div class="design">
+                    <img src="lightning2020.jpg">
+                    <p class="color">20×20</p>
+                </div>
+                <div class="design">
+                    <img src="lightning2040.jpg">
+                    <p class="color">40×40</p>
+                </div>
+                <div class="design">
+                    <img src="lightning20100.jpg">
+                    <p class="color">20×100</p>
+                </div>
+            </div>
+            <div class="footer">
+
+                <div class="thumb">
+                    Retail Client Services
+
+                </div>
+
+                <div class="thumb">
+                    Wholesale Client Services
+                </div>
+
+                <div class="thumb">
+                    Media
+                </div>
+
+                <div class="foot">
+                    Joint Venture
+                </div>
+                <div class="foot">
+                    Buyer Inquiry
+                </div>
+                <div class="foot">
+                    WWB-Blog
+                </div>
+                <div class="foot">
+                    JV Partner
+                </div>
+                <div class="foot">
+                    Private Label
+                </div>
+                <div class="foot">
+                    Editorial
+                </div>
+                <div class="foot">
+                    Customized Order Process
+                </div>
+                <div class="foot">
+                    Co - Branding
+                </div>
+                <div class="foot">
+                    Affliliate Partnership
+                </div>
+                <div class="foot">
+                    <div class="policy"> <a href="policy.html">Policies</a></div>
+                </div>
+                <div class="foot">
+                    <div class="social">
+                        <a href="https://instagram.com/womanswearbusiness?igshid=YmMyMTA2M2Y="><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://api.whatsapp.com/send?phone=12122102965" class="whatsapp"><i
+                                class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.pinterest.com/womenswearbusiness/_saved/"><i
+                                class="fab fa-pinterest"></i></a>
+
+                    </div>
+                </div>
+                <div class="finger">
+                    <img src="logopit-16448465792391x.png">
+                </div>
+            </div>
+        </div>
+        <script id="applicationScript">
+            var Application = function () {
+                this.prefix = "--web-";
+                var self = this;
+                self.goToTargetView = function (event) {
+                    var button = event.currentTarget;
+                    var buttonComputedStyles = getComputedStyle(button);
+                    var actionTargetValue = buttonComputedStyles.getPropertyValue(self.prefix + "action-target").trim();
+                    var targetType = buttonComputedStyles.getPropertyValue(self.prefix + "action-type").trim();
+
+                    if (self.application == false || targetType == "page") {
+                        document.location.href = "./" + actionTargetValue;
+                        return;
+                    }
+                    event.stopImmediatePropagation();
+                }
+                self.getElement = function (id) {
+                    id = id ? id.trim() : id;
+                    var element = id ? document.getElementById(id) : null;
+
+                    return element;
+                }
+            }
+
+            window.application = new Application();
+        </script>
+</body>
+
+</html>

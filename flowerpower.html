@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        width: 100%;
+        height: 100vh;
+        background: white;
+        display: flex;
+        align-items: center;
+
+    }
+
+    .swiper {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .swiper-slide {
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .swiper-slide img {
+        height: 56vw;
+        justify-content: center;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: gray;
+    }
+
+    .swiper .swiper-pagination-bullet-active {
+        background: white;
+    }
+
+    .title {
+        color: black;
+        position: relative;
+        top: 50vw;
+        padding: 0 1vw;
+        font-size: 1.3vw;
+        font-family: 'Times New Roman', Times, serif;
+        white-space: nowrap;
+        text-align: center;
+    }
+
+    .size {
+        color: black;
+        position: relative;
+        top: 50vw;
+        padding: 0 5.6vw 0 1vw;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .bsize {
+        color: black;
+        position: relative;
+        top: 50vw;
+        padding: 0 12vw 0 1vw;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .size h1 {
+        font-size: 1.4vw;
+        font-style: italic;
+    }
+
+    .bsize h1 {
+        font-size: 1.4vw;
+        font-style: italic;
+    }
+
+    .size h2 {
+        font-size: 1.2vw;
+    }
+
+    .bsize h2 {
+        font-size: 1.2vw;
+    }
+
+    .ltitle {
+        color: black;
+        position: relative;
+        top: 35vw;
+        padding: 0 1vw;
+        font-size: 1.3vw;
+        font-family: 'Times New Roman', Times, serif;
+        white-space: nowrap;
+        text-align: center;
+        right: 10vw;
+    }
+
+    .lsize {
+        color: black;
+        position: relative;
+        top: 35vw;
+        padding: 0 6vw 0 1vw;
+        font-family: 'Times New Roman', Times, serif;
+        left: 17vw;
+    }
+
+    .lsize h1 {
+        font-size: 1.4vw;
+        font-style: italic;
+    }
+
+    .lsize h2 {
+        font-size: 1.2vw;
+    }
+
+    #carting {
+        color: black;
+        position: absolute;
+        top: 52vw;
+        font-size: 1.3vw;
+        font-family: 'Times New Roman', Times, serif;
+        white-space: nowrap;
+        right: 5vw;
+    }
+
+     .cart a {
+        position: absolute;
+        text-decoration: none;
+        font-size: 2vw;
+        right: 3%;
+        top: 1vw;
+        z-index: 2;
+        color: rgba(92, 92, 92, 1);
+    }
+
+    .rashi {
+        color: black;
+        position: absolute;
+        top: 49.5vw;
+        font-size: 1.3vw;
+        font-family: 'Times New Roman', Times, serif;
+        white-space: nowrap;
+        right: 5.3vw;
+    }
+   #multiplyBtn {
+        position: absolute;
+        text-decoration: none;
+        font-size: 1.2vw;
+        top: 47vw;
+        z-index: 2;
+        right: 5vw;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    #divideBtn {
+        position: absolute;
+        text-decoration: none;
+        font-size: 1.2vw;
+        top: 47vw;
+        z-index: 2;
+        right: 8vw;
+        font-family: 'Times New Roman', Times, serif;
+
+    }
+    @media only screen and (max-width: 658px) {
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            background: white;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .swiper {
+            width: 100%;
+        }
+
+        .swiper-slide {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+        }
+
+
+        .swiper-slide img {
+            height: 92vw;
+            top: 21%;
+            position: relative;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            color: gray;
+            display: none;
+        }
+
+        .swiper-pagination {
+            top: 129vw;
+        }
+
+        .swiper .swiper-pagination-bullet-active {
+            background: black;
+        }
+
+        .title {
+            color: black;
+            position: absolute;
+            padding: 0 1vw;
+            font-size: 3.5vw;
+            font-family: 'Times New Roman', Times, serif;
+            white-space: nowrap;
+            z-index: 2;
+            top: 38vw;
+        }
+
+        .size {
+            color: black;
+            position: absolute;
+            font-family: 'Times New Roman', Times, serif;
+            top: 137vw;
+            left: 15%;
+        }
+
+        .bsize {
+            color: black;
+            position: absolute;
+            font-family: 'Times New Roman', Times, serif;
+            top: 137vw;
+            left: 15%;
+
+        }
+
+        .size h1 {
+            font-size: 3vw;
+            font-style: italic;
+        }
+
+        .bsize h1 {
+            font-size: 3vw;
+            font-style: italic;
+        }
+
+        .size h2 {
+            font-size: 2.5vw;
+        }
+
+        .bsize h2 {
+            font-size: 2.5vw;
+        }
+
+        .ltitle {
+            color: black;
+            position: absolute;
+            padding: 0 1vw;
+            font-size: 3.5vw;
+            font-family: 'Times New Roman', Times, serif;
+            white-space: nowrap;
+            z-index: 2;
+            top: 38vw;
+        }
+
+        .lsize {
+            color: black;
+            position: absolute;
+            font-family: 'Times New Roman', Times, serif;
+            top: 137vw;
+            left: 15%;
+        }
+
+        .lsize h1 {
+            font-size: 3vw;
+            font-style: italic;
+        }
+
+        .lsize h2 {
+            font-size: 2.5vw;
+        }
+
+        #carting {
+            color: black;
+            position: absolute;
+            top: 142vw;
+            font-size: 3vw;
+            font-family: 'Times New Roman', Times, serif;
+            white-space: nowrap;
+            right: 15vw;
+        }
+
+        .cart a {
+            position: absolute;
+            text-decoration: none;
+            font-size: 6vw;
+            right: 3%;
+            top: 1vw;
+            z-index: 2;
+            color: rgba(92, 92, 92, 1);
+        }
+
+        .rashi {
+            color: black;
+            position: absolute;
+            top: 137vw;
+            right: 16vw;
+            font-size: 3vw;
+            font-family: 'Times New Roman', Times, serif;
+            white-space: nowrap;
+        }
+    }
+</style>
+
+<body>
+    <div class="cart">
+        <a href="cart.html">
+            🛒<span>0</span>
+        </a>
+    </div>
+    <button onclick="multiplyBy80()" id="multiplyBtn">INR</button>
+    <button onclick="divideBy80()" id="divideBtn" disabled>USD</button>
+   
+    <div class="container">
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+
+                <div class="swiper-slide">
+                    <div class="title">
+                        Flower Power
+                    </div>
+                    <div class="images">
+                        <img src="Flower Power Field  20x20  94.jpg" alt="">
+                    </div>
+                    <div class="size">
+                        <h1>WW/S</h1>
+                        <h2>#94<br>20×20</h2>
+                    </div>
+                    <div class="rashi">Price: <div class="exchange" id="currency" style="display:inline-block;">105$</div></div>
+                    <a class="add-cart cart4" id="carting" href="#">Add To Cart</a>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title">
+                        Flower Power
+                    </div>
+                    <div class="images">
+                        <img src="Flower Power  40x40  95.jpg" alt="">
+                    </div>
+                    <div class="size">
+                        <h1>WW/S</h1>
+                        <h2>#95<br>40×40</h2>
+                    </div>
+                     <div class="rashi">Price: <div class="exchange" id="currency" style="display:inline-block;">225$</div></div>
+                    <a class="add-cart cart4" id="carting" href="#">Add To Cart</a>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title">
+                        Flower Power
+                    </div>
+                    <div class="images">
+                        <img src="Flowe Power Cornered 16x16   93.jpg" alt="">
+                    </div>
+                    <div class="size">
+                        <h1>WW/S</h1>
+                        <h2>#93<br>16×16 </h2>
+                    </div>
+                     <div class="rashi">Price: <div class="exchange" id="currency" style="display:inline-block;">65$</div></div>
+                    <a class="add-cart cart4" id="carting" href="#">Add To Cart</a>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title">
+                        Flower Power
+                    </div>
+                    <div class="images">
+                        <img src="Flower Power Cornered 16x16  97.jpg" alt="">
+                    </div>
+                    <div class="size">
+                        <h1>WW/S</h1>
+                        <h2>#97<br>16×16 </h2>
+                    </div>
+                     <div class="rashi">Price: <div class="exchange" id="currency" style="display:inline-block;">65$</div></div>
+                    <a class="add-cart cart4" id="carting" href="#">Add To Cart</a>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title">
+                        Flower Power
+                    </div>
+                    <div class="images">
+                        <img src="Flower Power 40x40  99.jpg" alt="">
+                    </div>
+                    <div class="size">
+                        <h1>WW/S</h1>
+                        <h2>#99<br>40×40</h2>
+                    </div>
+                     <div class="rashi">Price: <div class="exchange" id="currency" style="display:inline-block;">225$</div></div>
+                    <a class="add-cart cart4" id="carting" href="#">Add To Cart</a>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title">
+                        Flower Power
+                    </div>
+                    <div class="images">
+                        <img src="Flower Power Field  20x20 98.jpg" alt="">
+                    </div>
+                    <div class="size">
+                        <h1>WW/S</h1>
+                        <h2>#98<br>20×20</h2>
+                    </div>
+                    <div class="rashi">Price: <div class="exchange" id="currency" style="display:inline-block;">105$</div></div>
+                    <a class="add-cart cart4" id="carting" href="#">Add To Cart</a>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title">
+                        Flower Power
+                    </div>
+                    <div class="images">
+                        <img src="Flower Power Cornered 16x16  89.jpg" alt="">
+                    </div>
+                    <div class="size">
+                        <h1>WW/S</h1>
+                        <h2>#89<br>16×16 </h2>
+                    </div>
+                     <div class="rashi">Price: <div class="exchange" id="currency" style="display:inline-block;">65$</div></div>
+                    <a class="add-cart cart4" id="carting" href="#">Add To Cart</a>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title">
+                        Flower Power
+                    </div>
+                    <div class="images">
+                        <img src="Flower Power Field 20x20 90.jpg" alt="">
+                    </div>
+                    <div class="size">
+                        <h1>WW/S</h1>
+                        <h2>#90<br>20×20</h2>
+                    </div>
+                    <div class="rashi">Price: <div class="exchange" id="currency" style="display:inline-block;">105$</div></div>
+                    <a class="add-cart cart4" id="carting" href="#">Add To Cart</a>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title">
+                        Flower Power
+                    </div>
+                    <div class="images">
+                        <img src="Flower Power 40x40 91.jpg" alt="">
+                    </div>
+                    <div class="size">
+                        <h1>WW/S</h1>
+                        <h2>#91<br>40×40</h2>
+                    </div>
+                     <div class="rashi">Price: <div class="exchange" id="currency" style="display:inline-block;">225$</div></div>
+                    <a class="add-cart cart4" id="carting" href="#">Add To Cart</a>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title">
+                        Flower Power
+                    </div>
+                    <div class="images">
+                        <img src="Flower Power Cornered 16x16  109.jpg" alt="">
+                    </div>
+                    <div class="size">
+                        <h1>WW/S</h1>
+                        <h2>#109<br>16×16 </h2>
+                    </div>
+                     <div class="rashi">Price: <div class="exchange" id="currency" style="display:inline-block;">65$</div></div>
+                    <a class="add-cart cart4" id="carting" href="#">Add To Cart</a>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title">
+                        Flower Power
+                    </div>
+                    <div class="images">
+                        <img src="Flower Power Field  20x20  110.jpg" alt="">
+                    </div>
+                    <div class="size">
+                        <h1>WW/S</h1>
+                        <h2>#110<br>20×20</h2>
+                    </div>
+                    <div class="rashi">Price: <div class="exchange" id="currency" style="display:inline-block;">105$</div></div>
+                    <a class="add-cart cart4" id="carting" href="#">Add To Cart</a>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title">
+                        Flower Power
+                    </div>
+                    <div class="images">
+                        <img src="Flower Power 40x40  111.jpg" alt="">
+                    </div>
+                    <div class="size">
+                        <h1>WW/S</h1>
+                        <h2>#111<br>40×40</h2>
+                    </div>
+                     <div class="rashi">Price: <div class="exchange" id="currency" style="display:inline-block;">225$</div></div>
+                    <a class="add-cart cart4" id="carting" href="#">Add To Cart</a>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title">
+                        Flower Power
+                    </div>
+                    <div class="images">
+                        <img src="Flower Power Cornered 16x16 101.jpg" alt="">
+                    </div>
+                    <div class="size">
+                        <h1>WW/S</h1>
+                        <h2>#101<br>16×16 </h2>
+                    </div>
+                     <div class="rashi">Price: <div class="exchange" id="currency" style="display:inline-block;">65$</div></div>
+                    <a class="add-cart cart4" id="carting" href="#">Add To Cart</a>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title">
+                        Flower Power
+                    </div>
+                    <div class="images">
+                        <img src="Flower Power Field 20x20  102.jpg" alt="">
+                    </div>
+                    <div class="size">
+                        <h1>WW/S</h1>
+                        <h2>#102<br>20×20</h2>
+                    </div>
+                    <div class="rashi">Price: <div class="exchange" id="currency" style="display:inline-block;">105$</div></div>
+                    <a class="add-cart cart4" id="carting" href="#">Add To Cart</a>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title">
+                        Flower Power
+                    </div>
+                    <div class="images">
+                        <img src="Flower Power 40x40  103.jpg" alt="">
+                    </div>
+                    <div class="size">
+                        <h1>WW/S</h1>
+                        <h2>#103<br>40×40</h2>
+                    </div>
+                     <div class="rashi">Price: <div class="exchange" id="currency" style="display:inline-block;">225$</div></div>
+                    <a class="add-cart cart4" id="carting" href="#">Add To Cart</a>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title">
+                        Flower Power
+                    </div>
+                    <div class="images">
+                        <img src="Flower Power Cornered 16x16  113.jpg" alt="">
+                    </div>
+                    <div class="size">
+                        <h1>WW/S</h1>
+                        <h2>#113<br>16×16 </h2>
+                    </div>
+                     <div class="rashi">Price: <div class="exchange" id="currency" style="display:inline-block;">65$</div></div>
+                    <a class="add-cart cart4" id="carting" href="#">Add To Cart</a>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title">
+                        Flower Power
+                    </div>
+                    <div class="images">
+                        <img src="Flower Power Field 20x20  114.jpg" alt="">
+                    </div>
+                    <div class="size">
+                        <h1>WW/S</h1>
+                        <h2>#114<br>20×20</h2>
+                    </div>
+                    <div class="rashi">Price: <div class="exchange" id="currency" style="display:inline-block;">105$</div></div>
+                    <a class="add-cart cart4" id="carting" href="#">Add To Cart</a>
+                </div>
+                <div class="swiper-slide">
+                    <div class="ltitle">
+                        Flower Power
+                    </div>
+                    <div class="images">
+                        <img style="transform: rotate(90deg);" src="Flower power Cornered 20x100  100.jpg" alt="">
+                    </div>
+                    <div class="lsize">
+                        <h1>WW/S</h1>
+                        <h2>#100<br>20×100</h2>
+                    </div>
+                     <div class="rashi">Price: <div class="exchange" id="currency" style="display:inline-block;">295$</div></div>
+                    <a class="add-cart cart4" id="carting" href="#">Add To Cart</a>
+                </div>
+                <div class="swiper-slide">
+                    <div class="ltitle">
+                        Flower Power
+                    </div>
+                    <div class="images">
+                        <img style="transform: rotate(90deg);" src="Flower Power Cornered 20x100  96.jpg" alt="">
+                    </div>
+                    <div class="lsize">
+                        <h1>WW/S</h1>
+                        <h2>#96<br>20×100</h2>
+                    </div>
+                     <div class="rashi">Price: <div class="exchange" id="currency" style="display:inline-block;">295$</div></div>
+                    <a class="add-cart cart4" id="carting" href="#">Add To Cart</a>
+                </div>
+                <div class="swiper-slide">
+                    <div class="ltitle">
+                        Flower Power
+                    </div>
+                    <div class="images">
+                        <img style="transform: rotate(90deg);" src="Flower Power Cornered 20x100  112.jpg" alt="">
+                    </div>
+                    <div class="lsize">
+                        <h1>WW/S</h1>
+                        <h2>#112<br>20×100</h2>
+                    </div>
+                     <div class="rashi">Price: <div class="exchange" id="currency" style="display:inline-block;">295$</div></div>
+                    <a class="add-cart cart4" id="carting" href="#">Add To Cart</a>
+                </div>
+                <div class="swiper-slide">
+                    <div class="ltitle">
+                        Flower Power
+                    </div>
+                    <div class="images">
+                        <img style="transform: rotate(90deg);" src="Flower Power Cornered 20x100  92.jpg" alt="">
+                    </div>
+                    <div class="lsize">
+                        <h1>WW/S</h1>
+                        <h2>#92<br>20×100</h2>
+                    </div>
+                     <div class="rashi">Price: <div class="exchange" id="currency" style="display:inline-block;">295$</div></div>
+                    <a class="add-cart cart4" id="carting" href="#">Add To Cart</a>
+                </div>
+                <div class="swiper-slide">
+                    <img src="flower power.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="flower power one 1.jpg" alt="">
+                </div>
+
+                ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+
+
+        </div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        let multiplyClicked = false;
+        let divideClicked = false;
+
+        function multiplyBy80() {
+            if (!multiplyClicked) {
+                var currencies = document.getElementsByClassName("exchange");
+                for (var i = 0; i < currencies.length; i++) {
+                    let value = parseInt(currencies[i].innerHTML) * 80;
+                    currencies[i].innerHTML = value + " INR";
+                }
+                multiplyClicked = true;
+                divideClicked = false;
+                document.getElementById("multiplyBtn").disabled = true; // disable the multiply button
+                document.getElementById("divideBtn").disabled = false; // enable the divide button
+            }
+        }
+
+        function divideBy80() {
+            if (!divideClicked) {
+                var currencies = document.getElementsByClassName("exchange");
+                for (var i = 0; i < currencies.length; i++) {
+                    let value = parseInt(currencies[i].innerHTML) / 80;
+                    currencies[i].innerHTML = value + " $";
+                }
+                divideClicked = true;
+                multiplyClicked = false;
+                document.getElementById("divideBtn").disabled = true; // disable the divide button
+                document.getElementById("multiplyBtn").disabled = false; // enable the multiply button
+            }
+        }
+    </script>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+
+        });</script>
+    <script>
+        let carts = document.querySelectorAll('.add-cart');
+
+        let products = [
+            {
+                name: 'Flower Power',
+                tag: 'Flower Power Field  20x20  94',
+                size: '20x20',
+                pesa: '105',
+                inCart: 0,
+            },
+            {
+                name: 'Flower Power',
+                tag: 'Flower Power  40x40  95',
+                size: '40x40',
+                pesa: '225',
+                inCart: 0,
+            },
+            {
+                name: 'Flower Power',
+                tag: 'Flowe Power Cornered 16x16   93',
+                size: '16x16',
+                pesa: '65',
+                inCart: 0,
+            },
+            {
+                name: 'Flower Power',
+                tag: 'Flower Power Cornered 16x16  97',
+                size: '16x16',
+                pesa: '65',
+                inCart: 0,
+            },
+            {
+                name: 'Flower Power',
+                tag: 'Flower Power 40x40  99',
+                size: '40x40',
+                pesa: '225',
+                inCart: 0,
+            },
+            {
+                name: 'Flower Power',
+                tag: 'Flower Power Field  20x20 98',
+                size: '20x20',
+                pesa: '105',
+                inCart: 0,
+            },
+            {
+                name: 'Flower Power',
+                tag: 'Flower Power Cornered 16x16  89',
+                size: '16x16',
+                pesa: '65',
+                inCart: 0,
+            },
+            {
+                name: 'Flower Power',
+                tag: 'Flower Power Field 20x20 90',
+                size: '20x20',
+                pesa: '105',
+                inCart: 0,
+            },
+            {
+                name: 'Flower Power',
+                tag: 'Flower Power 40x40 91',
+                size: '40x40',
+                pesa: '225',
+                inCart: 0,
+            },
+            {
+                name: 'Flower Power',
+                tag: 'Flower Power Cornered 16x16  109',
+                size: '16x16',
+                pesa: '65',
+                inCart: 0,
+            },
+            {
+                name: 'Flower Power',
+                tag: 'Flower Power Field  20x20  110',
+                size: '20x20',
+                pesa: '105',
+                inCart: 0,
+            },
+            {
+                name: 'Flower Power',
+                tag: 'Flower Power 40x40  111',
+                size: '40x40',
+                pesa: '225',
+                inCart: 0,
+            },
+            {
+                name: 'Flower Power',
+                tag: 'Flower Power Cornered 16x16 101',
+                size: '16x16',
+                pesa: '65',
+                inCart: 0,
+            },
+            {
+                name: 'Flower Power',
+                tag: 'Flower Power Field 20x20  102',
+                size: '20x20',
+                pesa: '105',
+                inCart: 0,
+            },
+            {
+                name: 'Flower Power',
+                tag: 'Flower Power 40x40  103',
+                size: '40×40',
+                pesa: '225',
+                inCart: 0,
+            },
+            {
+                name: 'Flower Power',
+                tag: 'Flower Power Cornered 16x16  113',
+                size: '16×16 ',
+                pesa: '65',
+                inCart: 0,
+            },
+            {
+                name: 'Flower Power',
+                tag: 'Flower Power Field 20x20  114',
+                size: '20×20',
+                pesa: '105',
+                inCart: 0,
+            },
+            {
+                name: 'Flower Power',
+                tag: 'Flower power Cornered 20x100  100',
+                size: '20×100',
+                pesa: '295',
+                inCart: 0,
+            },
+            {
+                name: 'Flower Power',
+                tag: 'Flower Power Cornered 20x100  96',
+                size: '20×100',
+                pesa: '295',
+                inCart: 0,
+            },
+            {
+                name: 'Flower Power',
+                tag: 'Flower Power Cornered 20x100  112',
+                size: '20×100',
+                pesa: '',
+                inCart: 0,
+            },
+            {
+                name: 'Flower Power',
+                tag: 'Flower Power Cornered 20x100  92',
+                size: '20×100',
+                pesa: '',
+                inCart: 0,
+            },
+
+        ]
+
+        for (let i = 0; i < carts.length; i++) {
+            carts[i].addEventListener('click', () => {
+                event.preventDefault();
+                cartNumbers(products[i]);
+            })
+        }
+
+        function onLoadCartNumbers() {
+            let productNumbers = localStorage.getItem('cartNumbers');
+
+            if (productNumbers) {
+                document.querySelector('.cart span').textContent = productNumbers;
+            }
+        }
+
+        function cartNumbers(product) {
+            let productNumbers = localStorage.getItem('cartNumbers');
+            let cartItems = localStorage.getItem('productsInCart');
+            cartItems = JSON.parse(cartItems);
+
+            productNumbers = parseInt(productNumbers);
+
+            if (productNumbers) {
+                if (!cartItems || !cartItems[product.tag]) {
+                    localStorage.setItem('cartNumbers', productNumbers + 1);
+                    document.querySelector('.cart span').textContent = productNumbers + 1;
+                }
+            } else {
+                localStorage.setItem('cartNumbers', 1);
+                document.querySelector('.cart span').textContent = 1;
+            }
+
+            setItems(product);
+        }
+
+
+
+        function setItems(product) {
+            let cartItems = localStorage.getItem('productsInCart');
+            cartItems = JSON.parse(cartItems);
+
+            if (cartItems != null) {
+                if (cartItems[product.tag] == undefined) {
+                    // Product not in cart, add it
+                    product.inCart = 1;
+                    cartItems = {
+                        ...cartItems,
+                        [product.tag]: product
+                    }
+                } else {
+                    // Product already in cart
+                    alert('Product already in cart');
+                }
+            } else {
+                product.inCart = 1;
+                cartItems = {
+                    [product.tag]: product
+                }
+            }
+
+            localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+            displayCart();
+        }
+
+
+
+
+        function displayCart() {
+            let cartItems = localStorage.getItem("productsInCart");
+            cartItems = JSON.parse(cartItems);
+            let productContainer = document.querySelector(".products");
+            let total = 0; // define total variable
+
+            if (cartItems && productContainer) {
+                productContainer.innerHTML = '';
+                Object.values(cartItems).map(item => {
+                    productContainer.innerHTML += `
+          <div class="product">
+            <div class="prodet">
+              <i class="fa-solid fa-rectangle-xmark" data-tag="${item.tag}"></i>
+              <img src="${item.tag}.jpg">
+              <span>${item.name}</span>
+            </div>
+            <div class="hashtag">
+              <span>Silk Weave 100%</span>
+            </div>
+            <div class="sizdet">
+              <span>${item.size}</span>
+            </div>
+            <div class="quandet">
+              <input type="number" id="quantity" name="${item.tag}" value="${item.inCart}" min="1" max="50" onchange="updateTotalPrice('${item.tag}')">
+            </div>
+            <div class="totaldet">
+              <span id="total-${item.tag}">$${item.pesa * item.inCart}</span>
+            </div>
+          </div>
+          <br>
+      
+        `;
+
+                    total += item.pesa * item.inCart; // update total
+                });
+
+                console.log('Total: ' + total); // log total to console
+
+                // ... rest of the function code
+                // Add event listener to delete icon
+                let deleteIcons = document.querySelectorAll(".fa-rectangle-xmark");
+                deleteIcons.forEach(icon => {
+                    icon.addEventListener("click", () => {
+                        let tag = icon.getAttribute("data-tag");
+                        removeItemFromCart(tag);
+                        displayCart();
+                    });
+                });
+            }
+        }
+
+
+
+
+        function removeItemFromCart(tag) {
+            let cartItems = JSON.parse(localStorage.getItem("productsInCart"));
+            let productNumbers = parseInt(localStorage.getItem("cartNumbers"));
+            let item = cartItems[tag];
+
+            if (item) {
+                // Decrease cart count
+                localStorage.setItem("cartNumbers", productNumbers - 1);
+
+
+                // Update cart span
+                document.querySelector('.cart span').textContent = parseInt(document.querySelector('.cart span').textContent) - 1;
+
+                // Remove item from cart
+                delete cartItems[tag];
+                localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+            }
+        }
+
+
+
+
+        function updateTotalPrice(productTag) {
+            let cartItems = localStorage.getItem('productsInCart');
+            cartItems = JSON.parse(cartItems);
+
+            let quantity = parseInt(document.getElementsByName(productTag)[0].value);
+
+            cartItems[productTag].inCart = quantity;
+            cartItems[productTag].total = cartItems[productTag].pesa * quantity;
+
+            localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+
+            let totalElement = document.getElementById(`total-${productTag}`);
+            totalElement.textContent = `$${cartItems[productTag].total}`;
+        }
+
+        // select all elements with class "totaldet"
+        const totalElements = document.querySelectorAll('.totaldet');
+
+        // initialize a variable to store the total
+        let total = 0;
+
+        // loop through each element and add its value to the total
+        totalElements.forEach((element) => {
+            total += parseInt(element.textContent);
+        });
+
+        // log the total to the console
+        console.log('Total: ' + total);
+
+
+
+
+
+
+
+        displayCart();
+
+
+
+
+
+
+        onLoadCartNumbers();
+        displayCart();
+    </script>
+    <script src="maincart.js"></script>
+</body>
+
+</html>

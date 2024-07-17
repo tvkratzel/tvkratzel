@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: none;
+        }
+
+
+        body {
+            overflow-x: hidden;
+
+        }
+
+      .header {
+            position: relative;
+            margin: 0.9vw 0 0 0;
+        }
+
+        #heading {
+            overflow: visible;
+            top: 0px;
+            position: relative;
+            white-space: nowrap;
+            text-align: center;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 4.65vw;
+            color: rgba(92, 92, 92, 1);
+            --web-animation: fadein 0.30000001192092896s ease-out;
+            --web-action-type: page;
+            --web-action-target: index.html;
+            cursor: pointer;
+
+        }
+
+        #heading a {
+            text-decoration: underline;
+        }
+
+        #Line_31 {
+            fill: transparent;
+            stroke: rgba(112, 112, 112, 1);
+            stroke-width: 2px;
+            stroke-linejoin: miter;
+            stroke-linecap: butt;
+            stroke-miterlimit: 4;
+            shape-rendering: auto;
+        }
+
+      .Line_31 {
+    overflow: visible;
+    position: absolute;
+    left: 1.5%;
+    width: 94vw;
+    height: 1px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+        .navbar {
+            text-align: center;
+            position: sticky;
+            margin-top: 2.3vw;
+        }
+
+        .navbar ul {
+            display: inline-flex;
+        }
+
+        .navbar ul li {
+            padding: 0 5.5vw;
+            list-style: none;
+        }
+
+        .navbar ul li a {
+            font-size: 1.6vw;
+            text-decoration: none;
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            color: rgba(92, 92, 92, 1);
+            border-bottom: 1.82px solid rgb(189 189 189);
+        }
+
+        .history {
+            white-space: nowrap;
+            text-align: center;
+            font-family: Times New Roman;
+            margin-top: 4vw;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 5vw;
+            color: rgba(92, 92, 92, 1);
+        }
+
+        #Line_29 {
+            fill: transparent;
+            stroke: rgba(112, 112, 112, 1);
+            stroke-width: 1px;
+            stroke-linejoin: miter;
+            stroke-linecap: butt;
+            stroke-miterlimit: 4;
+            shape-rendering: auto;
+        }
+
+        .Line_29 {
+            overflow: visible;
+            height: 1px;
+            top: -5vw;
+            width: 38vw;
+            position: relative;
+            transform: matrix(1, 0, 0, 1, 0, 0);
+        }
+
+        #IMG-20220315-WA0000-01 {
+            opacity: 1.282;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 14vw;
+    overflow: visible;
+        }
+
+        #IMG-20220315-WA0000-01_ {
+            opacity: 1.282;
+    position: absolute;
+    width: 100%;
+    height: 77vw;
+    top: 78vw;
+    overflow: visible;
+        }
+
+        .histext {
+            text-align: left;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            position: relative;
+            margin-top: -2vw;
+            left: 3%;
+            font-size: 2.6vw;
+            color: rgba(59, 59, 59, 1);
+        }
+
+        .footer {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            background: rgb(52 47 47);
+            position: relative;
+            left: -1%;
+            width: 102%;
+            margin-top: 10vw;
+        }
+
+        .thumb {
+
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            padding: 0 13vw 0 3vw;
+            margin-top: 1.5vw;
+            font-size: 2.2vw;
+            color: rgba(255, 255, 255, 1);
+        }
+
+          .foot {
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            padding: 0 3.4vw;
+            font-size: 1.5vw;
+            margin-top: 0.5vw;
+            color: rgba(255, 255, 255, 1);
+
+        }
+        .policy a {
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1.5vw;
+            margin-top: 0.5vw;
+            color: rgba(255, 255, 255, 1);
+            text-decoration: none;
+
+        }
+
+        .social {
+            margin-top: 1vw;
+            margin-bottom: 1vw;
+        }
+
+        .social a {
+            color: rgba(255, 255, 255, 1);
+            padding: 0 1.3vw 0 0vw;
+        }
+
+        .whatsapp {
+            padding: 17px;
+        }
+
+        .finger {
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            padding: 0 3.4vw;
+            font-size: 1.5vw;
+            margin-top: 0.5vw;
+            color: rgba(255, 255, 255, 1);
+            height: 0;
+
+        }
+
+        .finger img {
+            width: 24vw;
+            position: relative;
+            top: 0.6vw;
+        }
+        @media (max-width: 600px) {
+          
+          .navbar ul li {
+          padding: 0 3vw;
+          list-style: none;
+      }
+      .navbar ul li a {
+          font-size: 2.2vw;
+          border-bottom: 1px solid rgb(189 189 189);
+         
+      }
+        
+      }
+    </style>
+</head>
+
+<body>
+    <div class="home">
+        <div class="header">
+            <div onclick="application.goToTargetView(event)" id="heading">
+                <p>WOMAN'S WEAR BUSINESS / ACCESSORIES</p>
+                <svg class="Line_31" viewBox="0 0 1810 1">
+                    <path id="Line_31" d="M 0 0 L 1810 0">
+                    </path>
+                </svg>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li class="grow"><a href="scarfhistory.html">SCARF HISTORY</a></li>
+                    <li class="grow"><a href="tutorial.html">TUTORIAL</a></li>
+                    <li class="grow"><a href="clientpurchase.html">CLIENT PURCHASE</a></li>
+                    <li class="grow"><a href="inquiry.html">CLIENT INQUIRY</a></li>
+                </ul>
+            </nav>
+            <div class="history">
+                <div class="history">
+                    SCARF HISTORY
+                </div>
+                <svg class="Line_29" viewBox="0 0 691 1">
+                    <path id="Line_29" d="M 0 0 L 691 0">
+                    </path>
+                </svg>
+            </div>
+            <img id="IMG-20220315-WA0000-01" src="IMG-20220315-WA0000-01.png">
+
+            <img id="IMG-20220315-WA0000-01_" src="IMG-20220315-WA0000-01_.png">
+
+            <div class="histext">
+                The History Of Silk Scarves <br> <br>
+
+                Textile Experts claim that the scarf was made of cotton rather than wool and initially, it <br> 
+                indicated the rank of the warriors in the Chinese Emperor Cheng (Shih Huang Ti).. <br><br>
+
+                The styled scarf dates back at least as far as ancient Rome where it was called sudarium <br> (Latin
+                term for “sweat cloth”) the sudarium soon became a fashion accessory for both <br> men and women,
+                whether it was knotted to a belt or worn round the neck. <br><br>
+
+                The elegant “Croatian style” enamored the French who were thrilled with the fashion <br> innovation and
+                started wearing scarves too. The French called the scarves cravatas from <br> the Croatian word kravata.
+                A scarf was also used to show one’s political inclination by its <br> color and as such, became
+                extremely popular. <br> <br>
+
+                In the 18th century, men and women alike wore neckerchiefs, no matter of the social class <br> they
+                belonged
+                to and the trend rapidly grew.. In the 19th century, the cravat became again <br> a fashion accessory
+                for men
+                and a basic item in every Man’s wardrobe. Around 1840, <br> single or double-knotted fringes were
+                extremely
+                stylish and scarves were worn both as <br> neck shawls and headwear for Women.. <br><br>
+
+                The 20th century saw different types of scarves inspired by the old trends and combined <br> with the
+                new
+                ones. Women began wearing more ornate scarves made of hand woven silks.. <br><br>
+
+                Silk Creates luster and beauty as its smooth fiber enables it to reflect light and give it a <br> silky
+                feel
+                and improving one’s look as it drapes beautifully and retains its shape.. The <br> exquisite nature of
+                the
+                silk material makes them provide endless fashionable possibilities <br> for enhancing a wardrobe.. As a
+                head
+                covering, a belt, sashes, an accent piece or just like <br> a shawl.. Silk was, for centuries, given the
+                reputation of a luxurious and sensuous fabric, <br> associated as such with style, wealth and success..
+                “A
+                status symbol still to this day".. <br><br>
+
+                The Executive Women today wears Silk Accessories with Their Suiting’s and Separates <br> in place of a
+                Man’s
+                style ties and pocket squares.. <br><br>
+
+                The WW/B Woman has countless styles to select from to enhance Her Professional <br> Wardrobe, while
+                contributing to Her more fashioned casual business attire when <br> traveling..
+            </div>
+
+            <div class="footer">
+
+                <div class="thumb">
+                    Retail Client Services
+        
+                </div>
+        
+                <div class="thumb">
+                    Wholesale Client Services
+                </div>
+        
+                <div class="thumb">
+                    Media
+                </div>
+        
+                <div class="foot">
+                    Joint Venture
+                </div>
+                <div class="foot">
+                    Buyer Inquiry
+                </div>
+                <div class="foot">
+                    WWB-Blog
+                </div>
+                <div class="foot">
+                    JV Partner
+                </div>
+                <div class="foot">
+                    Private Label
+                </div>
+                <div class="foot">
+                    Editorial
+                </div>
+                <div class="foot">
+                    Customized Order Process
+                </div>
+                <div class="foot">
+                    Co - Branding
+                </div>
+                <div class="foot">
+                    Affliliate Partnership
+                </div>
+                <div class="foot">
+        
+                </div>
+                <div class="foot">
+                    <div class="social">
+                        <a href="https://instagram.com/womanswearbusiness?igshid=YmMyMTA2M2Y="><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://api.whatsapp.com/send?phone=12122102965" class="whatsapp"><i
+                                class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.pinterest.com/womenswearbusiness/_saved/"><i class="fab fa-pinterest"></i></a>
+        
+                    </div>
+                </div>
+                <div class="finger">
+                    <img src="logopit-16448465792391x.png">
+                </div>
+        
+            </div>
+        </div>
+        <script id="applicationScript">
+            var Application = function () {
+                this.prefix = "--web-";
+                var self = this;
+                self.goToTargetView = function (event) {
+                    var button = event.currentTarget;
+                    var buttonComputedStyles = getComputedStyle(button);
+                    var actionTargetValue = buttonComputedStyles.getPropertyValue(self.prefix + "action-target").trim();
+                    var targetType = buttonComputedStyles.getPropertyValue(self.prefix + "action-type").trim();
+
+                    if (self.application == false || targetType == "page") {
+                        document.location.href = "./" + actionTargetValue;
+                        return;
+                    }
+                    event.stopImmediatePropagation();
+                }
+                self.getElement = function (id) {
+                    id = id ? id.trim() : id;
+                    var element = id ? document.getElementById(id) : null;
+
+                    return element;
+                }
+            }
+
+            window.application = new Application();
+        </script>
+</body>
+
+</html>

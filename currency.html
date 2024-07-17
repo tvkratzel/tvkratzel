@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            background: white;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .swiper {
+            width: 100%;
+            height: fit-content;
+        }
+
+        .swiper-slide {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+
+        .swiper-slide img {
+            height: 56vw;
+            justify-content: center;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            color: gray;
+        }
+
+        .swiper .swiper-pagination-bullet-active {
+            background: white;
+        }
+
+        .title {
+            color: black;
+            position: relative;
+            top: 50vw;
+            padding: 0 1vw;
+            font-size: 1.3vw;
+            font-family: 'Times New Roman', Times, serif;
+            white-space: nowrap;
+            text-align: center;
+        }
+
+        .size {
+            color: black;
+            position: relative;
+            top: 50vw;
+            padding: 0 5.6vw 0 1vw;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .bsize {
+            color: black;
+            position: relative;
+            top: 50vw;
+            padding: 0 12vw 0 1vw;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .size h1 {
+            font-size: 1.4vw;
+            font-style: italic;
+        }
+
+        .bsize h1 {
+            font-size: 1.4vw;
+            font-style: italic;
+        }
+
+        .size h2 {
+            font-size: 1.2vw;
+        }
+
+        .bsize h2 {
+            font-size: 1.2vw;
+        }
+
+        #carting {
+            color: black;
+            position: absolute;
+            top: 52vw;
+            font-size: 1.3vw;
+            font-family: 'Times New Roman', Times, serif;
+            white-space: nowrap;
+            right: 5vw;
+        }
+
+        .cart a {
+            position: absolute;
+            text-decoration: none;
+            font-size: 2vw;
+            right: 3%;
+            top: 1vw;
+            z-index: 2;
+            color: rgba(92, 92, 92, 1);
+        }
+
+        .rashi {
+            color: black;
+            position: absolute;
+            top: 49.5vw;
+            font-size: 1.3vw;
+            font-family: 'Times New Roman', Times, serif;
+            white-space: nowrap;
+            right: 5.3vw;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="rashi">Price: <div class="exchange" id="currency" style="display:inline-block;">105$</div></div>
+    <button onclick="multiplyBy80()" id="multiplyBtn">INR</button>
+    <button onclick="divideBy80()" id="divideBtn" disabled>USD</button>
+    <div class="swiper-slide">
+        <div class="title">
+            Indian Floral
+        </div>
+        <div class="images">
+            <img src="Indian Floral 40x40 75.jpg" alt="">
+        </div>
+        <div class="size">
+            <h1>WW/S</h1>
+            <h2>#75 <br> 40×40</h2>
+        </div>
+        <div class="rashi">Price: <div class="exchange" id="currency" style="display:inline-block;">225 $</div></div>
+
+        <a class="add-cart cart4" id="carting" href="#">Add To Cart</a>
+    </div>
+    <div class="swiper-slide">
+        <div class="title">
+            Art Deco Stripes
+        </div>
+        <div class="images">
+            <img src="Art Deco Stripes 20x20  10.jpg" alt="">
+        </div>
+        <div class="size">
+            <h1>WW/S</h1>
+            <h2>#10 <br> 20×20</h2>
+        </div>
+        <div class="rashi" id="currency">105 $</div>
+        <a class="add-cart cart4" id="carting" href="#">Add To Cart</a>
+    </div>
+
+    <script>
+        let multiplyClicked = false;
+        let divideClicked = false;
+
+        function multiplyBy80() {
+            if (!multiplyClicked) {
+                var currencies = document.getElementsByClassName("exchange");
+                for (var i = 0; i < currencies.length; i++) {
+                    let value = parseInt(currencies[i].innerHTML) * 80;
+                    currencies[i].innerHTML = value + " INR";
+                }
+                multiplyClicked = true;
+                divideClicked = false;
+                document.getElementById("multiplyBtn").disabled = true; // disable the multiply button
+                document.getElementById("divideBtn").disabled = false; // enable the divide button
+            }
+        }
+
+        function divideBy80() {
+            if (!divideClicked) {
+                var currencies = document.getElementsByClassName("exchange");
+                for (var i = 0; i < currencies.length; i++) {
+                    let value = parseInt(currencies[i].innerHTML) / 80;
+                    currencies[i].innerHTML = value + " $";
+                }
+                divideClicked = true;
+                multiplyClicked = false;
+                document.getElementById("divideBtn").disabled = true; // disable the divide button
+                document.getElementById("multiplyBtn").disabled = false; // enable the multiply button
+            }
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>

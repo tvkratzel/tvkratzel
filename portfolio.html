@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Portfolio</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+    <style>
+      /* Reset Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic Styles */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+header {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 10px;
+}
+
+nav a:hover {
+  color: #fff;
+  background-color: #333;
+}
+
+.hero-image {
+  background-image: url('https://www.travelandleisure.com/thmb/dHwMJGRYagePt9kKrfuLJ-x3IAw=/750x0/filters:no_upscale():max_bytes(150000):strip_icc()/iceland-BEAUTCONT1021-b1aeafa7ac2847a484cbca48d3172b6c.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  position: relative;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+.hero-text h2 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+section h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+section p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.project {
+  border: 1px solid #f2f2f2;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.project h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.project p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.project a {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.project a:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+form label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  display: block;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  background-color: #2d2d2d;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+  background-color: #fff;
+  color: #2d2d2d;
+  transition: all 0.3s ease-in-out;
+}
+
+footer {
+  background-color: #2d2d2d;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+}
+
+
+    </style>
+</head>
+<body>
+	<header>
+		<nav>
+			<h1>My Portfolio</h1>
+			<ul>
+				<li><a href="#about">About</a></li>
+				<li><a href="#portfolio">Portfolio</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+		<div class="hero-image">
+			<div class="hero-text">
+				<h2>Welcome to my Portfolio</h2>
+				<p>Check out my work below and feel free to contact me for any inquiries or collaborations.</p>
+			</div>
+		</div>
+	</header>
+	<main>
+		<section id="about">
+			<h2>About Me</h2>
+			<p>Hi, my name is Ritik Kratzel and I am a web developer based in Manali (India). I have experience in developing responsive and user-friendly websites using HTML, CSS, JavaScript, and other web technologies. I am always eager to learn and improve my skills, and I am passionate about creating beautiful and functional web experiences.</p>
+		</section>
+		<section id="portfolio">
+			<h2>Portfolio</h2>
+			<div class="project">
+				<h3>Project Title</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor lorem sapien, non ultrices est viverra eu. Praesent auctor velit eu urna dignissim blandit. Nulla facilisi. Nulla nec nisi sit amet erat bibendum blandit eu et tortor.</p>
+				<a href="#">View Project</a>
+			</div>
+			<div class="project">
+				<h3>Project Title</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor lorem sapien, non ultrices est viverra eu. Praesent auctor velit eu urna dignissim blandit. Nulla facilisi. Nulla nec nisi sit amet erat bibendum blandit eu et tortor.</p>
+				<a href="#">View Project</a>
+			</div>
+			<div class="project">
+				<h3>Project Title</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor lorem sapien, non ultrices est viverra eu. Praesent auctor velit eu urna dignissim blandit. Nulla facilisi. Nulla nec nisi sit amet erat bibendum blandit eu et tortor.</p>
+				<a href="#">View Project</a>
+			</div>
+		</section>
+		
+
+		<section id="contact">
+            <h2>Contact Me</h2>
+            <form action="send_email.php" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+        
+	</main>
+
+	<footer>
+		<p>Copyright © 2023 John Doe</p>
+	</footer>
+</body>
+</html>

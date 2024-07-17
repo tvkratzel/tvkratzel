@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Policy</title>
+    <style>
+        body {
+            margin: 0 0 0 0;
+        }
+
+        .heading {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .heading a {
+            font-size: 4.3vw;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            color: rgba(92, 92, 92, 1);
+            border-bottom: 2px solid rgba(92, 92, 92, 1);
+            margin: 1vw 0;
+            text-decoration: none;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .tablinks {
+            background-color: #f2f2f2;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+
+        .tabcontent {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-top: none;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: normal;
+            font-weight: normal;
+            color: rgba(83, 83, 83, 1);
+        }
+
+        .tabcontent p {
+            font-size: 1.5vw;
+        }
+
+        .tabcontent li {
+            font-size: 1.38vw;
+        }
+
+        .tabcontent h3 {
+            margin-top: 0;
+            position: relative;
+            font-size: 2.5vw;
+        }
+
+        .tabcontent h2 {
+            margin-top: 0;
+            position: relative;
+            font-size: 1.3vw;
+            font-style: normal;
+            font-weight: normal;
+        }
+
+        .tabcontent h1 {
+            margin-top: 0;
+            position: relative;
+            font-size: 2vw;
+            font-style: normal;
+            font-weight: normal;
+        }
+
+        .active {
+            background-color: #ddd;
+        }
+
+        .phonefooter {
+            display: none;
+        }
+
+        .footer {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            background: rgb(52 47 47);
+            position: relative;
+            margin-top: 10vw;
+        }
+
+        .thumb {
+
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            padding: 0 13vw 0 3vw;
+            margin-top: 1.5vw;
+            font-size: 2.2vw;
+            color: rgba(255, 255, 255, 1);
+        }
+
+        .foot {
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            padding: 0 3.4vw;
+            font-size: 1.5vw;
+            margin-top: 0.5vw;
+            color: rgba(255, 255, 255, 1);
+
+        }
+
+        .policy a {
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1.5vw;
+            margin-top: 0.5vw;
+            color: rgba(255, 255, 255, 1);
+            text-decoration: none;
+
+        }
+
+        .social {
+            margin-top: 1vw;
+            margin-bottom: 1vw;
+        }
+
+        .social a {
+            color: rgba(255, 255, 255, 1);
+            padding: 0 1.3vw 0 0vw;
+        }
+
+        .whatsapp {
+            padding: 17px;
+        }
+
+        .finger {
+            white-space: nowrap;
+            font-family: Times New Roman;
+            font-style: normal;
+            font-weight: normal;
+            padding: 0 0vw;
+            font-size: 1.5vw;
+            margin: 0 0 6vw 0;
+            color: rgba(255, 255, 255, 1);
+            height: 0;
+            position: relative;
+        }
+
+       .finger img {
+            width: 20vw;
+            position: relative;
+            top: 0vw;
+        }
+
+        .billing a {
+            position: relative;
+            top: -2.6vw;
+            left: 3.3vw;
+            font-size: 1.4vw;
+            color: white;
+            font-family: Times New Roman;
+            text-decoration: none;
+        }
+
+        @media(max-width: 650px) {
+            .tabs {
+                flex-wrap: wrap;
+            }
+
+            .tablinks {
+                flex: 1;
+                margin-right: 0;
+                margin-bottom: 0.5rem;
+                border-radius: 5px;
+            }
+
+            .tabcontent {
+                border-radius: 5px;
+            }
+
+            .tabcontent li {
+                font-size: 3.38vw;
+            }
+
+            .tabcontent h3 {
+                margin-top: 0;
+                position: relative;
+                font-size: 4.5vw;
+            }
+
+            .tabcontent h2 {
+                margin-top: 0;
+                position: relative;
+                font-size: 3.3vw;
+                font-style: normal;
+                font-weight: normal;
+            }
+
+            .tabcontent h1 {
+                margin-top: 0;
+                position: relative;
+                font-size: 4vw;
+                font-style: normal;
+                font-weight: normal;
+            }
+
+
+            .footer {
+                display: none;
+            }
+
+
+
+            .phonefooter {
+                position: relative;
+                display: flex;
+                width: 100%;
+                background: rgb(52, 47, 47);
+                z-index: 2;
+                height: 107vw;
+            }
+
+            .feet1 {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+
+            .thumb {
+                font-size: 5.5vw;
+                margin: 5vw 5vw 3vw 3vw;
+            }
+
+            .foot a {
+                color: rgba(255, 255, 255, 1);
+                text-decoration: none;
+            }
+
+            .foot {
+                font-size: 4vw;
+                padding: 0 6vw;
+            }
+
+            .feet2 {
+                position: absolute;
+                right: 0;
+                font-size: 5vw;
+                margin: 5vw 0 0 0;
+            }
+
+            .social {
+                row-gap: 5vw;
+                display: grid;
+                position: absolute;
+                right: 10vw;
+                top: 12vw;
+            }
+
+            .logo {
+                position: relative;
+                left: 0;
+                top: 50vw;
+            }
+
+            .logo img {
+                width: 50vw;
+            }
+
+            #last {
+                margin-bottom: 12vw;
+            }
+
+            .billing a {
+                position: relative;
+                top: 69vw;
+                left: -5.7vw;
+                display: flex;
+                font-size: 3vw;
+                color: white;
+                font-family: Times New Times New Roman;
+                text-decoration: none;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heading">
+        <a href="index.html">WOMAN'S WEAR BUSINESS / ACCESSORIES</a>
+    </div>
+    <div class="tabs">
+        <button class="tablinks" onclick="openPolicy(event, 'terms')">Terms and Conditions</button>
+        <button class="tablinks" onclick="openPolicy(event, 'disclaimer')">Disclaimer Policy</button>
+        <button class="tablinks" onclick="openPolicy(event, 'privacy')">Privacy Policy</button>
+        <button class="tablinks" onclick="openPolicy(event, 'shipping')">Shipping Policy</button>
+        <button class="tablinks" onclick="openPolicy(event, 'return')">Return and Cancellation Policy</button>
+        <button class="tablinks" onclick="openPolicy(event, 'touch')">Contact Us</button>
+
+    </div>
+
+    <div id="terms" class="tabcontent" style="display: block;">
+        <h3>Terms and Conditions</h3>
+        <p>
+            <li> All information displayed, transmitted or carried on WW/B is protected by copyright and other
+                intellectual property laws.</li>
+            <li> This site is designed, updated and maintained independently by WW/B The content is owned by WW/B
+                You may not modify, publish, transmit, transfer, sell, reproduce, create derivative work from,
+                distribute, repost, perform, display or in any way commercially exploit any of the content.</li>
+            <li> WW/B disclaims all warranties or conditions, whether expressed or implied, (including without
+                limitation implied, warranties or conditions of information and context). We consider ourselves and
+                intend to be subject to the jurisdiction only of the courts of New Delhi, India.</li>
+            <li> WW/B reserves the right, in its sole discretion, to suspend or cancel the service at any time if a
+                computer virus, bug, or other technical problem corrupts the security, or proper administration of the
+                service.</li>
+            <li> WW/B Values the privacy of information pertaining to its associates. We do not use or disclose
+                information about your individual visits to our website or any information that you may give us, such as
+                your name, address, email address or telephone number, to any outside sources.</li>
+            <li> WW/B reserves the right to refuse service to anyone at any time.</li>
+            <li> WW/B will not use information about you without your permission and will provide the means for you
+                to manage and control the information that you have provided. We will enable you to communicate your
+                privacy concerns to us and that we will respond to them appropriately.</li>
+            <li> WW/B does not disclose any personal information to advertisers and for other marketing and
+                promotional purposes that could be used to personally identify you, such as your password, credit card
+                number and bank account number.</li>
+        </p>
+    </div>
+
+    <div id="disclaimer" class="tabcontent">
+        <h3>Disclaimer Policy</h3>
+        <p>
+            <li>The information contained in this website is for general information purposes only. The information is
+                provided by WW/B and while we endeavor to keep the information up to date and correct, we make no
+                representations or warranties of any kind, express or implied, about the completeness, accuracy,
+                reliability, suitability or availability with respect to the website or the information, products,
+                services, or related graphics contained on the website for any purpose. Any reliance you place on such
+                information is therefore strictly at your own risk.</li>
+            <li>In no event will we be liable for any loss or damage including without limitation, indirect or
+                consequential loss or damage, or any loss or damage whatsoever arising from loss of data or profits
+                arise out of, or in connection with, the use of this website.</li>
+            <li>Through this website you are able to link to other websites which are not under the control of WW/B.
+                We have no control over the nature, content and availability of those sites. The inclusion of any links
+                does not necessarily imply a recommendation or endorse the views expressed within them.</li>
+            <li>Every effort is made to keep the website up and running smoothly. However, WW/B takes no
+                responsibility for, and will not be liable for, the website being temporarily unavailable due to
+                technical issues beyond our control.</li>
+            <li>WW/B is located at –</li>
+        <h2> Address: #51 spring dale 1st cross, 1st floor opposite to Nagarjuna Hotel IIGM Building 1st floor Bangalore
+            25 <br>
+            Phone: 080-46694100 <br>
+            E-mail: contactus@womanswearbusiness.com <br>
+            Website: www.wwb-scarves-accesories.com </h2>
+        </p>
+    </div>
+
+    <div id="privacy" class="tabcontent">
+        <h3>Privacy Policy</h3>
+        <p>
+        <h1>This privacy policy sets out how WW/B uses and protects any information that you give WW/B when you
+            use this website.</h1>
+        <h2> WW/B is committed to ensuring that your privacy is protected. Should we ask you to provide certain
+            information by which you can be identified when using this website, then you can be assured that it will
+            only be
+            used in accordance with this privacy statement. WW/B reserves the right to change this policy from time
+            to
+            time by updating this page. </h2>
+        <h1>What we collect</h1>
+        <li>Name and job title.</li>
+        <li>Contact information including email address.</li>
+        <li>Demographic information such as postcode, preferences and interests.</li>
+        <li>Other information relevant to customer surveys and/or offers.</li>
+        <h1> What we do with the information we gather</h1>
+        <h2> We require this information to understand your needs and provide you with a better service, and in
+            particular
+            for the following reasons: </h2>
+        <li> Internal record keeping.</li>
+        <li> We may use the information to improve our products and services.</li>
+        <li> We may periodically send promotional emails about new products, special offers or other information which
+            we</li>
+        think you may find interesting using the email address which you have provided.
+        <li> From time to time, we may also use your information to contact you for market research purposes. We may
+            contact you by email, phone, fax or mail. We may use the information to customise the website according to
+            your interests.</li> <br>
+        <h1> Security</h1>
+        <h2> We are committed to ensuring that your information is secure. In order to prevent unauthorised access or
+            disclosure we have put in place suitable physical, electronic and managerial procedures to safeguard and
+            secure
+            the information we collect online.</h2>
+        <h1>How we use cookies</h1>
+        <h2> We use traffic log cookies to identify which pages are being used. This helps us analyse data about webpage
+            traffic and improve our website in order to tailor it to customer needs. We only use this information for
+            statistical analysis purposes and then the data is removed from the system. <br>
+            Overall, cookies help us provide you with a better website, by enabling us to monitor which pages you find
+            useful and which you do not. A cookie in no way gives us access to your computer or any information about
+            you,
+            other than the data you choose to share with us. <br>
+            You can choose to accept or decline cookies. Most web browsers automatically accept cookies, but you can
+            usually
+            modify your browser setting to decline cookies if you prefer. This may prevent you from taking full
+            advantage of
+            the website. </h2> <br>
+        <h1> Links to other websites</h1>
+        <h2> Our website may contain links to other websites of interest. However, once you have used these links to
+            leave
+            our site, you should note that we do not have any control over that other website. Therefore, we cannot be
+            responsible for the protection and privacy of any information which you provide whilst visiting such sites
+            and
+            such sites are not governed by this privacy statement. You should exercise caution and look at the privacy
+            statement applicable to the website in question.</h2>
+        <h1> Controlling your personal information</h1>
+        <h2> You may choose to restrict the collection or use of your personal information in the following ways:</h2>
+        <li> Whenever you are asked to fill in a form on the website, look for the box that you can click to indicate
+            that
+            you do not want the information to be used by anybody for direct marketing purposes </li>
+        <li> If you have previously agreed to us using your personal information for direct marketing purposes, you may
+            change your mind at any time by writing to or emailing us at marketing@pnrao.com We will not sell,
+            distribute or
+            lease your personal information to third parties unless we have your permission or are required by law to do
+            so.
+            We may use your personal information to send you promotional information about third parties which we think
+            you
+            may find interesting if you tell us that you wish this to happen.</li> <br>
+        <h2> You may request details of personal information which we hold about you under the Data Protection Act 1998.
+            A
+            small fee will be payable. If you would like a copy of the information held on you please write to Office
+            No.
+            51, Spring Dale, Residency Road 1st Cross, Residency Road, Ashok Nagar, Bengaluru, Karnataka – 560 025,
+            INDIA.
+        </h2> <br>
+        <h2> If you believe that any information we are holding on you is incorrect or incomplete, please write to or
+            email
+            us as soon as possible, at the above address. We will promptly correct any information found to be
+            incorrect.
+        </h2><br>
+        <h1> Contacting Us </h1>
+        <h2>If there are any questions regarding this privacy policy, you may contact us using the information below:
+        </h2>
+        <h1> WW/B</h1>
+        <h2> Address: Office No. 51, Spring Dale, Residency Road 1st Cross, Ashok Nagar, Bengaluru, Karnataka – 560 025,
+            INDIA.
+            Telephone Number: 9980803612
+            E-Mail ID : contactus@womanswearbusiness.com</h2>
+        </p>
+    </div>
+
+    <div id="shipping" class="tabcontent">
+        <h3>Shipping Policy</h3>
+        <p>
+        <h1>Shipping & Delivery Policy</h1>
+        <li> WW/B is not liable for any delay in delivery by the courier company / postal authorities and only
+            guarantees to hand over the consignment to the courier company or postal authorities within 15 working days
+            from the date of the order and payment or as per the delivery date agreed at the time of order confirmation.
+            Delivery of all orders will be to registered address of the buyer as per the delivery address provided at
+            the time of purchase only at all times (Unless specified at the time of Order).</li>
+        <li> WW/B is in no way responsible for any damage to the order while in transit to the buyer.</li>
+        <li> While we shall strive to ship all items in your order together, this may not always be possible due to
+            product characteristics, or availability.</li>
+        <li> Please note all items (including gifts) will be shipped with an invoice mentioning the price, as per Indian
+            Tax Regulations.</li>
+        <li> For domestic buyers, orders are shipped through registered domestic courier companies and /or speed post
+            only. Orders are shipped within 15 working days or as per the delivery date agreed at the time of order
+            confirmation and delivering of the shipment subject to Courier Company / Post Office norms. </li>
+        <li> For International buyers, orders are shipped and delivered through registered International courier
+            companies and/or International speed post only.</li>
+        <li>At WW/B, we are committed to delivering your products in a timely and efficient manner. For our customers
+            within India, you can expect to receive your order within a minimum of 10 days and a maximum of 15 days. For
+            our international customers, we strive to deliver your order within a minimum of 15 days and a maximum of 25
+            days.</li>
+        </p>
+    </div>
+
+    <div id="return" class="tabcontent">
+        <h3>Return and Cancellation Policy</h3>
+        <p>
+        <h1>Cancellation Policy</h1>
+        <h2> No cancellation will be accepted by WW/B once the order is placed.</h2>
+        <h1> Return & Refund Policy</h1>
+        <h2> There could be certain circumstances beyond our control where you could receive a damaged / defective
+            product or a product that is not the same as per your original order. We will replace the product to your
+            satisfaction at no extra cost. In such circumstances, before using the product, please get in touch with our
+            Customer Service Team who will guide you. <br>
+            The return process of the product can be restricted depending on the nature and category of the product. We
+            do not have a return/refund or exchange policy on sizes. Every apparel is custom-made based on your order.
+            Sizes are detailed out on every product page. </h2>
+        <h1> Conditions for Return</h1>
+        <li> Please notify us of receipt of a damaged / defective product within maximum 24 hours of delivery.</li>
+        <li> Products/Items should be unused.</li>
+        <li> Products should be returned in their original packaging along with the original price tags, labels and
+            invoices.</li>
+        <li> The product should be couriered to our office address as mentioned by the customer support team, depending
+            on the originating warehouse from where the product was dispatched. Courier charges to be borne by the
+            customer.</li>
+        <li> It is advised that the return packets should be strongly and adequately packaged so that there is no
+            further
+            damage of goods in transit.</li>
+        <li> Once the goods are received at the Company Name center, we will examine the product and if the claim is
+            found genuine, we will refund the product price to your bank account, while the delivery charges (twice the
+            initial delivery fee charged) would be given to you as a voucher that can be used on the website in the
+            future. If the claim is found not valid, you will have to pay the delivery fees again for getting the
+            product delivered back.</li>
+        <li> We do not have an exchange policy for sizes. </li>
+        <li> We do not have an exchange policy for used products, no matter how rarely used.</li> <br>
+        <h1> Refunds</h1>
+        <li> We will process the refund after receipt of the product by WW/B or its business partner. Refund will be
+            processed based on the mode of payment of the order</li>
+        <li> Orders paid by credit / debit card will be refunded to the credit / debit card or your bank account within
+            7
+            working days and the refund will reflect in the next statement.</li>
+        <li> Orders paid by net banking accounts will be credited back to bank account.</li>
+        <li> For all other modes of payment, we will send a refund cheque. The cheque will be made in favor of the name
+            as in the "billing name" provided at the time of placing the order.</li>
+        <li> While refunding, courier charges, COD Charges (40 INR), Bank transaction charges (5% of amount) are
+            deducted. Only the base value of product is refunded.</li> <br>
+        <h1> Re-attempts</h1>
+        <li> If after multiple re-attempts for delivery of the product, the product is shipped back to WW/B, after
+            which the customer asks for a re-delivery, the customer shall have to bear the complete RTO charges levied
+            by the delivery partner on WW/B.</p>
+    </div>
+    <div id="touch" class="tabcontent">
+        <h1>Contact Us</h1>
+        <p>Thank you for your interest in our business. Please use the information below to get in touch with us.</p>
+        <h2>Contact Information</h2>
+        <ul>
+            <li><strong>Email:</strong> contactus@pnrao.com</li>
+            <li><strong>Phone:</strong> +91 9980803612</li>
+            <li><strong>Address:</strong> Office No. 51,
+                Spring Dale, Residency Road 1st Cross,
+                Residency Road, Ashok Nagar, Bengaluru,
+                Karnataka 560025, India.</li>
+        </ul>
+    </div>
+   <div class="footer">
+
+        <div class="thumb">
+            Retail Client Services
+
+        </div>
+
+        <div class="thumb">
+            Wholesale Client Services
+        </div>
+
+        <div class="thumb">
+            Media
+        </div>
+
+        <div class="foot">
+            Joint Venture
+        </div>
+        <div class="foot">
+            Buyer Inquiry
+        </div>
+        <div class="foot">
+            WWB-Blog
+        </div>
+        <div class="foot">
+            JV Partner
+        </div>
+        <div class="foot">
+            Private Label
+        </div>
+        <div class="foot">
+            Editorial
+        </div>
+        <div class="foot">
+            Customized Order Process
+        </div>
+        <div class="foot">
+            Co - Branding
+        </div>
+        <div class="foot">
+            Affliliate Partnership
+        </div>
+        <div class="foot">
+            <div class="policy"> <a href="policy.html">Policies</a></div>
+        </div>
+        <div class="foot">
+            <div class="social">
+                <a href="https://instagram.com/womanswearbusiness?igshid=YmMyMTA2M2Y="><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=12122102965" class="whatsapp"><i
+                        class="fab fa-whatsapp"></i></a>
+                <a href="https://www.pinterest.com/womenswearbusiness/_saved/"><i class="fab fa-pinterest"></i></a>
+
+            </div>
+        </div>
+        <div class="finger">
+            <img src="logopit-16448465792391x.png">
+        </div>
+        <div class="billing"><a href="https://www.pnrao.com">P N RAO</a></div>
+
+    </div>
+    <div class="phonefooter">
+        <div class="feet1">
+            <div class="thumb">
+                Retail Client Services
+
+            </div>
+            <div class="foot">
+                <a href="clientinquiry.html"> Joint Venture
+                </a>
+            </div>
+            <div class="foot">
+                <a href="clientinquiry.html"> JV Partner
+                </a>
+            </div>
+            <div class="foot">
+                <a href="customized.html"> Customized Order Process
+                </a>
+            </div>
+            <div class="foot">
+                <a href="policy.html">Policies</a>
+            </div>
+            <div class="thumb">
+                Wholesale Client Services
+
+            </div>
+            <div class="foot">
+                <a href="clientinquiry.html"> Buyer Inquiry
+                </a>
+            </div>
+            <div class="foot">
+                <a href="clientinquiry.html"> Private Label
+                </a>
+            </div>
+            <div class="foot">
+                <a href="clientinquiry.html"> Co - Branding
+                </a>
+            </div>
+            <div class="thumb">
+                Media
+
+            </div>
+            <div class="foot">
+                <a href="clientinquiry.html"> WW/B -Blog
+                </a>
+            </div>
+            <div class="foot">
+                <a href="clientinquiry.html"> Editorial
+                </a>
+            </div>
+            <div class="foot" id="last">
+                Affliliate Partnership
+            </div>
+        </div>
+
+        <div class="feet2">
+
+            <div class="social">
+                <a href="https://instagram.com/womanswearbusiness?igshid=YmMyMTA2M2Y="><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=12122102965" class="whatsapp"><i
+                        class="fab fa-whatsapp"></i></a>
+                <a href="https://www.pinterest.com/womenswearbusiness/_saved/"><i class="fab fa-pinterest"></i></a>
+
+            </div>
+            <div class="logo">
+                <img src="logo.png" alt="">
+            </div>
+        </div>
+        <div class="billing"><a href="https://www.pnrao.com">P N RAO</a></div>
+
+    </div>
+
+    <script>
+        function openPolicy(evt, policyName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(policyName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Set the default tab to the first one
+        document.getElementById("terms").style.display = "block";
+        document.getElementsByClassName("tablinks")[0].className += " active";
+    </script>
+</body>
+</body>
+
+</html>

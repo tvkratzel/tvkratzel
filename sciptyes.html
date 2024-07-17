@@ -1,0 +1,592 @@
+<script>
+    let carts = document.querySelectorAll('.add-cart');
+    let products = [];
+
+    for (let i = 0; i < carts.length; i++) {
+        carts[i].addEventListener('click', () => {
+            event.preventDefault();
+            cartNumbers(products[i]);
+        });
+    }
+
+    function onLoadCartNumbers() {
+        let productNumbers = localStorage.getItem('cartNumbers');
+
+        if (productNumbers) {
+            document.querySelector('.cart span').textContent = productNumbers;
+        }
+    }
+
+    function cartNumbers(product) {
+        let productNumbers = localStorage.getItem('cartNumbers');
+        let cartItems = localStorage.getItem('productsInCart');
+        cartItems = JSON.parse(cartItems);
+
+        productNumbers = parseInt(productNumbers);
+
+        if (productNumbers) {
+            if (!cartItems || !cartItems[product.tag]) {
+                localStorage.setItem('cartNumbers', productNumbers + 1);
+                document.querySelector('.cart span').textContent = productNumbers + 1;
+            }
+        } else {
+            localStorage.setItem('cartNumbers', 1);
+            document.querySelector('.cart span').textContent = 1;
+        }
+
+        setItems(product);
+    }
+
+    function setItems(product) {
+        let cartItems = localStorage.getItem('productsInCart');
+        cartItems = JSON.parse(cartItems);
+
+        if (cartItems != null) {
+            if (cartItems[product.tag] == undefined) {
+                // Product not in cart, add it
+                product.inCart = 1;
+                cartItems = {
+                    ...cartItems,
+                    [product.tag]: product
+                };
+            } else {
+                // Product already in cart
+                alert('Product already in cart');
+            }
+        } else {
+            product.inCart = 1;
+            cartItems = {
+                [product.tag]: product
+            };
+        }
+
+        localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+        displayCart();
+    }
+
+    function displayCart() {
+        let cartItems = localStorage.getItem("productsInCart");
+        cartItems = JSON.parse(cartItems);
+        let productContainer = document.querySelector(".products");
+        let total = 0;
+        let quantity = 0; // define quantity variable
+
+        let shipCount = {};
+
+        if (cartItems && productContainer) {
+            productContainer.innerHTML = '';
+            Object.values(cartItems).map(item => {
+                productContainer.innerHTML += `
+          <div class="product">
+            <div class="prodet">
+              <i class="fa-solid fa-rectangle-xmark" data-tag="${item.tag}"></i>
+              <img src="${item.tag}.jpg" onclick="displayImage('${item.tag}')">
+              <span>${item.name}</span>
+            </div>
+            <div class="hashtag">
+             
+                <span>Silk Weave 100%</span>
+        </div>
+        <div class="sizdet">
+          <span>${item.size}</span>
+        </div>
+        <div class="quandet">
+          <input type="number" id="quantity" name="${item.tag}" value="${item.inCart}" min="1" max="10" onchange="updateTotalPrice('${item.tag}')">
+        </div>
+        <div class="totaldet">
+          <span id="total-${item.tag}">$${item.pesa * item.inCart}</span>
+          <span id="inr-total-${item.tag}" style="display: none;">(₹${item.pesa * item.inCart * 80})</span>
+        </div>
+        <div class="ship">
+          <span>${item.ship}</span>
+        </div>
+        <div class="pid">
+          <span>${item.pid}</span>
+        </div>
+      </div>
+      <br>
+      <div id="modal-container" class="modal-container" onclick="hideImage()">
+        <div id="modal-content" class="modal-content">
+          <img id="modal-image" class="modal-image" src="" alt="">
+        </div>
+      </div>
+    `;
+
+                total += item.pesa * item.inCart;
+                quantity += item.inCart; // update quantity
+            });
+
+            // display the total price and quantity
+            document.getElementById('total-price').textContent = total.toFixed(2);
+            document.getElementById('quantity').textContent = quantity;
+
+            // display the new span for inr-total-price
+            let inrTotalPriceElement = document.getElementById('inrtotal-price');
+            inrTotalPriceElement.style.display = 'inline';
+
+            // calculate the shipping price
+            let shippingPrice = 10;
+            if (quantity > 1 && quantity <= 5) {
+                shippingPrice += 2.5 * (quantity - 1);
+            } else if (quantity > 5) {
+                shippingPrice += 2.5 * 4 + 3 * (quantity - 5);
+            }
+
+            // display the shipping price
+            document.getElementById('spc').textContent = `$${shippingPrice.toFixed(2)}`;
+
+            // ... rest of the function code
+            // Add event listener to delete icon
+            let deleteIcons = document.querySelectorAll(".fa-rectangle-xmark");
+            deleteIcons.forEach(icon => {
+                icon.addEventListener("click", () => {
+                    let tag = icon.getAttribute("data-tag");
+                    removeItemFromCart(tag);
+                    displayCart();
+                });
+            });
+        }
+    }
+
+    function removeItemFromCart(tag) {
+        let cartItems = JSON.parse(localStorage.getItem("productsInCart"));
+        let productNumbers = parseInt(localStorage.getItem("cartNumbers"));
+        let item = cartItems[tag];
+
+        if (item) {
+            // Decrease cart count
+            localStorage.setItem("cartNumbers", productNumbers - 1);
+
+            // Update cart span
+            document.querySelector('.cart span').textContent = parseInt(document.querySelector('.cart span').textContent) - 1;
+
+            // Remove item from cart
+            delete cartItems[tag];
+            localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+        }
+    }
+
+    function saveCartToDatabase() {
+        let cartItems = localStorage.getItem("productsInCart");
+        cartItems = JSON.parse(cartItems);
+
+        // Create a new FormData object and append the cart data to it
+        let formData = new FormData();
+        formData.append("products", JSON.stringify(cartItems));
+
+        // Send a POST request to your PHP script with the form data
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "saveCart.php", true);
+        xhr.onreadystatechange = function () {
+            if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+                // Request completed successfully
+                console.log(this.responseText);
+            }
+        };
+        xhr.send(formData);
+    }
+
+    function displayImage(tag) {
+        let imageSrc = tag + '.jpg';
+        let modalContainer = document.getElementById('modal-container');
+        let modalImage = document.getElementById('modal-image');
+        modalImage.src = imageSrc;
+        modalContainer.style.display = 'block';
+    }
+
+    function hideImage() {
+        let modalContainer = document.getElementById('modal-container');
+        modalContainer.style.display = 'none';
+    }
+
+    function updateTotalPrice(productTag) {
+        let cartItems = localStorage.getItem('productsInCart');
+        cartItems = JSON.parse(cartItems);
+
+        let quantity = parseInt(document.getElementsByName(productTag)[0].value);
+
+        cartItems[productTag].inCart = quantity;
+        cartItems[productTag].total = cartItems[productTag].pesa * quantity;
+
+        localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+
+        // Calculate the total quantity of all products in the cart
+        let totalQuantity = Object.values(cartItems).reduce((total, item) => {
+            return total + item.inCart;
+        }, 0);
+
+        // Calculate the total price of all products in the cart
+        let cartTotal = Object.values(cartItems).reduce((total, item) => {
+            return total + item.pesa * item.inCart;
+        }, 0);
+
+        let cartSubTotal = cartTotal * 80; // Calculate the sub total in Indian Rupees
+
+        localStorage.setItem("Total", JSON.stringify(cartTotal));
+        localStorage.setItem("Quantity", JSON.stringify(totalQuantity));
+
+        // Display the updated total and quantity of all products
+        document.getElementById('total-price').textContent = cartTotal.toFixed(2);
+        document.getElementById('quantity').textContent = totalQuantity;
+
+        // Update the total of the changed product
+        let productTotalElement = document.getElementById(`total-${productTag}`);
+        productTotalElement.textContent = `$${cartItems[productTag].total.toFixed(2)}`;
+
+        // Update the Indian Rupee price of the changed product
+        let inrProductTotalElement = document.getElementById(`inr-total-${productTag}`);
+        inrProductTotalElement.textContent = `(₹${(cartItems[productTag].total * 80).toFixed(2)})`;
+
+        // Update the sub total in Indian Rupees
+        document.getElementById('inrtotal-price').textContent = `(₹${cartSubTotal.toFixed(2)})`;
+
+        // Calculate the shipping price
+        let shippingPrice = 10;
+        if (totalQuantity > 1 && totalQuantity <= 5) {
+            shippingPrice += 2.5 * (totalQuantity - 1);
+        } else if (totalQuantity > 5) {
+            shippingPrice += 2.5 * 4 + 3 * (totalQuantity - 5);
+        }
+
+        // Display the shipping price
+        document.getElementById('spc').textContent = `$${shippingPrice.toFixed(2)}`;
+    }
+
+    // Define a function to update the content of the element
+    function updateElement() {
+        const element = document.getElementById("total-price");
+    }
+
+    // Call the function immediately to update the element once when the page loads
+    updateElement();
+
+    // Call the function every 5 seconds to update the element periodically
+    setInterval(updateElement, 5000);
+
+    // Display the new span when the page loads
+    window.addEventListener('DOMContentLoaded', function () {
+        let inrTotalPriceElement = document.getElementById('inrtotal-price');
+        inrTotalPriceElement.style.display = 'inline';
+    });
+
+    displayCart();
+    onLoadCartNumbers();
+    displayCart();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    let carts = document.querySelectorAll('.add-cart');
+
+    let products = [
+
+    ]
+
+    for (let i = 0; i < carts.length; i++) {
+      carts[i].addEventListener('click', () => {
+        event.preventDefault();
+        cartNumbers(products[i]);
+      })
+    }
+
+    function onLoadCartNumbers() {
+      let productNumbers = localStorage.getItem('cartNumbers');
+
+      if (productNumbers) {
+        document.querySelector('.cart span').textContent = productNumbers;
+      }
+    }
+
+    function cartNumbers(product) {
+      let productNumbers = localStorage.getItem('cartNumbers');
+      let cartItems = localStorage.getItem('productsInCart');
+      cartItems = JSON.parse(cartItems);
+
+      productNumbers = parseInt(productNumbers);
+
+      if (productNumbers) {
+        if (!cartItems || !cartItems[product.tag]) {
+          localStorage.setItem('cartNumbers', productNumbers + 1);
+          document.querySelector('.cart span').textContent = productNumbers + 1;
+        }
+      } else {
+        localStorage.setItem('cartNumbers', 1);
+        document.querySelector('.cart span').textContent = 1;
+      }
+
+      setItems(product);
+    }
+
+
+
+    function setItems(product) {
+      let cartItems = localStorage.getItem('productsInCart');
+      cartItems = JSON.parse(cartItems);
+
+      if (cartItems != null) {
+        if (cartItems[product.tag] == undefined) {
+          // Product not in cart, add it
+          product.inCart = 1;
+          cartItems = {
+            ...cartItems,
+            [product.tag]: product
+          }
+        } else {
+          // Product already in cart
+          alert('Product already in cart');
+        }
+      } else {
+        product.inCart = 1;
+        cartItems = {
+          [product.tag]: product
+        }
+      }
+
+      localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+      displayCart();
+    }
+
+
+
+
+
+    function displayCart() {
+      let cartItems = localStorage.getItem("productsInCart");
+      cartItems = JSON.parse(cartItems);
+      let productContainer = document.querySelector(".products");
+      let total = 0;
+      let quantity = 0; // define quantity variable
+
+      let shipCount = {};
+      if (cartItems && productContainer) {
+        productContainer.innerHTML = '';
+        Object.values(cartItems).map(item => {
+          productContainer.innerHTML += `
+        <div class="product">
+          <div class="prodet">
+            <i class="fa-solid fa-rectangle-xmark" data-tag="${item.tag}"></i>
+            <img src="${item.tag}.jpg" onclick="displayImage('${item.tag}')">
+            <span>${item.name}</span>
+          </div>
+          <div class="hashtag">
+            <span>Silk Weave 100%</span>
+          </div>
+          <div class="sizdet">
+            <span>${item.size}</span>
+          </div>
+          <div class="quandet">
+            <input type="number" id="quantity" name="${item.tag}" value="${item.inCart}" min="1" max="10" onchange="updateTotalPrice('${item.tag}')">
+          </div>
+          <div class="totaldet">
+            <span id="total-${item.tag}">$${item.pesa * item.inCart}</span>
+            <span id="inr-total-${item.tag}">(₹${item.pesa * item.inCart * 80})</span>
+          </div>
+          <div class="ship">
+            <span>${item.ship}</span>
+          </div>
+          <div class="pid">
+            <span>${item.pid}</span>
+          </div>
+        </div>
+        <br>
+        <div id="modal-container" class="modal-container" onclick="hideImage()">
+          <div id="modal-content" class="modal-content">
+            <img id="modal-image" class="modal-image" src="" alt="">
+          </div>
+        </div>
+      `;
+
+          total += item.pesa * item.inCart;
+          quantity += item.inCart; // update quantity
+        });
+        //
+
+        localStorage.setItem("Total", JSON.stringify(total));
+
+        document.getElementById('total-price').textContent = total;
+        // ... rest of the function code
+        // Add event listener to delete icon
+        let deleteIcons = document.querySelectorAll(".fa-rectangle-xmark");
+        deleteIcons.forEach(icon => {
+          icon.addEventListener("click", () => {
+            let tag = icon.getAttribute("data-tag");
+            removeItemFromCart(tag);
+            displayCart();
+          });
+        });
+      }
+      // Update the existing script for the old span in totaldet
+      let productTotalElement = document.getElementById(`total-${item.tag}`);
+      productTotalElement.textContent = `$${item.pesa * item.inCart}`;
+
+      // Add the new script for the new span in totaldet
+      let inrProductTotalElement = document.getElementById(`inr-total-${item.tag}`);
+      inrProductTotalElement.textContent = `(₹${item.pesa * item.inCart * 80})`;
+
+      total += item.pesa * item.inCart;
+      quantity += item.inCart; // update quantity
+      // log ship count
+      console.log(shipCount);
+    }
+
+
+
+
+
+    function removeItemFromCart(tag) {
+      let cartItems = JSON.parse(localStorage.getItem("productsInCart"));
+      let productNumbers = parseInt(localStorage.getItem("cartNumbers"));
+      let item = cartItems[tag];
+
+      if (item) {
+        // Decrease cart count
+        localStorage.setItem("cartNumbers", productNumbers - 1);
+
+
+        // Update cart span
+        document.querySelector('.cart span').textContent = parseInt(document.querySelector('.cart span').textContent) - 1;
+
+        // Remove item from cart
+        delete cartItems[tag];
+        localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+      }
+    }
+
+    function saveCartToDatabase() {
+      let cartItems = localStorage.getItem("productsInCart");
+      cartItems = JSON.parse(cartItems);
+
+      // Create a new FormData object and append the cart data to it
+      let formData = new FormData();
+      formData.append("products", JSON.stringify(cartItems));
+
+      // Send a POST request to your PHP script with the form data
+      let xhr = new XMLHttpRequest();
+      xhr.open("POST", "saveCart.php", true);
+      xhr.onreadystatechange = function () {
+        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+          // Request completed successfully
+          console.log(this.responseText);
+        }
+      };
+      xhr.send(formData);
+    }
+
+    function displayImage(tag) {
+      let imageSrc = tag + '.jpg';
+      let modalContainer = document.getElementById('modal-container');
+      let modalImage = document.getElementById('modal-image');
+      modalImage.src = imageSrc;
+      modalContainer.style.display = 'block';
+    }
+
+    function hideImage() {
+      let modalContainer = document.getElementById('modal-container');
+      modalContainer.style.display = 'none';
+    }
+
+
+
+
+    function updateTotalPrice(productTag) {
+      let cartItems = localStorage.getItem('productsInCart');
+      cartItems = JSON.parse(cartItems);
+
+      let quantity = parseInt(document.getElementsByName(productTag)[0].value);
+
+      cartItems[productTag].inCart = quantity;
+      cartItems[productTag].total = cartItems[productTag].pesa * quantity;
+
+      localStorage.setItem("Quantity", JSON.stringify(quantity)); // store quantity in localStorage
+      localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+
+      // calculate total quantity of all products in the cart
+      let totalQuantity = Object.values(cartItems).reduce((total, item) => {
+        return total + item.inCart;
+      }, 0);
+
+      // calculate the total price of all products in the cart
+      let cartTotal = Object.values(cartItems).reduce((total, item) => {
+        return total + item.pesa * item.inCart;
+      }, 0);
+
+      let cartSubTotal = cartTotal * 80; // Calculate the sub total in Indian Rupees
+
+      localStorage.setItem("Total", JSON.stringify(cartTotal));
+      localStorage.setItem("Quantity", JSON.stringify(totalQuantity));
+
+      // display the updated total and quantity of all products
+      document.getElementById('total-price').textContent = cartTotal.toFixed(2);
+      document.getElementById('quantity').textContent = totalQuantity;
+
+      // update the total of the changed product
+      let productTotalElement = document.getElementById(`total-${productTag}`);
+      productTotalElement.textContent = `$${cartItems[productTag].total.toFixed(2)}`;
+
+      // update the Indian Rupee price of the changed product
+      let inrProductTotalElement = document.getElementById(`inr-total-${productTag}`);
+      inrProductTotalElement.textContent = `(₹${(cartItems[productTag].total * 80).toFixed(2)})`;
+
+      // update the sub total in Indian Rupees
+      document.getElementById('inrtotal-price').textContent = `(₹${cartSubTotal.toFixed(2)})`;
+
+      // calculate the shipping price
+      let shippingPrice = 10;
+      if (totalQuantity > 1 && totalQuantity <= 5) {
+        shippingPrice += 2.5 * (totalQuantity - 1);
+      } else if (totalQuantity > 5) {
+        shippingPrice += 2.5 * 4 + 3 * (totalQuantity - 5);
+      }
+
+      // display the shipping price
+      document.getElementById('spc').textContent = `$${shippingPrice.toFixed(2)}`;
+    }
+
+
+
+
+    // Define a function to update the content of the element
+    function updateElement() {
+      const element = document.getElementById("total-price");
+    }
+
+    // Call the function immediately to update the element once when the page loads
+    updateElement();
+
+    // Call the function every 5 seconds to update the element periodically
+    setInterval(updateElement, 5000);
+
+    // Display the new span when the page loads
+    window.addEventListener('DOMContentLoaded', function () {
+      let inrTotalPriceElement = document.getElementById('inrtotal-price');
+      inrTotalPriceElement.style.display = 'inline';
+    });
+
+
+    
+    onLoadCartNumbers();
+    displayCart();
+  </script>

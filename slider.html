@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+   .container {
+        width: 100%;
+        height: 100vh;
+        background: white;
+        display: flex;
+        align-items: center;
+
+    }
+
+    .swiper {
+        width: 55%;
+        height: fit-content;
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: 55vw;
+    }
+    .swiper-button-prev,.swiper-button-next{
+color: white;
+    }
+  
+</style>
+
+<body>
+    <div class="container">
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+
+                </div>
+                <div class="swiper-slide"><img src="Art Deco Bubble 16X16  121.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="paigly1616.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="purple.png" alt=""></div>
+                <div class="swiper-slide"><img src="bubble1616.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="Art Deco Bubble 16X16  121.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="paigly1616.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="purple.png" alt=""></div>
+                <div class="swiper-slide"><img src="bubble1616.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="Art Deco Bubble 16X16  121.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="paigly1616.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="purple.png" alt=""></div>
+                <div class="swiper-slide"><img src="bubble1616.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="Art Deco Bubble 16X16  121.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="paigly1616.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="purple.png" alt=""></div>
+                <div class="swiper-slide"><img src="bubble1616.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="Art Deco Bubble 16X16  121.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="paigly1616.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="purple.png" alt=""></div>
+
+                ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+           
+
+        </div>
+         <!-- If we need navigation buttons -->
+         <div class="swiper-button-prev"></div>
+         <div class="swiper-button-next"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        loop: true,
+      
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+      
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      
+      
+      });</script>
+</body>
+
+</html>
